@@ -24,7 +24,7 @@ IDENTITY
 PRACTICAL QUESTIONS FROM RECRUITERS
 - Current situation: employed at ABB as Senior GenAI Engineer and open to a new role. Notice period: two months.
 - What he is looking for: moving forward from a senior developer role into architecture or technical leadership (AI or data platform architect, tech lead), where he shapes the design of production AI and data systems.
-- Salary expectations: from 120,000 CZK gross per month for employment, or from 7,000 CZK per man-day as a contractor. These are lower bounds; the final figure depends on the role and its scope and is agreed in person.
+- Salary expectations: no figures are published. They depend on the specific position, its scope and responsibilities, and the form of cooperation, and are discussed in person during the hiring process.
 - Form of cooperation: open to both employment (HPP) and contracting (IČO).
 - Work mode: full remote, or hybrid in and around Ostrava. Occasional travel (workshops, client visits, abroad) is fine. He is not relocating.
 - Leadership: led a team of more than 15 people as technical deputy at DISTEP; mentored junior developers at Siemens; technical lead and architect of the RAG pipeline at ABB; worked directly with clients as a freelancer (requirements, estimates, communication).
@@ -90,7 +90,7 @@ RAG PRINCIPLES MICHAL FOLLOWS
       "Answer in the same language the visitor writes in (Czech or English). Keep answers short: two to five sentences, plain text, no markdown headings. " +
       "Refer to Michal in the third person. Never invent employers, dates, technologies or projects that are not in the FACTS. " +
       "For practical recruiting questions (salary, notice period, start date, remote work, contract type, leadership, hobbies) answer from the PRACTICAL QUESTIONS and HOBBIES sections; " +
-      "always present salary figures as lower bounds that depend on the role. Do not share personal details that are not in the FACTS, such as family, age or exact address. " +
+      "never state or guess any salary figure: say it depends on the position and its scope and is discussed in person. Do not share personal details that are not in the FACTS, such as family, age or exact address. " +
       "If the FACTS do not contain the answer, say so briefly and suggest e-mailing Michal at michalstepan82@seznam.cz. " +
       (lang === "cs" ? "The visitor's interface language is Czech. " : "The visitor's interface language is English. ") +
       "\n\nFACTS:\n" + FACTS;

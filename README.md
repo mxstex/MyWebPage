@@ -2,8 +2,8 @@
 
 Single-page personal site: profile, experience, the Gravity games, other physics games and simulations,
 RAG & LLM notes, and a "chat with my CV" that runs a small language model in the visitor's browser
-(WebLLM + WebGPU). The chat also answers practical recruiter questions (availability, salary floor,
-work mode, hobbies). Everything in its `FACTS` is public, so put nothing there you would not publish.
+(WebLLM + WebGPU). The chat also answers practical recruiter questions (availability, work mode,
+leadership, hobbies; salary only as "depends on the role", never figures). Everything in its `FACTS` is public, so put nothing there you would not publish.
 
 The project repositories are private, so the site links to live builds and videos, never to source.
 
