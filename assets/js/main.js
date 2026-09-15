@@ -53,9 +53,8 @@
   function renderLinks() {
     $("#cv-link").setAttribute("href", SITE.cv);
     $("#contact-cv").setAttribute("href", SITE.cv);
-    $("#github-link").setAttribute("href", SITE.github);
-    $("#contact-github").setAttribute("href", SITE.github);
-    $("#site-repo").setAttribute("href", SITE.siteRepo);
+    $("#youtube-link").setAttribute("href", SITE.youtube);
+    $("#contact-youtube").setAttribute("href", SITE.youtube);
     $("#hero-email").setAttribute("href", "mailto:" + SITE.email); $("#hero-email").textContent = SITE.email;
     $("#contact-email").setAttribute("href", "mailto:" + SITE.email); $("#contact-email-v").innerHTML = esc(SITE.email).replace("@", "@<wbr>");
     $("#hero-location").textContent = tr(SITE.location);
@@ -87,7 +86,8 @@
 
   function linkButtons(links, small) {
     return links.map((l) => {
-      const url = resolveUrl(l.url); if (!url) return "";
+      const url = resolveUrl(l.url);
+      if (!url) return l.soon ? '<span class="badge soon">' + esc(T[lang]["gravity.soon"]) + "</span>" : "";
       return '<a class="btn' + (l.primary ? " primary" : "") + (small ? " small" : "") + '" href="' + esc(url) + '"' + linkAttrs(url) + ">" + esc(tr(l.label)) + "</a>";
     }).join("");
   }
@@ -124,7 +124,7 @@
   function renderProjects() {
     $("#project-grid").innerHTML = DATA.projects.map((p) =>
       '<article class="project">' +
-        '<img class="cover" src="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy">' +
+        (p.image ? '<img class="cover" src="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy">' : "") +
         '<div class="body"><h3>' + esc(p.name) + "<small>" + esc(tr(p.sub)) + "</small></h3>" +
         '<div class="chips">' + p.tags.map((t) => '<span class="chip soft">' + esc(t) + "</span>").join("") + "</div>" +
         "<p>" + esc(tr(p.desc)) + "</p>" +

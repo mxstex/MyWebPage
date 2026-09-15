@@ -194,6 +194,7 @@ h2 { font-size: clamp(1.8rem, 3.2vw, 2.4rem); margin-bottom: 0.6rem; }
 .app-card .title small { display: block; color: var(--muted); font-size: 0.82rem; font-family: var(--font-body); }
 .app-card p { font-size: 0.95rem; color: var(--text); margin: 0; flex: 1; }
 .app-card .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.4rem; }
+.badge.soon { display: inline-flex; align-items: center; padding: 6px 12px; font-size: 0.85rem; border: 1px dashed var(--line); border-radius: 8px; color: var(--muted); }
 
 .subhead { font-size: 1.25rem; margin: 2.6rem 0 1rem; }
 .strip { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
