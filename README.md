@@ -20,11 +20,12 @@ Paper). Each has its own palette in `style.css` and its own hero animation in `m
 - `assets/js/chat.js` — the fact sheet the in-browser model answers from (`FACTS`), model ids.
 - `assets/css/style.css` — look and feel.
 - `cv/Michal_Stepan_CV.html` — the source of the downloadable CV. After editing it, re-export the PDF
-  with Edge (or Chrome) and check that it still fits on two pages:
+  with Edge (or Chrome) and check that it still fits on two pages. The CV loads Inter and Lora from
+  Google Fonts; `--virtual-time-budget` gives them time to arrive before printing:
 
   ```bash
   "/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" --headless=new --disable-gpu \
-    --no-pdf-header-footer --print-to-pdf="G:\GIT\MyWebPage\cv\Michal_Stepan_CV.pdf" \
+    --no-pdf-header-footer --virtual-time-budget=8000 --print-to-pdf="G:\GIT\MyWebPage\cv\Michal_Stepan_CV.pdf" \
     "file:///G:/GIT/MyWebPage/cv/Michal_Stepan_CV.html"
   ```
 - `assets/img/` — screenshots and graphics, already downscaled.

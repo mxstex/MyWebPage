@@ -3,79 +3,169 @@
 <head>
 <meta charset="utf-8">
 <title>Michal Štěpán · CV</title>
-<!-- Source of cv/Michal_Stepan_CV.pdf. Re-export after every change (see README). -->
+<!-- Source of cv/Michal_Stepan_CV.pdf. Re-export after every change (see README). Colours follow the site's Meadow palette. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  @page { size: A4; margin: 12mm 15mm 12mm 15mm; }
-  :root { --ink: #16223a; --muted: #52607a; --accent: #9a6e08; --rule: #d9dde6; }
+  @page { size: A4; margin: 10mm 13mm 10mm 13mm; }
+  :root {
+    --ink: #1c2b1e; --muted: #56655a; --rule: #d6e7c8;
+    --green: #276e2b; --green-soft: #e4f2d8; --green-ink: #1f5a23;
+    --blue: #1b64a0; --blue-soft: #e1ecf8; --blue-ink: #174f80;
+    --gold: #f1c55c; --gold-soft: #fbf0cf; --gold-ink: #6b4d05;
+    --grey-soft: #eef0ec; --grey-ink: #4d564d;
+  }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; background: #fff; }
-  body { font-family: "Segoe UI", Arial, Helvetica, sans-serif; font-size: 9.4pt; line-height: 1.38; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  a { color: inherit; text-decoration: none; }
-  header { border-bottom: 2px solid var(--accent); padding-bottom: 7px; margin-bottom: 9px; }
-  h1 { font-size: 21pt; line-height: 1.1; margin: 0; letter-spacing: 0.01em; }
-  .role { font-size: 11pt; color: var(--accent); font-weight: 600; margin: 2px 0 6px; }
-  .contact { display: flex; flex-wrap: wrap; gap: 2px 14px; font-size: 8.8pt; color: var(--muted); }
-  .contact b { color: var(--ink); font-weight: 600; }
-  h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.02em; color: var(--accent); margin: 12px 0 5px; padding-bottom: 2px; border-bottom: 1px solid var(--rule); break-after: avoid; }
-  p { margin: 0 0 5px; }
-  ul { margin: 2px 0 0; padding-left: 15px; }
-  li { margin: 0 0 1.5px; }
-  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 18px; }
-  .skills div b { display: block; font-size: 9pt; }
-  .skills div span { color: var(--muted); font-size: 8.8pt; }
-  .job { margin: 0 0 8px; break-inside: avoid; }
+  body { font-family: "Inter", "Segoe UI", Arial, sans-serif; font-size: 9pt; line-height: 1.42; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: var(--blue); text-decoration: none; }
+  b { font-weight: 600; }
+  p { margin: 0 0 4px; }
+
+  /* ---------- header ---------- */
+  .hero { position: relative; overflow: hidden; display: flex; gap: 12px; align-items: center; padding: 11px 16px 15px; border-radius: 12px;
+          background: linear-gradient(120deg, #e6f3da 0%, #f5faee 55%, #fff4d2 100%); }
+  .hero .sun { position: absolute; right: -26px; top: -30px; width: 120px; height: 120px; border-radius: 50%;
+               background: radial-gradient(circle, #f7d777 0%, #f1c55c 45%, rgba(241,197,92,0.25) 68%, rgba(241,197,92,0) 72%); }
+  .hero .grass { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 11px; }
+  .mark { flex: none; width: 50px; height: 50px; border-radius: 13px; background: var(--gold); color: #1a1408; display: grid; place-items: center;
+          font-family: "Lora", Georgia, serif; font-weight: 700; font-size: 19pt; box-shadow: 0 2px 0 rgba(107,77,5,0.18); position: relative; }
+  .who { position: relative; }
+  h1 { font-family: "Lora", Georgia, serif; font-size: 22pt; line-height: 1.05; margin: 0; color: var(--ink); }
+  h1 .accent { color: var(--green); }
+  .role { font-size: 10.2pt; font-weight: 600; color: var(--green); margin: 3px 0 7px; }
+  .contact { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+  .contact span { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.85); border: 1px solid #dbe9cf; border-radius: 999px;
+                  padding: 1px 8px 1px 6px; font-size: 8.2pt; color: var(--muted); }
+  .contact span b { color: var(--ink); font-weight: 600; }
+  .contact svg { width: 10px; height: 10px; stroke: var(--green); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ---------- sections ---------- */
+  h2 { display: flex; align-items: center; gap: 8px; font-family: "Lora", Georgia, serif; font-size: 11.5pt; color: var(--green);
+       margin: 13px 0 6px; break-after: avoid; }
+  h2::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 3px var(--gold-soft); }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+
+  .profile { border-left: 3px solid var(--gold); padding: 1px 0 1px 10px; }
+
+  .highlights { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 7px; }
+  .hl { border-radius: 9px; padding: 5px 9px 6px; }
+  .hl b { display: block; font-size: 9pt; }
+  .hl span { font-size: 7.9pt; color: var(--muted); }
+  .hl.g { background: var(--green-soft); } .hl.g b { color: var(--green-ink); }
+  .hl.b { background: var(--blue-soft); }  .hl.b b { color: var(--blue-ink); }
+  .hl.y { background: var(--gold-soft); }  .hl.y b { color: var(--gold-ink); }
+  .hl.n { background: #f1ecf8; }           .hl.n b { color: #5b3d8a; }
+
+  /* ---------- skills ---------- */
+  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 8px; }
+  .sk { border: 1px solid #e3ebdc; border-radius: 9px; padding: 5px 8px 4px; }
+  .sk h3 { display: flex; align-items: center; gap: 6px; font-size: 9pt; margin: 0 0 4px; }
+  .sk h3 i { width: 7px; height: 7px; border-radius: 50%; }
+  .chips span { display: inline-block; font-size: 7.8pt; line-height: 1.35; padding: 0.5px 6px; margin: 0 1px 3px 0; border-radius: 999px; }
+  .sk.g h3 i { background: var(--green); } .sk.g .chips span { background: var(--green-soft); color: var(--green-ink); }
+  .sk.b h3 i { background: var(--blue); }  .sk.b .chips span { background: var(--blue-soft); color: var(--blue-ink); }
+  .sk.y h3 i { background: #c9951b; }      .sk.y .chips span { background: var(--gold-soft); color: var(--gold-ink); }
+  .sk.n h3 i { background: #9aa39a; }      .sk.n .chips span { background: var(--grey-soft); color: var(--grey-ink); }
+  .sk.n h3 { color: var(--grey-ink); }
+
+  /* ---------- experience ---------- */
+  .job { position: relative; margin: 0 0 0 5px; padding: 0 0 7px 15px; border-left: 2px solid var(--rule); }
+  .job:last-child { padding-bottom: 1px; }
+  .job-head, .note { break-after: avoid; }
+  li { break-inside: avoid; }
+  .job::before { content: ""; position: absolute; left: -7px; top: 3px; width: 8px; height: 8px; border-radius: 50%; background: #fff; border: 2px solid var(--green); }
+  .job.now::before { background: var(--green); box-shadow: 0 0 0 3px var(--green-soft); }
   .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
-  .job-head h3 { font-size: 10pt; margin: 0; }
-  .job-head h3 span { font-weight: 400; color: var(--muted); }
-  .when { font-size: 8.8pt; color: var(--muted); white-space: nowrap; }
-  .note { font-size: 8.8pt; color: var(--muted); font-style: italic; margin: 1px 0 2px; }
-  .stack { font-size: 8.6pt; color: var(--muted); margin-top: 2px; }
-  .stack b { color: var(--ink); font-weight: 600; }
-  .proj { margin: 0 0 4px; }
-  .proj b { font-weight: 600; }
-  .cols3 { display: grid; grid-template-columns: 1.5fr 1.1fr 0.8fr; gap: 0 16px; }
-  .edu { margin: 0 0 5px; }
-  .edu b { display: block; }
-  .edu span { color: var(--muted); font-size: 8.8pt; }
+  .job-head h3 { font-size: 9.8pt; margin: 0; }
+  .job-head h3 span { font-weight: 600; color: var(--blue); }
+  .when { flex: none; font-size: 7.9pt; font-weight: 600; color: var(--green-ink); background: var(--green-soft); border-radius: 999px; padding: 0.5px 8px; white-space: nowrap; }
+  .note { font-size: 8.3pt; color: var(--muted); font-style: italic; margin: 1px 0 1px; }
+  ul { list-style: none; margin: 2px 0 0; padding-left: 11px; }
+  li { position: relative; margin: 0 0 1.5px; }
+  li::before { content: ""; position: absolute; left: -10px; top: 0.58em; width: 4.5px; height: 4.5px; border-radius: 50%; background: #7cb65c; }
+  .stack { font-size: 8.1pt; color: var(--muted); margin-top: 2px; }
+  .stack b { font-size: 6.8pt; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--green-ink); background: var(--green-soft);
+             border-radius: 4px; padding: 0 4px; margin-right: 4px; }
+
+  /* ---------- Tojin Games ---------- */
+  .tojin { margin-top: 9px; border-radius: 12px; padding: 7px 12px 7px; background: linear-gradient(120deg, #fff7df 0%, #f7fbef 60%, #e9f3fb 100%); border: 1px solid #efe3bd; break-inside: avoid; }
+  .tojin h2 { margin-top: 2px; }
+  .tojin h2::before { display: none; }
+  .tojin h2 svg { flex: none; width: 15px; height: 15px; }
+  .tojin .note a { font-style: normal; }
+  .tojin li b { color: var(--gold-ink); }
+  .tojin li::before { background: #e0a92c; }
+
+  /* ---------- education ---------- */
+  .cols4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0 12px; }
+  .edu { margin: 0 0 4px; }
+  .edu b { display: block; font-size: 8.8pt; }
+  .edu span { color: var(--muted); font-size: 8.2pt; }
   .keep { break-inside: avoid; }
 </style>
 </head>
 <body>
 
-<header>
-  <h1>Ing. Michal Štěpán</h1>
-  <div class="role">Senior GenAI Engineer · LLM applications, evaluation, MCP · Azure &amp; GCP</div>
-  <div class="contact">
-    <span><b>michalstepan82@seznam.cz</b></span>
-    <span>+420 608 464 905</span>
-    <span>Sviadnov (Ostrava), Czechia · remote / hybrid</span>
-    <span>Portfolio <a href="https://mxstex.github.io/MyWebPage/">mxstex.github.io/MyWebPage</a></span>
+<header class="hero">
+  <div class="sun"></div>
+  <svg class="grass" viewBox="0 0 600 11" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="#b9dc9b" d="M0 11 L0 7 Q6 1 9 7 Q13 2 17 7 Q22 0 25 7 Q30 3 34 7 Q38 1 42 7 Q47 3 51 7 Q55 0 59 7 Q64 2 68 7 Q72 1 76 7 Q81 3 85 7 Q89 0 93 7 Q98 2 102 7 Q106 1 110 7 Q115 3 119 7 Q123 0 127 7 Q132 2 136 7 Q140 1 144 7 Q149 3 153 7 Q157 0 161 7 Q166 2 170 7 Q174 1 178 7 Q183 3 187 7 Q191 0 195 7 Q200 2 204 7 Q208 1 212 7 Q217 3 221 7 Q225 0 229 7 Q234 2 238 7 Q242 1 246 7 Q251 3 255 7 Q259 0 263 7 Q268 2 272 7 Q276 1 280 7 Q285 3 289 7 Q293 0 297 7 Q302 2 306 7 Q310 1 314 7 Q319 3 323 7 Q327 0 331 7 Q336 2 340 7 Q344 1 348 7 Q353 3 357 7 Q361 0 365 7 Q370 2 374 7 Q378 1 382 7 Q387 3 391 7 Q395 0 399 7 Q404 2 408 7 Q412 1 416 7 Q421 3 425 7 Q429 0 433 7 Q438 2 442 7 Q446 1 450 7 Q455 3 459 7 Q463 0 467 7 Q472 2 476 7 Q480 1 484 7 Q489 3 493 7 Q497 0 501 7 Q506 2 510 7 Q514 1 518 7 Q523 3 527 7 Q531 0 535 7 Q540 2 544 7 Q548 1 552 7 Q557 3 561 7 Q565 0 569 7 Q574 2 578 7 Q582 1 586 7 Q591 3 595 7 Q598 2 600 6 L600 11 Z"/>
+    <circle cx="118" cy="4" r="1.6" fill="#f3a6c8"/><circle cx="262" cy="3.5" r="1.6" fill="#f1c55c"/><circle cx="401" cy="4" r="1.6" fill="#b9a6f3"/><circle cx="523" cy="3.5" r="1.6" fill="#f3a6c8"/>
+  </svg>
+  <div class="mark">MŠ</div>
+  <div class="who">
+    <h1>Ing. Michal <span class="accent">Štěpán</span></h1>
+    <div class="role">Senior GenAI Engineer · LLM applications, RAG, evaluation, MCP · Azure &amp; GCP</div>
+    <div class="contact">
+      <span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><b>michalstepan82@seznam.cz</b></span>
+      <span><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>+420 608 464 905</span>
+      <span><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Sviadnov (Ostrava), Czechia · remote / hybrid</span>
+      <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><a href="https://mxstex.github.io/MyWebPage/">mxstex.github.io/MyWebPage</a></span>
+      <span><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Czech native · English B2–C1 (Cambridge FCE)</span>
+    </div>
   </div>
 </header>
 
 <h2>Profile</h2>
-<p>GenAI engineer who builds LLM applications end to end. At ABB I work on an AI-assisted validation app, where an LLM works alongside deterministic rules and every change is measured against golden datasets, and I deliver it to Azure Container Apps. I also build MCP servers that give AI coding assistants access to team tools. In my own time I build the same way on GCP as Tojin Games: LLM agents on local models, physics simulation games, a shared login service and an automated video pipeline, developed with Claude Code. Before ABB I spent three years as a freelance data and backend engineer (DTSE, Landis+Gyr, Vendavo) and built energy analytics at Siemens and ABB. Before that, eight years at a district-heating utility, the last ones as technical deputy leading more than fifteen people. I studied nuclear engineering at ČVUT FJFI and did tokamak research there. I want to keep doing this work (designing and shipping LLM applications and agents), with a larger share of the design and technical lead.</p>
+<p class="profile">GenAI engineer who builds LLM applications end to end: RAG on Azure AI Search since 2025, an LLM working alongside deterministic rules, evaluation on golden datasets, MCP servers for AI coding assistants, and delivery to Azure and GCP. In my own time I build the same way as Tojin Games, together with Claude Code. Before ABB: freelance data and backend engineering, energy analytics at Siemens and ABB, and eight years at a district-heating utility, the last ones leading more than fifteen people. Nuclear engineer by training. I want to keep building LLM applications and agents, with a larger share of the design and technical lead.</p>
+<div class="highlights">
+  <div class="hl g"><b>RAG since 2025</b><span>Azure AI Search · LangGraph · Document Intelligence</span></div>
+  <div class="hl b"><b>Evaluation first</b><span>golden datasets, acceptance and stress tests</span></div>
+  <div class="hl y"><b>MCP servers</b><span>tools for Claude Code and GitHub Copilot</span></div>
+  <div class="hl n"><b>Tojin Games</b><span>8 games, 5 live on Cloud Run, 40+ videos</span></div>
+</div>
 
 <h2>Core skills</h2>
 <div class="skills">
-  <div><b>GenAI &amp; LLM applications</b><span>Azure OpenAI / Azure AI Foundry · structured outputs · LLM + deterministic-rule validation · golden datasets &amp; evaluation · Model Context Protocol (MCP) servers · LLM agents on local models (Ollama) · pgvector memory · AI coding agents (Claude Code, GitHub Copilot)</span></div>
-  <div><b>Cloud &amp; delivery</b><span>Azure Container Apps · Container Registry · Key Vault with managed identity · Log Analytics · Blob &amp; Table Storage · Azure Pipelines (dev → prod) · GCP Cloud Run · Secret Manager · Terraform (GCP) · Docker · OAuth 2.0 / JWT</span></div>
-  <div><b>Programming &amp; testing</b><span>Python (FastAPI, Pandas, NumPy/SciPy, NiceGUI) · Pytest · Playwright · load and stress tests · SQL / PostgreSQL · JavaScript (Canvas, WebGL2) · Kotlin + Jetpack Compose</span></div>
-  <div><b>Worked with earlier</b><span>Dagster · Airflow · DuckDB · BigQuery · RabbitMQ · Kubernetes · GitLab CI · GitHub Actions · Flask · Streamlit · AWS (S3, Lambda) · Azure Functions · Azure AI Search · Document Intelligence · LangChain · LangGraph · ChromaDB · Grafana · Power BI · ARIMA / SARIMA</span></div>
+  <div class="sk g"><h3><i></i>GenAI &amp; LLM applications</h3><div class="chips">
+    <span>Azure OpenAI / AI Foundry</span><span>RAG on Azure AI Search</span><span>vector + hybrid retrieval</span><span>LangChain · LangGraph (mostly 2025)</span><span>ChromaDB</span><span>Document Intelligence</span><span>structured outputs</span><span>LLM + deterministic rules</span><span>golden datasets &amp; evaluation</span><span>MCP servers</span><span>LLM agents on Ollama</span><span>pgvector memory</span><span>Claude Code</span><span>GitHub Copilot</span>
+  </div></div>
+  <div class="sk b"><h3><i></i>Cloud &amp; delivery</h3><div class="chips">
+    <span>Azure Container Apps</span><span>Container Registry</span><span>Key Vault · managed identity</span><span>Log Analytics</span><span>Blob &amp; Table Storage</span><span>Azure Pipelines (dev → prod)</span><span>GCP Cloud Run</span><span>Secret Manager</span><span>Terraform (GCP)</span><span>Docker</span><span>OAuth 2.0 / JWT</span>
+  </div></div>
+  <div class="sk y"><h3><i></i>Programming &amp; testing</h3><div class="chips">
+    <span>Python</span><span>FastAPI</span><span>Pandas</span><span>NumPy / SciPy</span><span>NiceGUI</span><span>Pytest</span><span>Playwright</span><span>load &amp; stress tests</span><span>SQL / PostgreSQL</span><span>JavaScript · Canvas · WebGL2</span><span>Kotlin + Jetpack Compose</span>
+  </div></div>
+  <div class="sk n"><h3><i></i>Worked with earlier</h3><div class="chips">
+    <span>Dagster</span><span>Airflow</span><span>DuckDB</span><span>BigQuery</span><span>RabbitMQ</span><span>Kubernetes</span><span>GitLab CI</span><span>GitHub Actions</span><span>Flask</span><span>Streamlit</span><span>AWS S3 · Lambda</span><span>Azure Functions</span><span>Grafana</span><span>Power BI</span><span>ARIMA / SARIMA</span>
+  </div></div>
 </div>
 
 <h2>Professional experience</h2>
+<div class="timeline">
 
-<div class="job">
-  <div class="job-head"><h3>Senior GenAI Engineer <span>· ABB s.r.o.</span></h3><span class="when">Sep 2025 – present</span></div>
+<div class="job now">
+  <div class="job-head"><h3>Senior GenAI Engineer · <span>ABB s.r.o.</span></h3><span class="when">Sep 2025 – present</span></div>
   <ul>
+    <li>RAG since 2025: retrieval over Azure AI Search with vector embeddings and hybrid retrieval, LangChain and LangGraph workflows, ChromaDB, and Azure Document Intelligence to turn documents into indexable content. In 2026 wrote the architecture documentation for a RAG assistant (Azure AI Search, LangGraph, Azure OpenAI).</li>
     <li>AI-assisted validation of engineering spreadsheets: built the evaluation (golden datasets, acceptance evaluation, performance and stress tests) that every change is measured against.</li>
     <li>Backend in FastAPI: a YAML rule engine that runs deterministic checks next to the LLM validators, switchable model profiles (Azure OpenAI or a local model through Ollama) with structured outputs, quotas and session cleanup; benchmarked local against cloud models.</li>
     <li>Delivery: Azure Pipelines for dev, test, stage and prod; Docker images in Container Registry, Azure Container Apps, Key Vault secrets through managed identity, Log Analytics.</li>
     <li>Built a proof-of-concept MCP server (Python, FastMCP) that gives AI coding assistants (Claude Code, GitHub Copilot) access to Azure DevOps work items, with a mock API and tests.</li>
-    <li>Wrote the architecture documentation for a RAG assistant (Azure AI Search hybrid retrieval, LangGraph, Azure OpenAI).</li>
   </ul>
-  <div class="stack"><b>Stack:</b> Python · FastAPI · Azure OpenAI / AI Foundry · Pandas · Pytest · Docker · Azure Container Apps · Key Vault · Azure Pipelines · MCP · Ollama</div>
+  <div class="stack"><b>Stack</b>Python · FastAPI · Azure OpenAI / AI Foundry · Azure AI Search · LangChain · LangGraph · Document Intelligence · Pandas · Pytest · Docker · Azure Container Apps · Key Vault · Azure Pipelines · MCP · Ollama</div>
 </div>
 
 <div class="job">
@@ -88,63 +178,58 @@
     <li>Maintained CI/CD in GitLab CI and GitHub Actions with unit, integration and end-to-end tests in Pytest.</li>
     <li>Delivered high-performance processing pipelines for recommender systems (multiprocessing, optimisation); L2 support for production systems.</li>
   </ul>
-  <div class="stack"><b>Stack:</b> Python · Dagster · Airflow · PostgreSQL · DuckDB · BigQuery · RabbitMQ · GCP · Kubernetes · GitLab CI · GitHub Actions</div>
+  <div class="stack"><b>Stack</b>Python · Dagster · Airflow · PostgreSQL · DuckDB · BigQuery · RabbitMQ · GCP · Kubernetes · GitLab CI · GitHub Actions</div>
 </div>
 
 <div class="job">
-  <div class="job-head"><h3>Senior Software Developer <span>· Siemens s.r.o.</span></h3><span class="when">Jan 2021 – Aug 2022</span></div>
+  <div class="job-head"><h3>Senior Software Developer · <span>Siemens s.r.o.</span></h3><span class="when">Jan 2021 – Aug 2022</span></div>
   <ul>
     <li>Developed an Energy Management System consolidating and analysing data from many sources.</li>
     <li>Implemented ARIMA and SARIMA models for time-series forecasting.</li>
     <li>Mentored junior developers.</li>
   </ul>
-  <div class="stack"><b>Stack:</b> Python · Flask · FastAPI · Docker · PostgreSQL · Grafana · Power BI · RabbitMQ · AWS S3 · AWS Lambda</div>
+  <div class="stack"><b>Stack</b>Python · Flask · FastAPI · Docker · PostgreSQL · Grafana · Power BI · RabbitMQ · AWS S3 · AWS Lambda</div>
 </div>
 
 <div class="job">
-  <div class="job-head"><h3>Software Project Engineer <span>· ABB s.r.o.</span></h3><span class="when">Oct 2018 – Jan 2021</span></div>
+  <div class="job-head"><h3>Software Project Engineer · <span>ABB s.r.o.</span></h3><span class="when">Oct 2018 – Jan 2021</span></div>
   <ul>
     <li>Developed a water and energy consumption evaluation system; designed and implemented predictive-analytics features.</li>
   </ul>
-  <div class="stack"><b>Stack:</b> Python · Docker · PostgreSQL · Azure Functions · Azure Blob Storage · Grafana · Power BI</div>
+  <div class="stack"><b>Stack</b>Python · Docker · PostgreSQL · Azure Functions · Azure Blob Storage · Grafana · Power BI</div>
 </div>
 
 <div class="job">
-  <div class="job-head"><h3>IT Specialist · Power Engineer · Technical Deputy <span>· DISTEP a.s.</span></h3><span class="when">May 2010 – Oct 2018</span></div>
+  <div class="job-head"><h3>IT Specialist · Power Engineer · Technical Deputy · <span>DISTEP a.s.</span></h3><span class="when">May 2010 – Oct 2018</span></div>
   <ul>
     <li>As technical deputy, led an operations team of more than fifteen people in water and heat distribution.</li>
     <li>Improved resource efficiency through optimised calculations and monitoring; streamlined data collection with PDA barcode readers (MS SQL, VBA).</li>
   </ul>
 </div>
 
-<div class="job">
-<h2>Tojin Games · own studio, in my own time</h2>
+</div>
+
+<section class="tojin">
+<h2><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="10.5" ry="4.2" fill="none" stroke="#c9951b" stroke-width="1.6" transform="rotate(-20 12 12)"/><circle cx="12" cy="12" r="4.6" fill="#f1c55c"/><circle cx="21" cy="8.6" r="1.7" fill="#276e2b"/></svg>Tojin Games · my own studio, in my own time</h2>
 <div class="note">Independent science, space and simulation games · YouTube <a href="https://www.youtube.com/@tojin111">youtube.com/@tojin111</a> · live builds on the portfolio site</div>
 <ul>
-  <li>Built eight science, space and strategy games solo, plus an early online prototype of Jednota; five are live in the browser on Google Cloud Run. Hand-written simulation engines for Newtonian gravity, Kepler orbital mechanics with WebGL2 rendering, plasma confinement (Biot–Savart) and the Schrödinger equation (split-step Fourier). In Gravity, tests keep the browser JavaScript engine bit-identical to the Python reference and the Kotlin Android engine within 1e-9.</li>
+  <li><b>Games:</b> eight science, space and strategy games built solo, plus an early online prototype of Jednota; five are live in the browser on Google Cloud Run. Hand-written engines for Newtonian gravity, Kepler orbits with WebGL2 rendering, plasma confinement (Biot–Savart) and the Schrödinger equation (split-step Fourier); in Gravity, tests keep the JavaScript engine bit-identical to the Python reference and the Kotlin one within 1e-9.</li>
   <li><b>Jednota</b>, a 4X strategy game run by LLM agents (~73,000 lines of Python, about 1,300 tests): strategist, envoy and fleet-commander agents on local LLMs through Ollama, with JSON-schema output and no agent framework; deterministic rules validate every model decision (accepted 93/93 strategic, 80/88 diplomatic, 79/86 tactical in a measured five-empire campaign); memory across games through pgvector RAG.</li>
   <li><b>Platform:</b> an OAuth 2.0 to RS256 JWT entitlement service (FastAPI, Cloud Run, Secret Manager, Terraform, 54 tests) gives five games one shared login and access tiers; every service scales to zero under a one-instance cost cap.</li>
   <li><b>Video pipeline:</b> code-driven 4K capture of real game sessions (Playwright, Chrome DevTools Protocol, ffmpeg/NVENC), captions from on-screen events, local TTS, loudness-checked masters and automated validation, plus local ComfyUI models (FLUX, Wan 2.2): more than forty videos published in September 2026.</li>
-  <li>Developed with Claude Code: about 70% of the commits are co-written with the agent. The results are checked by test suites, level verifiers and bots that play the games through.</li>
+  <li><b>How:</b> developed with Claude Code, which co-wrote about 70% of the commits; the results are checked by test suites, level verifiers and bots that play the games through.</li>
 </ul>
-</div>
+</section>
 
 <div class="keep">
-<h2>Education, certificates, languages</h2>
-<div class="cols3">
+<h2>Education &amp; certificates</h2>
+<div class="cols4">
+  <div class="edu"><b>Ing. (MSc), Electrical Engineering and Computer Science · 2012</b><span>VŠB – Technical University of Ostrava. Thesis: VBA Utilization for Power Engineering Data Processing and Presentation</span></div>
+  <div class="edu"><b>Bc., Nuclear Engineering · 2009</b><span>Czech Technical University in Prague, Faculty of Nuclear Sciences and Physical Engineering. Thesis: Physical Analysis of Fast Reactor Cores in Up-to-Date Tendencies</span></div>
+  <div class="edu"><b>Research project · 2006</b><span>Institute of Plasma Physics, Czech Academy of Sciences: electrostatic turbulence in the edge plasma of the CASTOR tokamak</span></div>
   <div>
-    <div class="edu"><b>Ing. (MSc), Electrical Engineering and Computer Science · 2012</b><span>VŠB – Technical University of Ostrava. Thesis: VBA Utilization for Power Engineering Data Processing and Presentation</span></div>
-    <div class="edu"><b>Bc., Nuclear Engineering · 2009</b><span>Czech Technical University in Prague, Faculty of Nuclear Sciences and Physical Engineering. Thesis: Physical Analysis of Fast Reactor Cores in Up-to-Date Tendencies</span></div>
-    <div class="edu"><b>Research project · 2006</b><span>Institute of Plasma Physics, Czech Academy of Sciences: electrostatic turbulence in the edge plasma of the CASTOR tokamak</span></div>
-  </div>
-  <div>
-    <div class="edu"><b>Microsoft AZ-305</b><span>Designing Microsoft Azure Infrastructure Solutions · training</span></div>
-    <div class="edu"><b>Microsoft AZ-400</b><span>Designing and Implementing Microsoft DevOps Solutions · training</span></div>
+    <div class="edu"><b>Microsoft AZ-305 · AZ-400</b><span>Azure infrastructure design and DevOps solutions · training</span></div>
     <div class="edu"><b>Cambridge English: First (FCE)</b><span>Grade B · CEFR B2 · 2019</span></div>
-  </div>
-  <div>
-    <div class="edu"><b>Czech</b><span>native</span></div>
-    <div class="edu"><b>English</b><span>B2–C1 (Cambridge FCE)</span></div>
   </div>
 </div>
 </div>

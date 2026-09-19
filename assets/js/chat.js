@@ -38,19 +38,19 @@ HOBBIES AND INTERESTS
 - Music: he composes the music for his own games, and likes listening to music and going to concerts.
 
 SUMMARY
-- Senior GenAI Engineer who builds LLM applications end to end: an LLM working alongside deterministic rules, evaluation on golden datasets, MCP servers for AI coding assistants, delivery to Azure Container Apps or Google Cloud Run.
+- Senior GenAI Engineer who builds LLM applications end to end: RAG on Azure AI Search (since 2025), an LLM working alongside deterministic rules, evaluation on golden datasets, MCP servers for AI coding assistants, delivery to Azure Container Apps or Google Cloud Run.
 - Works with AI coding agents (Claude Code), at ABB and in his own games.
 - Earlier background in data and backend engineering (freelance, Siemens, ABB) and in energy (district heating).
 
 CORE SKILLS
-- GenAI and LLM applications (current work): Azure OpenAI / Azure AI Foundry, structured outputs, LLM validation combined with deterministic rules, golden datasets and evaluation, Model Context Protocol (MCP) servers, LLM agents on local models through Ollama, pgvector memory, AI coding agents (Claude Code, GitHub Copilot).
+- GenAI and LLM applications (current work): Azure OpenAI / Azure AI Foundry, RAG on Azure AI Search with vector and hybrid retrieval, LangChain and LangGraph, ChromaDB, Azure Document Intelligence (these four mostly in 2025 at ABB), structured outputs, LLM validation combined with deterministic rules, golden datasets and evaluation, Model Context Protocol (MCP) servers, LLM agents on local models through Ollama, pgvector memory, AI coding agents (Claude Code, GitHub Copilot).
 - Cloud and delivery (current work): Azure Container Apps, Container Registry, Key Vault with managed identity, Log Analytics, Blob and Table Storage, Azure Pipelines for dev, test, stage and prod; Google Cloud Run, Secret Manager, Terraform on GCP; Docker; OAuth 2.0 / JWT.
 - Programming and testing (current work): Python (FastAPI, Pandas, NumPy, SciPy, NiceGUI), Pytest, Playwright, load and stress tests, SQL and PostgreSQL, JavaScript (Canvas, WebGL2), Kotlin with Jetpack Compose for Android.
-- Worked with earlier, in previous jobs: Dagster, Airflow, DuckDB, BigQuery, RabbitMQ, Kubernetes, GitLab CI, GitHub Actions, Flask, Streamlit, AWS S3 and Lambda, Azure Functions, Azure AI Search, Document Intelligence, LangChain, LangGraph, ChromaDB, Grafana, Power BI, ARIMA and SARIMA forecasting.
+- Worked with earlier, in previous jobs: Dagster, Airflow, DuckDB, BigQuery, RabbitMQ, Kubernetes, GitLab CI, GitHub Actions, Flask, Streamlit, AWS S3 and Lambda, Azure Functions, Grafana, Power BI, ARIMA and SARIMA forecasting.
 
 WORK EXPERIENCE (most recent first)
 1. ABB s.r.o. - Senior GenAI Engineer, September 2025 to present.
-   Works on an AI-assisted validation app for engineering spreadsheets, where an LLM works alongside deterministic rules. Built its evaluation (golden datasets, acceptance evaluation, performance and stress tests). In the FastAPI backend: a YAML rule engine next to the LLM validators, switchable model profiles (Azure OpenAI or a local model through Ollama) with structured outputs, quotas. Built the delivery: Azure Pipelines for dev, test, stage and prod, Docker images in Container Registry, Azure Container Apps, Key Vault through managed identity, Log Analytics. Built a proof-of-concept MCP server (Python, FastMCP) that gives AI coding assistants (Claude Code, GitHub Copilot) access to Azure DevOps work items. Wrote the architecture documentation for a RAG assistant (Azure AI Search, LangGraph, Azure OpenAI).
+   Has built RAG since 2025: retrieval over Azure AI Search with vector embeddings and hybrid retrieval, LangChain and LangGraph workflows, ChromaDB, and Azure Document Intelligence to turn documents into indexable content. Now works on an AI-assisted validation app for engineering spreadsheets, where an LLM works alongside deterministic rules. Built its evaluation (golden datasets, acceptance evaluation, performance and stress tests). In the FastAPI backend: a YAML rule engine next to the LLM validators, switchable model profiles (Azure OpenAI or a local model through Ollama) with structured outputs, quotas. Built the delivery: Azure Pipelines for dev, test, stage and prod, Docker images in Container Registry, Azure Container Apps, Key Vault through managed identity, Log Analytics. Built a proof-of-concept MCP server (Python, FastMCP) that gives AI coding assistants (Claude Code, GitHub Copilot) access to Azure DevOps work items. Wrote the architecture documentation for a RAG assistant (Azure AI Search, LangGraph, Azure OpenAI).
 2. Freelance Software / Data Engineer, September 2022 to September 2025.
    Projects for DTSE, Landis+Gyr, Vendavo and other clients in energy, telecom and manufacturing. Designed end-to-end data workflows in Python with Dagster and Airflow, storage in PostgreSQL, DuckDB and BigQuery. Built backend components for high-volume ingestion and message-based processing with RabbitMQ. Migrated services from Kubernetes to GCP (Cloud Run, GCS, BigQuery). Maintained CI/CD (GitLab CI, GitHub Actions) with unit, integration and e2e tests in Pytest. Delivered high-performance pipelines for recommender systems. Provided L2 engineering support for production systems.
 3. Siemens s.r.o. - Senior Software Developer, January 2021 to August 2022.
@@ -82,7 +82,7 @@ PERSONAL PROJECTS: TOJIN GAMES (his own studio, built in his own time; the sourc
 - This website: plain HTML, CSS and JavaScript on GitHub Pages. The chat you are reading runs a small Qwen2.5 model in the browser via WebLLM and WebGPU; nothing is sent to a server.
 
 LLM PRINCIPLES MICHAL FOLLOWS
-- Measure with golden datasets and an acceptance evaluation before tuning prompts; compare local and cloud models the same way.
+- Measure with golden datasets and an acceptance evaluation before tuning prompts, for retrieval (hybrid vector + keyword search in Azure AI Search) as much as for the model; compare local and cloud models the same way.
 - Deterministic rules wherever they can do the job and the model only where judgement is needed; structured outputs keep answers machine-checkable.
 - Give AI assistants tools through MCP instead of pasted copies of data.
 - Ship it, not a prototype: containers, pipelines for every environment, secrets in Key Vault, telemetry.
