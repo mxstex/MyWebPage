@@ -17,17 +17,17 @@
      does not need chunking or a vector index - it fits in the prompt. */
   const FACTS = `
 IDENTITY
-- Name: Ing. Michal Štěpán (Michal Stepan). Title: AI & Data Platform Architect. Based in Sviadnov near Ostrava, Czech Republic.
+- Name: Ing. Michal Štěpán (Michal Stepan). Title: Senior GenAI Engineer. Based in Sviadnov near Ostrava, Czech Republic.
 - Contact: e-mail michalstepan82@seznam.cz. YouTube channel Tojin (youtube.com/@tojin111) with videos of his games; Patreon page Tojin Games (patreon.com/cw/TojinGames), where supporters unlock the full browser games. A PDF CV can be downloaded from this website. The source code of his projects is private.
 - Languages: Czech (native), English (B2-C1, Cambridge First Certificate, grade B, 2019). Interviews in Czech or English are fine.
 
 PRACTICAL QUESTIONS FROM RECRUITERS
 - Current situation: employed at ABB as Senior GenAI Engineer.
-- What he is looking for: moving forward from a senior developer role into architecture or technical leadership (AI or data platform architect, tech lead), where he shapes the design of production AI and data systems.
+- What he is looking for: to keep doing what he does now, building LLM applications and agents end to end (LLM plus deterministic rules, evaluation on golden datasets, MCP tools, delivery on Azure or GCP), with a larger share of the design and technical lead.
 - Salary expectations: no figures are published. They depend on the specific position, its scope and responsibilities, and the form of cooperation, and are discussed in person during the hiring process.
 - Work mode: full remote, or hybrid in and around Ostrava. Occasional travel (workshops, client visits, abroad) is fine. He is not relocating.
-- Leadership: led a team of more than 15 people as technical deputy at DISTEP; mentored junior developers at Siemens; technical lead and architect of the RAG pipeline at ABB; worked directly with clients as a freelancer (requirements, estimates, communication).
-- Why him: end-to-end architecture from data to a deployed AI service including the infrastructure; a physics and engineering foundation (nuclear engineering, power engineering, numerical simulation); about 20 years of experience across physics research, energy, software, data and AI.
+- Leadership: led a team of more than 15 people as technical deputy at DISTEP; mentored junior developers at Siemens; built the evaluation and the deployment pipelines of an LLM application at ABB; worked directly with clients as a freelancer (requirements, estimates, communication).
+- Why him: builds an LLM application end to end, from the rules and the evaluation to a deployed service with its pipelines; a physics and engineering foundation (nuclear engineering, power engineering, numerical simulation); about 16 years of work in energy, software, data and AI.
 - Benefits and other conditions: discussed during the hiring process. To arrange an interview, e-mail michalstepan82@seznam.cz.
 
 HOBBIES AND INTERESTS
@@ -38,19 +38,19 @@ HOBBIES AND INTERESTS
 - Music: he composes the music for his own games, and likes listening to music and going to concerts.
 
 SUMMARY
-- AI and Data Platform Engineer with a strong focus on system architecture, GenAI platforms and scalable data systems.
-- Experienced in designing end-to-end AI and data solutions across cloud environments: RAG systems, data pipelines, enterprise analytics platforms.
-- Bridges data engineering, AI capabilities and business applications to build reliable, production-grade AI systems.
+- Senior GenAI Engineer who builds LLM applications end to end: an LLM working alongside deterministic rules, evaluation on golden datasets, MCP servers for AI coding assistants, delivery to Azure Container Apps or Google Cloud Run.
+- Works with AI coding agents (Claude Code), at ABB and in his own games.
+- Earlier background in data and backend engineering (freelance, Siemens, ABB) and in energy (district heating).
 
 CORE SKILLS
-- Architecture: Retrieval-Augmented Generation (RAG), multi-step LLM workflows, tool integration / function calling, Model Context Protocol (MCP) servers, agent-based systems, orchestration with LangChain and LangGraph, data platform architecture, distributed data pipelines.
-- Data & AI platforms: vector databases (Azure AI Search, ChromaDB, pgvector), document intelligence pipelines, model evaluation workflows, golden datasets, data quality and observability.
-- Cloud: Azure architecture (Container Apps, Functions, Blob and Table Storage, Key Vault, Container Registry, Log Analytics, Azure OpenAI, Azure AI Search), GCP (Cloud Run, GCS, BigQuery), containerized AI services, CI/CD for data and AI systems (Azure Pipelines, GitLab CI, GitHub Actions), Docker, Terraform.
-- Programming: Python (FastAPI, Pandas, Pytest, Streamlit, NiceGUI), SQL, Kotlin with Jetpack Compose for Android. Also Grafana and Power BI.
+- GenAI and LLM applications (current work): Azure OpenAI / Azure AI Foundry, structured outputs, LLM validation combined with deterministic rules, golden datasets and evaluation, Model Context Protocol (MCP) servers, LLM agents on local models through Ollama, pgvector memory, AI coding agents (Claude Code, GitHub Copilot).
+- Cloud and delivery (current work): Azure Container Apps, Container Registry, Key Vault with managed identity, Log Analytics, Blob and Table Storage, Azure Pipelines for dev, test, stage and prod; Google Cloud Run, Secret Manager, Terraform on GCP; Docker; OAuth 2.0 / JWT.
+- Programming and testing (current work): Python (FastAPI, Pandas, NumPy, SciPy, NiceGUI), Pytest, Playwright, load and stress tests, SQL and PostgreSQL, JavaScript (Canvas, WebGL2), Kotlin with Jetpack Compose for Android.
+- Worked with earlier, in previous jobs: Dagster, Airflow, DuckDB, BigQuery, RabbitMQ, Kubernetes, GitLab CI, GitHub Actions, Flask, Streamlit, AWS S3 and Lambda, Azure Functions, Azure AI Search, Document Intelligence, LangChain, LangGraph, ChromaDB, Grafana, Power BI, ARIMA and SARIMA forecasting.
 
 WORK EXPERIENCE (most recent first)
 1. ABB s.r.o. - Senior GenAI Engineer, September 2025 to present.
-   Designed the architecture of a full RAG pipeline (Azure AI Search, vector embeddings, grounding). Integrates GenAI into business processes, creates golden datasets and model evaluation workflows. Develops an internal GenAI application platform with FastAPI, Streamlit, Docker and Azure Container Apps. Deploys and manages containerized apps in Azure Container Apps; administers Key Vault, Container Registry and Log Analytics. Implements Document Intelligence and multimodal processing pipelines.
+   Works on an AI-assisted validation app for engineering spreadsheets, where an LLM works alongside deterministic rules. Built its evaluation (golden datasets, acceptance evaluation, performance and stress tests). In the FastAPI backend: a YAML rule engine next to the LLM validators, switchable model profiles (Azure OpenAI or a local model through Ollama) with structured outputs, quotas. Built the delivery: Azure Pipelines for dev, test, stage and prod, Docker images in Container Registry, Azure Container Apps, Key Vault through managed identity, Log Analytics. Built a proof-of-concept MCP server (Python, FastMCP) that gives AI coding assistants (Claude Code, GitHub Copilot) access to Azure DevOps work items. Wrote the architecture documentation for a RAG assistant (Azure AI Search, LangGraph, Azure OpenAI).
 2. Freelance Software / Data Engineer, September 2022 to September 2025.
    Projects for DTSE, Landis+Gyr, Vendavo and other clients in energy, telecom and manufacturing. Designed end-to-end data workflows in Python with Dagster and Airflow, storage in PostgreSQL, DuckDB and BigQuery. Built backend components for high-volume ingestion and message-based processing with RabbitMQ. Migrated services from Kubernetes to GCP (Cloud Run, GCS, BigQuery). Maintained CI/CD (GitLab CI, GitHub Actions) with unit, integration and e2e tests in Pytest. Delivered high-performance pipelines for recommender systems. Provided L2 engineering support for production systems.
 3. Siemens s.r.o. - Senior Software Developer, January 2021 to August 2022.
@@ -67,7 +67,7 @@ EDUCATION
 - Training: Microsoft AZ-305 (Designing Azure Infrastructure Solutions) and AZ-400 (Designing and Implementing DevOps Solutions).
 
 PERSONAL PROJECTS: TOJIN GAMES (his own studio, built in his own time; the source code is private; live builds and YouTube videos are public)
-- Nine science, space and strategy games. Five are playable in the browser on Google Cloud Run (Gravity 3D, Orbit, Starforge, MyZoo, My Garden): the opening of each is free and the rest unlocks with the Explorer membership on Patreon. The games are ad-free and bilingual (English and Czech).
+- Eight science, space and strategy games, plus an early online prototype of Jednota. Five are playable in the browser on Google Cloud Run (Gravity 3D, Orbit, Starforge, MyZoo, My Garden): the opening of each is free and the rest unlocks with the Explorer membership on Patreon. The games are ad-free and bilingual (English and Czech).
 - Gravity: an educational Newtonian-gravity sandbox. The player never steers a body; they set the initial velocity of one small asteroid, choose the moment to release it and watch gravity do the rest. Ten story chapters go from an asteroid to two colliding black holes. The physics is hand-written (Velocity Verlet, symmetric forces, conserved angular momentum), no physics engine. Four builds: Gravity (web, Python + NiceGUI + HTML5 canvas, 2D, the reference implementation), Gravity 3D (web, hand-written perspective projection, no WebGL, 21 levels including two Voyager missions and the real Solar System; the simulation runs in the browser in a JavaScript copy of the Python engine kept bit-identical by tests, and the server replays every win), and Gravity and Gravity 3D for Android (Kotlin + Jetpack Compose, engine tested against the Python one; the 2D app is in closed testing on Google Play).
 - Jednota: a 4X galactic strategy game and his largest project (about 73,000 lines of Python, 1,300 tests, 300 logged design decisions). An invasion is coming from beyond the galaxy; the races unify the galaxy by diplomacy or conquest, then must destroy the invasion fleet. Three layers of AI agents on a local LLM through Ollama: a strategist per empire, an envoy per AI government and an admiral per fleet. Deterministic rules validate every model decision; in a measured five-empire campaign they accepted 93 of 93 strategic, 80 of 88 diplomatic and 79 of 86 tactical decisions. Agents remember earlier games through a pgvector store of chronicles, and recorded decisions let replays run without the model. In development, not publicly playable. A persistent multiplayer browser version (FastAPI, PostgreSQL, Vue 3) is an early prototype.
 - Orbit: orbital mechanics in the real Solar System at real scale (Earth and Moon, Jupiter and its moons, Saturn and its rings). Rendezvous, docking and transfers with twelve spacecraft, including NASA's public-domain Apollo, Soyuz and Gemini models. Kepler's equation, patched conics, finite burns and six WebGL2 shader programs are hand-written. All 23 missions are verified by flying them, including with small timing and burn errors. Playable online; the first act is free.
@@ -77,15 +77,15 @@ PERSONAL PROJECTS: TOJIN GAMES (his own studio, built in his own time; the sourc
 - MyZoo and My Garden: simulation games about animal care and building a garden ecosystem, with offline simulation, bots that play them through, and art generated locally with ComfyUI, FLUX and Wan 2.2. Both playable online.
 - The platform behind the games: his own FastAPI service turns a Patreon OAuth 2.0 login into a short-lived RS256 JWT, so five games share one login and one free/supporter model without holding any Patreon credential. Everything runs on Google Cloud Run with Terraform, scales to zero and costs almost nothing when idle.
 - Video pipeline: code-driven 4K videos of the real games (Playwright and the Chrome DevTools Protocol for capture, captions from on-screen events, Kokoro text-to-speech narration, loudness-checked audio, automated validation), plus a local storyboard-to-video tool on ComfyUI (Wan 2.2) and Ollama. More than forty videos were published in September 2026.
-- How he builds them: Python and NiceGUI, pytest and Playwright tests, level verifiers and bots that play the games through, Docker and Terraform, AI coding agents (Claude Code) under automated test gates, local generative models for art (ComfyUI), his own music, Kokoro for narration.
+- How he builds them: Python and NiceGUI, pytest and Playwright tests, level verifiers and bots that play the games through, Docker and Terraform, AI coding agents (Claude Code, about 70% of the commits are co-written with it), local generative models for art (ComfyUI), his own music, Kokoro for narration.
 - Other: he has built a Model Context Protocol (MCP) server that connects Claude to a PostgreSQL notes database, and a peer-to-peer file-sync tool for home networks in pure Python.
 - This website: plain HTML, CSS and JavaScript on GitHub Pages. The chat you are reading runs a small Qwen2.5 model in the browser via WebLLM and WebGPU; nothing is sent to a server.
 
-RAG PRINCIPLES MICHAL FOLLOWS
-- Measure retrieval with golden datasets before tuning prompts; use hybrid (vector + keyword) search with grounding and citations.
-- Use deterministic code where it can do the job and the model only where judgement is needed; agents call tools via function calling.
-- Turn documents into structured data first (Azure Document Intelligence, multimodal pipelines).
-- Ship a platform, not a prototype: containers, secrets in Key Vault, telemetry, CI/CD.
+LLM PRINCIPLES MICHAL FOLLOWS
+- Measure with golden datasets and an acceptance evaluation before tuning prompts; compare local and cloud models the same way.
+- Deterministic rules wherever they can do the job and the model only where judgement is needed; structured outputs keep answers machine-checkable.
+- Give AI assistants tools through MCP instead of pasted copies of data.
+- Ship it, not a prototype: containers, pipelines for every environment, secrets in Key Vault, telemetry.
 `.trim();
 
   function systemPrompt(lang) {

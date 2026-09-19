@@ -44,7 +44,7 @@
 
 <header>
   <h1>Ing. Michal Štěpán</h1>
-  <div class="role">AI &amp; Data Platform Architect · Senior GenAI Engineer · Azure &amp; GCP</div>
+  <div class="role">Senior GenAI Engineer · LLM applications, evaluation, MCP · Azure &amp; GCP</div>
   <div class="contact">
     <span><b>michalstepan82@seznam.cz</b></span>
     <span>+420 608 464 905</span>
@@ -54,14 +54,14 @@
 </header>
 
 <h2>Profile</h2>
-<p>AI and data platform engineer with about 20 years across physics research, energy, software, data and AI. At ABB I design and run production GenAI: a RAG pipeline on Azure AI Search, the internal platform GenAI applications run on, and Document Intelligence pipelines. Before that, three years as a freelance data and backend engineer for DTSE, Landis+Gyr and Vendavo, and eight years at a district-heating utility, the last ones leading a team of more than fifteen people. Physics background: nuclear engineering at ČVUT FJFI and tokamak research. In my own time I run Tojin Games, where I build and ship simulation games, LLM agents and cloud services end to end. Moving towards AI and data platform architecture and technical leadership.</p>
+<p>GenAI engineer who builds LLM applications end to end. At ABB I work on an AI-assisted validation app, where an LLM works alongside deterministic rules and every change is measured against golden datasets, and I deliver it to Azure Container Apps. I also build MCP servers that give AI coding assistants access to team tools. In my own time I build the same way on GCP as Tojin Games: LLM agents on local models, physics simulation games, a shared login service and an automated video pipeline, developed with Claude Code. Before ABB I spent three years as a freelance data and backend engineer (DTSE, Landis+Gyr, Vendavo) and built energy analytics at Siemens and ABB. Before that, eight years at a district-heating utility, the last ones as technical deputy leading more than fifteen people. I studied nuclear engineering at ČVUT FJFI and did tokamak research there. I want to keep doing this work (designing and shipping LLM applications and agents), with a larger share of the design and technical lead.</p>
 
 <h2>Core skills</h2>
 <div class="skills">
-  <div><b>Architecture &amp; GenAI</b><span>RAG (hybrid search, grounding, citations) · multi-step LLM workflows · function calling / tools · Model Context Protocol (MCP) · agent systems (LangChain, LangGraph) · model evaluation with golden datasets · local LLMs (Ollama)</span></div>
-  <div><b>Data &amp; AI platforms</b><span>Azure AI Search · Azure OpenAI · Azure Document Intelligence · pgvector · ChromaDB · Dagster · Airflow · PostgreSQL · DuckDB · BigQuery · RabbitMQ · data quality &amp; observability</span></div>
-  <div><b>Cloud &amp; infrastructure</b><span>Azure (Container Apps, Functions, Storage, Key Vault, Container Registry, Log Analytics) · GCP (Cloud Run, GCS, BigQuery, Secret Manager) · Docker · Terraform · OAuth 2.0 / JWT · Azure Pipelines · GitLab CI · GitHub Actions</span></div>
-  <div><b>Programming</b><span>Python (FastAPI, Pandas, NumPy/SciPy, Pytest, Playwright, Streamlit, NiceGUI) · SQL · JavaScript (Canvas, WebGL2) · Kotlin + Jetpack Compose · Grafana · Power BI</span></div>
+  <div><b>GenAI &amp; LLM applications</b><span>Azure OpenAI / Azure AI Foundry · structured outputs · LLM + deterministic-rule validation · golden datasets &amp; evaluation · Model Context Protocol (MCP) servers · LLM agents on local models (Ollama) · pgvector memory · AI coding agents (Claude Code, GitHub Copilot)</span></div>
+  <div><b>Cloud &amp; delivery</b><span>Azure Container Apps · Container Registry · Key Vault with managed identity · Log Analytics · Blob &amp; Table Storage · Azure Pipelines (dev → prod) · GCP Cloud Run · Secret Manager · Terraform (GCP) · Docker · OAuth 2.0 / JWT</span></div>
+  <div><b>Programming &amp; testing</b><span>Python (FastAPI, Pandas, NumPy/SciPy, NiceGUI) · Pytest · Playwright · load and stress tests · SQL / PostgreSQL · JavaScript (Canvas, WebGL2) · Kotlin + Jetpack Compose</span></div>
+  <div><b>Worked with earlier</b><span>Dagster · Airflow · DuckDB · BigQuery · RabbitMQ · Kubernetes · GitLab CI · GitHub Actions · Flask · Streamlit · AWS (S3, Lambda) · Azure Functions · Azure AI Search · Document Intelligence · LangChain · LangGraph · ChromaDB · Grafana · Power BI · ARIMA / SARIMA</span></div>
 </div>
 
 <h2>Professional experience</h2>
@@ -69,13 +69,13 @@
 <div class="job">
   <div class="job-head"><h3>Senior GenAI Engineer <span>· ABB s.r.o.</span></h3><span class="when">Sep 2025 – present</span></div>
   <ul>
-    <li>Designed the architecture of a full RAG pipeline: Azure AI Search, vector embeddings, hybrid retrieval and grounding.</li>
-    <li>Integrate GenAI into business processes; build golden datasets and model-evaluation workflows.</li>
-    <li>Develop the internal GenAI application platform: FastAPI, Streamlit, Docker, Azure Container Apps.</li>
-    <li>Run the platform: Key Vault, Container Registry, Log Analytics, containerized deployments.</li>
-    <li>Implement Document Intelligence and multimodal processing pipelines.</li>
+    <li>AI-assisted validation of engineering spreadsheets: built the evaluation (golden datasets, acceptance evaluation, performance and stress tests) that every change is measured against.</li>
+    <li>Backend in FastAPI: a YAML rule engine that runs deterministic checks next to the LLM validators, switchable model profiles (Azure OpenAI or a local model through Ollama) with structured outputs, quotas and session cleanup; benchmarked local against cloud models.</li>
+    <li>Delivery: Azure Pipelines for dev, test, stage and prod; Docker images in Container Registry, Azure Container Apps, Key Vault secrets through managed identity, Log Analytics.</li>
+    <li>Built a proof-of-concept MCP server (Python, FastMCP) that gives AI coding assistants (Claude Code, GitHub Copilot) access to Azure DevOps work items, with a mock API and tests.</li>
+    <li>Wrote the architecture documentation for a RAG assistant (Azure AI Search hybrid retrieval, LangGraph, Azure OpenAI).</li>
   </ul>
-  <div class="stack"><b>Stack:</b> Python · FastAPI · Streamlit · Azure OpenAI · Azure AI Search · Document Intelligence · Docker · Azure Container Apps</div>
+  <div class="stack"><b>Stack:</b> Python · FastAPI · Azure OpenAI / AI Foundry · Pandas · Pytest · Docker · Azure Container Apps · Key Vault · Azure Pipelines · MCP · Ollama</div>
 </div>
 
 <div class="job">
@@ -121,11 +121,11 @@
 <h2>Tojin Games · own studio, in my own time</h2>
 <div class="note">Independent science, space and simulation games · YouTube <a href="https://www.youtube.com/@tojin111">youtube.com/@tojin111</a> · live builds on the portfolio site</div>
 <ul>
-  <li>Built nine science, space and strategy games solo; five are live in the browser on Google Cloud Run. Hand-written simulation engines for Newtonian gravity, Kepler orbital mechanics with WebGL2 rendering, plasma confinement and the Schrödinger equation; golden-trace tests keep the Python, JavaScript and Kotlin engines in agreement.</li>
-  <li><b>Jednota</b>, a multi-agent LLM strategy game (~73,000 lines of Python, 1,300 tests): strategist, envoy and admiral agents on local LLMs through Ollama; deterministic rules validate every model decision (accepted 93/93 strategic, 80/88 diplomatic, 79/86 tactical in a measured campaign); memory across games through pgvector RAG.</li>
+  <li>Built eight science, space and strategy games solo, plus an early online prototype of Jednota; five are live in the browser on Google Cloud Run. Hand-written simulation engines for Newtonian gravity, Kepler orbital mechanics with WebGL2 rendering, plasma confinement (Biot–Savart) and the Schrödinger equation (split-step Fourier). In Gravity, tests keep the browser JavaScript engine bit-identical to the Python reference and the Kotlin Android engine within 1e-9.</li>
+  <li><b>Jednota</b>, a 4X strategy game run by LLM agents (~73,000 lines of Python, about 1,300 tests): strategist, envoy and fleet-commander agents on local LLMs through Ollama, with JSON-schema output and no agent framework; deterministic rules validate every model decision (accepted 93/93 strategic, 80/88 diplomatic, 79/86 tactical in a measured five-empire campaign); memory across games through pgvector RAG.</li>
   <li><b>Platform:</b> an OAuth 2.0 to RS256 JWT entitlement service (FastAPI, Cloud Run, Secret Manager, Terraform, 54 tests) gives five games one shared login and access tiers; every service scales to zero under a one-instance cost cap.</li>
   <li><b>Video pipeline:</b> code-driven 4K capture of real game sessions (Playwright, Chrome DevTools Protocol, ffmpeg/NVENC), captions from on-screen events, local TTS, loudness-checked masters and automated validation, plus local ComfyUI models (FLUX, Wan 2.2): more than forty videos published in September 2026.</li>
-  <li>Built with AI coding agents (Claude Code) under automated test gates: level verifiers, bots that play the games through, cross-language golden traces.</li>
+  <li>Developed with Claude Code: about 70% of the commits are co-written with the agent. The results are checked by test suites, level verifiers and bots that play the games through.</li>
 </ul>
 </div>
 
