@@ -14,6 +14,8 @@ light theme.
 ## Editing
 
 - `assets/js/content.js` — every link and every text, in both languages. Edit this first.
+  Every published change gets a new entry at the top of `DATA.changelog` (version, date, EN + CS
+  bullets); the header shows that version and opens the changelog.
 - `assets/js/chat.js` — the fact sheet the in-browser model answers from (`FACTS`), model ids.
 - `assets/css/style.css` — look and feel.
 - `cv/Michal_Stepan_CV.html` — the source of the downloadable CV. After editing it, re-export the PDF

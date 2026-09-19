@@ -43,7 +43,8 @@
 
   <header class="site-header">
     <nav class="container nav" aria-label="Main">
-      <a class="brand" href="#top"><span class="mark">MŠ</span><span>Michal Štěpán</span></a>
+      <a class="brand" href="#top"><span class="mark">MŠ</span><span class="brand-name">Michal Štěpán</span></a>
+      <button class="ver-btn" id="version-btn" type="button" aria-haspopup="dialog" data-i18n-attr="title:changelog.open"></button>
       <ul class="nav-links" id="nav-links">
         <li><a href="#about" data-i18n="nav.about">About</a></li>
         <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
@@ -121,7 +122,6 @@
     <section id="about">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">01</div>
           <h2 data-i18n="about.title">About</h2>
         </div>
         <div class="about-grid">
@@ -144,7 +144,6 @@
     <section id="skills">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">02</div>
           <h2 data-i18n="skills.title">Skills</h2>
           <p class="lead" data-i18n="skills.lead"></p>
         </div>
@@ -156,7 +155,6 @@
     <section id="experience">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">03</div>
           <h2 data-i18n="experience.title">Experience</h2>
         </div>
         <div class="timeline" id="timeline"></div>
@@ -190,7 +188,6 @@
     <section id="projects">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">05</div>
           <h2 data-i18n="projects.title">Other projects</h2>
           <p class="lead" data-i18n="projects.lead"></p>
         </div>
@@ -202,7 +199,6 @@
     <section id="rag">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">06</div>
           <h2 data-i18n="rag.title">RAG & LLM in practice</h2>
           <p class="lead" data-i18n="rag.lead"></p>
         </div>
@@ -214,7 +210,6 @@
     <section id="chat">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">07</div>
           <h2 data-i18n="chat.title">Chat with my CV</h2>
           <p class="lead" data-i18n="chat.intro"></p>
         </div>
@@ -255,7 +250,6 @@
     <section id="education">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">08</div>
           <h2 data-i18n="education.title">Education & certificates</h2>
         </div>
         <div class="edu-grid">
@@ -281,7 +275,6 @@
     <section id="contact">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">09</div>
           <h2 data-i18n="contact.title">Contact</h2>
           <p class="lead" data-i18n="contact.lead"></p>
         </div>
@@ -320,6 +313,16 @@
       <span>© <span id="year">2026</span> Michal Štěpán · <span data-i18n="footer.built">Built with plain HTML, CSS and JavaScript. Hosted on GitHub Pages.</span></span>
     </div>
   </footer>
+
+  <dialog class="changelog" id="changelog" aria-labelledby="changelog-title">
+    <div class="changelog-head">
+      <h2 id="changelog-title" data-i18n="changelog.title">Changelog</h2>
+      <button class="icon-btn" id="changelog-close" type="button" data-i18n-attr="aria-label:lightbox.close,title:lightbox.close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="changelog-list" id="changelog-list"></div>
+  </dialog>
 
   <dialog class="lightbox" id="lightbox">
     <figure>

@@ -132,6 +132,8 @@ window.T = {
 
     "footer.built": "Built with plain HTML, CSS and JavaScript. Hosted on GitHub Pages.",
     "lightbox.close": "Close",
+    "changelog.title": "Changelog",
+    "changelog.open": "What's new on this site",
   },
   cs: {
     "meta.title": "Michal Štěpán · AI & datový platformový architekt",
@@ -232,6 +234,8 @@ window.T = {
 
     "footer.built": "Postaveno v čistém HTML, CSS a JavaScriptu. Hostováno na GitHub Pages.",
     "lightbox.close": "Zavřít",
+    "changelog.title": "Co je nového",
+    "changelog.open": "Co je na webu nového",
   },
 };
 
@@ -614,6 +618,74 @@ window.DATA = {
   languages: [
     { name: { en: "Czech", cs: "Čeština" }, level: { en: "native", cs: "rodilý mluvčí" } },
     { name: { en: "English", cs: "Angličtina" }, level: { en: "B2–C1", cs: "B2–C1" } },
+  ],
+
+  // Newest first. The header shows the version of the first entry.
+  changelog: [
+    {
+      version: "1.3.0",
+      date: "2026-09-19",
+      items: {
+        en: [
+          "Version number in the header; click it for this changelog.",
+          "Section headings no longer carry numbers.",
+        ],
+        cs: [
+          "Číslo verze v hlavičce; po kliknutí se otevře tento přehled změn.",
+          "Nadpisy sekcí už nemají čísla.",
+        ],
+      },
+    },
+    {
+      version: "1.2.0",
+      date: "2026-09-19",
+      items: {
+        en: [
+          "Tojin Games, my studio: YouTube and Patreon links in the intro and in contacts.",
+          "Play links and videos for Starforge, MyZoo and My Garden; new Tojin platform card.",
+          "Gravity 3D moved to Google Cloud Run.",
+          "Two-page CV with a Tojin Games section.",
+        ],
+        cs: [
+          "Tojin Games, moje studio: odkazy na YouTube a Patreon v úvodu i v kontaktech.",
+          "Odkazy na hraní a videa u Starforge, MyZoo a My Garden; nová karta Tojin platform.",
+          "Gravity 3D se přestěhovala na Google Cloud Run.",
+          "Dvoustránkové CV se sekcí Tojin Games.",
+        ],
+      },
+    },
+    {
+      version: "1.1.0",
+      date: "2026-09-15",
+      items: {
+        en: [
+          "All physics games and simulations: HoldMyPlazma, Orbit, Quantum, Starforge, MyZoo, My Garden.",
+          "Android builds of Gravity marked as coming soon to Google Play.",
+          "The CV chat answers practical recruiter questions: work mode, leadership, hobbies.",
+        ],
+        cs: [
+          "Všechny fyzikální hry a simulace: HoldMyPlazma, Orbit, Quantum, Starforge, MyZoo, My Garden.",
+          "Androidí verze Gravity označené jako brzy na Google Play.",
+          "Chat s CV odpovídá na praktické otázky náborářů: způsob práce, vedení týmu, koníčky.",
+        ],
+      },
+    },
+    {
+      version: "1.0.0",
+      date: "2026-09-10",
+      items: {
+        en: [
+          "First version: profile, skills, experience, Gravity showcase, RAG & LLM notes.",
+          "English and Czech, dark and light theme.",
+          "Chat with my CV, running a small language model right in the browser.",
+        ],
+        cs: [
+          "První verze: profil, dovednosti, praxe, přehlídka Gravity, poznámky k RAG a LLM.",
+          "Angličtina i čeština, tmavý i světlý režim.",
+          "Chat s mým CV, který běží na malém jazykovém modelu přímo v prohlížeči.",
+        ],
+      },
+    },
   ],
 
   chatSuggestions: {

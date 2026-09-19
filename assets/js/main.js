@@ -156,8 +156,22 @@
     $("#langs").innerHTML = DATA.languages.map((l) => "<div><b>" + esc(tr(l.name)) + "</b><span>" + esc(tr(l.level)) + "</span></div>").join("");
   }
 
+  function fmtDate(iso) {
+    const p = iso.split("-").map(Number);
+    if (lang === "cs") return p[2] + ". " + p[1] + ". " + p[0];
+    return p[2] + " " + ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][p[1] - 1] + " " + p[0];
+  }
+
+  function renderChangelog() {
+    $("#version-btn").textContent = "v" + DATA.changelog[0].version;
+    $("#changelog-list").innerHTML = DATA.changelog.map((c) =>
+      '<section class="release"><div class="release-head"><b>v' + esc(c.version) + '</b><time datetime="' + esc(c.date) + '">' + esc(fmtDate(c.date)) + "</time></div>" +
+      "<ul>" + (c.items[lang] || c.items.en).map((i) => "<li>" + esc(i) + "</li>").join("") + "</ul></section>"
+    ).join("");
+  }
+
   function renderAll() {
-    renderLinks(); renderSkills(); renderExperience(); renderGravityApps(); renderGallery(); renderVideos(); renderProjects(); renderRag(); renderEducation();
+    renderLinks(); renderSkills(); renderExperience(); renderGravityApps(); renderGallery(); renderVideos(); renderProjects(); renderRag(); renderEducation(); renderChangelog();
   }
 
   /* ---------------- interactions ---------------- */
@@ -178,6 +192,13 @@
       if (typeof dlg.showModal === "function") dlg.showModal(); else window.open(g.src, "_blank");
     });
     dlg.addEventListener("click", () => dlg.close());
+  }
+
+  function wireChangelog() {
+    const dlg = $("#changelog");
+    $("#version-btn").addEventListener("click", () => { if (typeof dlg.showModal === "function") dlg.showModal(); });
+    $("#changelog-close").addEventListener("click", () => dlg.close());
+    dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); }); // click on the backdrop
   }
 
   function wireVideos() {
@@ -278,7 +299,7 @@
 
   /* ---------------- boot ---------------- */
   lang = detectLang();
-  wireNav(); wireLightbox(); wireVideos();
+  wireNav(); wireLightbox(); wireChangelog(); wireVideos();
   applyI18n();
   startOrbits();
 })();
