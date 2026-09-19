@@ -50,7 +50,7 @@
     sea:    { scene: "sea", c: { sun: "255,214,120", waves: ["rgba(120,196,196,0.40)", "rgba(62,158,166,0.50)", "rgba(24,122,132,0.65)"], gull: "rgba(40,70,80,0.75)" } },
     space:  { scene: "orbits", c: { star: "#f1c55c", body: "#8fb4ff", trail: "rgba(143,180,255,0.5)" } },
     nebula: { scene: "orbits", stars: true, c: { star: "#7fe3f0", body: "#d4a6ff", trail: "rgba(212,166,255,0.45)", twinkle: "236,230,255" } },
-    paper:  { scene: "orbits", c: { star: "#a8780a", body: "#2b5cc7", trail: "rgba(43,92,199,0.45)" } },
+    paper:  { scene: "orbits", c: { star: "#8a6208", body: "#2b5cc7", trail: "rgba(43,92,199,0.45)" } },
   };
   const currentBg = () => { const b = document.documentElement.getAttribute("data-bg"); return BGS[b] ? b : "meadow"; };
 
@@ -207,7 +207,7 @@
       if (!menu.hidden) (menu.querySelector('[aria-checked="true"]') || items[0]).focus();
     });
     menu.addEventListener("click", (e) => {
-      const b = e.target.closest("[data-bg]"); if (!b) return;
+      const b = e.target.closest("button[data-bg]"); if (!b || !menu.contains(b)) return; // <html> carries data-bg too
       setBg(b.getAttribute("data-bg"), true); show(false); btn.focus();
     });
     menu.addEventListener("keydown", (e) => {
@@ -217,6 +217,8 @@
       items[(i + (e.key === "ArrowDown" ? 1 : items.length - 1)) % items.length].focus();
     });
     document.addEventListener("click", (e) => { if (!menu.hidden && !e.target.closest(".bg-picker")) show(false); });
+    // Tabbing away closes the menu; a click on the menu's own padding or title (relatedTarget null) does not
+    $(".bg-picker").addEventListener("focusout", (e) => { if (!menu.hidden && e.relatedTarget && !e.currentTarget.contains(e.relatedTarget)) show(false); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !menu.hidden) { show(false); btn.focus(); } });
   }
 
@@ -263,10 +265,13 @@
       g.addColorStop(0, "rgba(" + rgb + "," + alpha + ")"); g.addColorStop(0.18, "rgba(" + rgb + "," + alpha + ")"); g.addColorStop(1, "rgba(" + rgb + ",0)");
       ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, r, 0, TAU); ctx.fill();
     }
+    // Where the sun, moon or star sits. In the one-column layout (<860px) text fills the hero,
+    // so it moves to the top-right corner and shrinks to keep the tagline readable.
+    const sky = () => W < 860 ? { x: W - 36, y: 26, k: 0.55 } : { x: W * 0.82, y: H * 0.2, k: 1 };
 
     /* --- orbits: a tiny Newtonian sketch (space, nebula, paper) --- */
     function seedOrbits() {
-      const cx = W * 0.82, cy = H * 0.2, M = 2600;
+      const cx = sky().x, cy = sky().y, M = 2600;
       S.bodies = [{ x: cx, y: cy, m: M, r: 7 }];
       const n = W < 700 ? 4 : 6;
       for (let i = 0; i < n; i++) {
@@ -391,7 +396,7 @@
     }
     function drawMeadow() {
       const c = cfg.c;
-      glow(W * 0.82, H * 0.2, 110, c.sun, 0.9);
+      const s0 = sky(); glow(s0.x, s0.y, 110 * s0.k, c.sun, 0.9);
       ctx.lineWidth = 0.8; ctx.strokeStyle = c.seedLine;
       for (const s of S.seeds) {
         ctx.beginPath(); ctx.moveTo(s.x, s.y + 2); ctx.lineTo(s.x - 1, s.y + 7); ctx.stroke();
@@ -431,7 +436,7 @@
     }
     function drawForest() {
       const c = cfg.c;
-      glow(W * 0.82, H * 0.2, 90, c.moon, 0.5);
+      const s0 = sky(); glow(s0.x, s0.y, 90 * s0.k, c.moon, 0.5);
       drawGrass();
       for (const f of S.flies) {
         const a = Math.pow(Math.max(0, Math.sin(t * f.sp + f.ph)), 2); if (a < 0.02) continue;
@@ -471,7 +476,7 @@
     }
     function drawSea() {
       const c = cfg.c;
-      glow(W * 0.82, H * 0.2, 110, c.sun, 0.75);
+      const s0 = sky(); glow(s0.x, s0.y, 110 * s0.k, c.sun, 0.75);
       ctx.strokeStyle = c.gull; ctx.lineWidth = 1.6;
       for (const g of S.gulls) {
         const y = g.y0 + Math.sin(t * 0.6 + g.ph) * 10, f = Math.sin(t * 4 + g.ph) * 3, s = g.s;
@@ -514,7 +519,7 @@
     }
     function frame(ts) {
       if (!running) return;
-      const dt = Math.min(0.05, (ts - last) / 1000 || 0.016); last = ts; t += dt;
+      const dt = last ? Math.min(0.05, (ts - last) / 1000) : 0.016; last = ts; t += dt;
       SCENES[cfg.scene][1](dt); render();
       raf = requestAnimationFrame(frame);
     }
@@ -523,8 +528,8 @@
     const toCanvas = (e) => { const r = canvas.getBoundingClientRect(); P.x = e.clientX - r.left; P.y = e.clientY - r.top; };
     hero.addEventListener("pointermove", (e) => { toCanvas(e); P.on = true; });
     hero.addEventListener("pointerleave", () => { P.on = false; });
-    hero.addEventListener("pointerdown", (e) => {
-      if (e.button !== 0 || e.target.closest("a, button, input, select")) return;
+    hero.addEventListener("click", (e) => { // not pointerdown: a scroll swipe on a phone must not plant anything
+      if (e.target.closest("a, button, input, select")) return;
       toCanvas(e); SCENES[cfg.scene][3](P.x, P.y); if (still) render();
     });
 
@@ -532,8 +537,11 @@
     if (window.ResizeObserver) new ResizeObserver(resize).observe(canvas); else window.addEventListener("resize", resize);
     document.addEventListener("bgchange", setup);
     if (still) return;
-    document.addEventListener("visibilitychange", () => { running = !document.hidden; if (running) { last = 0; raf = requestAnimationFrame(frame); } else cancelAnimationFrame(raf); });
-    raf = requestAnimationFrame(frame);
+    // Cancel before re-queuing: a page opened in a background tab already has a frame queued,
+    // and a second loop would run every scene at double speed.
+    document.addEventListener("visibilitychange", () => { running = !document.hidden; cancelAnimationFrame(raf); if (running) { last = 0; raf = requestAnimationFrame(frame); } });
+    running = !document.hidden;
+    if (running) raf = requestAnimationFrame(frame);
   }
 
   /* ---------------- boot ---------------- */

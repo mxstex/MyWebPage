@@ -645,6 +645,20 @@ window.DATA = {
   // Newest first. The header shows the version of the first entry.
   changelog: [
     {
+      version: "1.4.1",
+      date: "2026-09-19",
+      items: {
+        en: [
+          "Background fixes: animations no longer run at double speed after opening the page in a background tab, and scrolling on a phone no longer plants flowers or launches planets.",
+          "Easier to read: deeper green (Meadow) and gold (Paper), the sun, moon and star move to the corner on phones, and keyboard focus is visible in the background menu.",
+        ],
+        cs: [
+          "Opravy pozadí: animace po otevření v kartě na pozadí už neběží dvojnásobnou rychlostí a posouvání stránky na mobilu už nesází kytky ani nevypouští planety.",
+          "Lepší čitelnost: sytější zelená (Louka) a zlatá (Papír), slunce, měsíc a hvězda jsou na mobilu v rohu a v menu pozadí je vidět fokus z klávesnice.",
+        ],
+      },
+    },
+    {
       version: "1.4.0",
       date: "2026-09-19",
       items: {
