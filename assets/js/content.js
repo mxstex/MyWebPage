@@ -48,7 +48,18 @@ window.T = {
     "nav.menu": "Menu",
     "lang.switch": "Česky",
     "lang.switchTitle": "Přepnout do češtiny",
-    "theme.toggle": "Toggle light / dark theme",
+    "bg.choose": "Choose background",
+    "bg.title": "Background",
+    "bg.meadow": "Meadow",
+    "bg.forest": "Forest at dusk",
+    "bg.sea": "Sea",
+    "bg.space": "Space",
+    "bg.nebula": "Nebula",
+    "bg.paper": "Paper",
+    "scene.meadow": "Brush over the grass; click to plant a flower",
+    "scene.forest": "Fireflies follow your cursor; click for more",
+    "scene.sea": "Click the sky for a gull, the water for ripples",
+    "scene.orbits": "Click the sky to launch a planet",
     "skip": "Skip to content",
 
     "hero.kicker": "AI & Data Platform Architect · GenAI · Cloud data systems",
@@ -150,7 +161,18 @@ window.T = {
     "nav.menu": "Menu",
     "lang.switch": "English",
     "lang.switchTitle": "Switch to English",
-    "theme.toggle": "Přepnout světlý / tmavý režim",
+    "bg.choose": "Vybrat pozadí",
+    "bg.title": "Pozadí",
+    "bg.meadow": "Louka",
+    "bg.forest": "Les za soumraku",
+    "bg.sea": "Moře",
+    "bg.space": "Vesmír",
+    "bg.nebula": "Mlhovina",
+    "bg.paper": "Papír",
+    "scene.meadow": "Přejeď po trávě, kliknutím zasadíš kytku",
+    "scene.forest": "Světlušky letí za kurzorem, kliknutím přibudou",
+    "scene.sea": "Klikni do nebe pro racka, na vodu pro vlnky",
+    "scene.orbits": "Klikni do oblohy a vypusť planetu",
     "skip": "Přeskočit na obsah",
 
     "hero.kicker": "AI & datový platformový architekt · GenAI · cloudové datové systémy",
@@ -622,6 +644,24 @@ window.DATA = {
 
   // Newest first. The header shows the version of the first entry.
   changelog: [
+    {
+      version: "1.4.0",
+      date: "2026-09-19",
+      items: {
+        en: [
+          "Background picker in the header: Meadow (the new default), Forest at dusk, Sea, Space, Nebula and Paper.",
+          "Each background has its own animation at the top: grass with flowers and butterflies, fireflies, waves, orbits or a starfield.",
+          "The top of the page is a small playground: click to plant flowers, release gulls, light up fireflies or launch planets.",
+          "It replaces the light / dark switch; the previous dark and light looks are now Space and Paper.",
+        ],
+        cs: [
+          "Výběr pozadí v hlavičce: Louka (nové výchozí), Les za soumraku, Moře, Vesmír, Mlhovina a Papír.",
+          "Každé pozadí má nahoře vlastní animaci: trávu s kytkami a motýly, světlušky, vlny, oběžné dráhy nebo hvězdy.",
+          "Úvod stránky je malé hřiště: kliknutím sázíš kytky, vypouštíš racky, rozsvěcuješ světlušky nebo posíláš planety na oběžnou dráhu.",
+          "Nahrazuje přepínač světlý / tmavý; dosavadní tmavý a světlý vzhled jsou teď Vesmír a Papír.",
+        ],
+      },
+    },
     {
       version: "1.3.0",
       date: "2026-09-19",

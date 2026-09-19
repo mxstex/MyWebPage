@@ -1,6 +1,7 @@
 /* =====================================================================
    Michal Štěpán · portfolio
-   Plain CSS, no build step. Dark is the default, light via [data-theme].
+   Plain CSS, no build step. Six backgrounds via :root[data-bg]; the
+   base :root values are the "space" one, "meadow" is the default.
    ===================================================================== */
 
 :root {
@@ -22,7 +23,76 @@
   color-scheme: dark;
 }
 
-[data-theme="light"] {
+/* :root[data-bg], not [data-bg]: the picker's menu items carry data-bg too */
+:root[data-bg="meadow"] {
+  --bg: #f2f8ea;
+  --bg-2: #fbfdf7;
+  --card: #ffffff;
+  --card-2: #e8f3dc;
+  --text: #1d3324;
+  --muted: #4e6a55;
+  --accent: #2e7d32;
+  --accent-ink: #ffffff;
+  --accent-2: #1b64a0;
+  --line: rgba(29, 51, 36, 0.13);
+  --shadow: 0 10px 30px rgba(29, 51, 36, 0.10);
+  --hero-bg: linear-gradient(180deg, #dcefff 0%, #ebf6f1 58%, #e3f2d4 100%);
+  --scene-opacity: 1;
+  color-scheme: light;
+}
+
+:root[data-bg="forest"] {
+  --bg: #0e1712;
+  --bg-2: #111d16;
+  --card: #15241b;
+  --card-2: #1b2e22;
+  --text: #e4eee5;
+  --muted: #a3b9a8;
+  --accent: #a5d46f;
+  --accent-ink: #10200f;
+  --accent-2: #e8c872;
+  --line: rgba(255, 255, 255, 0.09);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.40);
+  --hero-bg: radial-gradient(900px 420px at 82% 8%, rgba(220, 232, 190, 0.07), transparent 70%), linear-gradient(180deg, #0b140f, #0f1a13);
+  --scene-opacity: 0.95;
+  color-scheme: dark;
+}
+
+:root[data-bg="sea"] {
+  --bg: #eef6f6;
+  --bg-2: #f8fcfc;
+  --card: #ffffff;
+  --card-2: #e1efef;
+  --text: #13303a;
+  --muted: #4a6670;
+  --accent: #0f7478;
+  --accent-ink: #ffffff;
+  --accent-2: #2458a6;
+  --line: rgba(19, 48, 58, 0.12);
+  --shadow: 0 10px 30px rgba(19, 48, 58, 0.10);
+  --hero-bg: linear-gradient(180deg, #e0effb 0%, #edf7f7 65%, #e4f2f2 100%);
+  --scene-opacity: 1;
+  color-scheme: light;
+}
+
+:root[data-bg="nebula"] {
+  --bg: #110c22;
+  --bg-2: #150f2b;
+  --card: #1b1436;
+  --card-2: #241a47;
+  --text: #ece8fb;
+  --muted: #b3aad8;
+  --accent: #7fe3f0;
+  --accent-ink: #081620;
+  --accent-2: #d4a6ff;
+  --line: rgba(255, 255, 255, 0.10);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --hero-bg: radial-gradient(700px 420px at 85% 12%, rgba(150, 80, 240, 0.30), transparent 70%), radial-gradient(640px 420px at 8% 95%, rgba(40, 190, 210, 0.14), transparent 70%);
+  --scene-opacity: 0.85;
+  color-scheme: dark;
+}
+
+:root[data-bg="paper"] {
   --bg: #f7f5ef;
   --bg-2: #ffffff;
   --card: #ffffff;
@@ -93,7 +163,28 @@ ul { margin: 0; padding-left: 1.2em; }
 .icon-btn:hover, .pill-btn:hover { border-color: var(--accent); }
 .icon-btn svg { width: 18px; height: 18px; }
 .menu-btn { display: none; }
-[data-theme="light"] .ico-sun, :root:not([data-theme="light"]) .ico-moon { display: none; }
+
+.bg-picker { position: relative; }
+.bg-menu {
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 60; min-width: 210px;
+  display: grid; gap: 2px; padding: 6px;
+  background: var(--bg-2); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow);
+}
+.bg-menu-title { color: var(--muted); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 10px 4px; }
+.bg-menu button {
+  display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 10px;
+  border: 0; border-radius: 8px; background: transparent; color: var(--text);
+  font: inherit; font-size: 0.92rem; text-align: left; cursor: pointer;
+}
+.bg-menu button:hover, .bg-menu button:focus-visible { background: var(--card-2); outline: none; }
+.bg-menu button[aria-checked="true"]::after { content: "✓"; margin-left: auto; color: var(--accent); font-weight: 700; }
+.bg-menu .sw { flex: none; width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--line); }
+.bg-menu [data-bg="meadow"] .sw { background: radial-gradient(circle at 70% 30%, #ffcf4d 0 3px, transparent 4px), linear-gradient(180deg, #cfe8fb 0 52%, #6fbd4a 52%); }
+.bg-menu [data-bg="forest"] .sw { background: radial-gradient(circle at 35% 40%, #ffd66e 0 1.5px, transparent 2.5px), radial-gradient(circle at 65% 30%, #ffd66e 0 1.5px, transparent 2.5px), linear-gradient(180deg, #0e1712 0 58%, #2a4c31 58%); }
+.bg-menu [data-bg="sea"] .sw { background: linear-gradient(180deg, #dcedfb 0 50%, #5fb3b3 50% 72%, #1f8088 72%); }
+.bg-menu [data-bg="space"] .sw { background: radial-gradient(circle at 65% 35%, #f1c55c 0 3px, transparent 4px), #0b1020; }
+.bg-menu [data-bg="nebula"] .sw { background: radial-gradient(circle at 68% 32%, #7fe3f0 0 2.5px, transparent 3.5px), radial-gradient(circle at 30% 70%, #9a5cf0, #110c22 75%); }
+.bg-menu [data-bg="paper"] .sw { background: radial-gradient(circle at 65% 35%, #a8780a 0 3px, transparent 4px), #f7f5ef; }
 
 @media (max-width: 860px) {
   .menu-btn { display: inline-flex; }
@@ -131,9 +222,16 @@ h2 { font-size: clamp(1.8rem, 3.2vw, 2.4rem); margin-bottom: 0.6rem; }
 .lead { color: var(--muted); font-size: 1.05rem; margin: 0; }
 
 /* ---------- hero ---------- */
-.hero { position: relative; overflow: hidden; padding: clamp(4rem, 10vw, 7.5rem) 0; border-bottom: 1px solid var(--line); }
-.hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.7; pointer-events: none; }
+.hero { position: relative; overflow: hidden; padding: clamp(4rem, 10vw, 7.5rem) 0; border-bottom: 1px solid var(--line); background: var(--hero-bg, none); }
+.hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: var(--scene-opacity, 0.7); pointer-events: none; }
 .hero .container { position: relative; }
+.scene-hint {
+  position: absolute; right: 1.25rem; bottom: 0.9rem; z-index: 1; pointer-events: none;
+  padding: 4px 12px; border-radius: 999px; font-size: 0.8rem; color: var(--muted);
+  background: color-mix(in srgb, var(--bg) 72%, transparent); border: 1px solid var(--line);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+}
+.scene-hint::before { content: "✦ "; color: var(--accent); }
 .hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 2rem; align-items: center; }
 .hero h1 { font-size: clamp(2.5rem, 6vw, 4.3rem); font-weight: 700; letter-spacing: -0.01em; margin: 0.3rem 0 1rem; }
 .hero h1 .accent { color: var(--accent); }
@@ -215,8 +313,8 @@ h2 { font-size: clamp(1.8rem, 3.2vw, 2.4rem); margin-bottom: 0.6rem; }
 .yt { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #000 center / cover no-repeat; cursor: pointer; border: 1px solid var(--line); }
 .yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .yt .play { position: absolute; inset: 0; display: grid; place-items: center; background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0) 60%); }
-.yt .play span { width: 68px; height: 48px; border-radius: 12px; background: rgba(241,197,92,0.95); display: grid; place-items: center; }
-.yt .play svg { width: 26px; height: 26px; fill: #1a1408; margin-left: 3px; }
+.yt .play span { width: 68px; height: 48px; border-radius: 12px; background: var(--accent); display: grid; place-items: center; }
+.yt .play svg { width: 26px; height: 26px; fill: var(--accent-ink); margin-left: 3px; }
 .yt .cap { position: absolute; left: 12px; right: 12px; bottom: 10px; color: #fff; font-size: 0.9rem; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
 
 /* ---------- projects ---------- */

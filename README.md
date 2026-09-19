@@ -8,8 +8,9 @@ leadership, hobbies; salary only as "depends on the role", never figures). Every
 The project repositories are private, so the site links to live builds, videos, the YouTube channel and
 the Tojin Games Patreon, never to source.
 
-Plain HTML, CSS and JavaScript. No build step. Bilingual (English / Czech) with a switch, dark and
-light theme.
+Plain HTML, CSS and JavaScript. No build step. Bilingual (English / Czech) with a switch, and six
+backgrounds to pick from in the header (Meadow by default, then Forest at dusk, Sea, Space, Nebula,
+Paper). Each has its own palette in `style.css` and its own hero animation in `main.js` (`BGS`).
 
 ## Editing
 
