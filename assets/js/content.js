@@ -10,19 +10,24 @@ window.SITE = {
   initials: "MŠ",
   email: "michalstepan82@seznam.cz",
   youtube: "https://www.youtube.com/@tojin111",
+  patreon: "https://www.patreon.com/cw/TojinGames",  // hidden while empty
   linkedin: "",                              // e.g. "https://www.linkedin.com/in/…"; hidden while empty
   cv: "cv/Michal_Stepan_CV.pdf",
   location: { en: "Sviadnov, Czechia", cs: "Sviadnov, Česko" },
   links: {
-    gravityWeb3d: "https://gravity3d.happywater-ef07256e.westeurope.azurecontainerapps.io/",
+    gravityWeb3d: "https://gravity3d-tgz74cquha-ez.a.run.app/",
     gravityWeb2d: "",                        // public URL of the 2D web build, when there is one
     orbitWeb: "https://orbit-prod-lxfrbj3zhq-ew.a.run.app",
+    starforgeWeb: "https://starforge-4zrmoo7y3a-ez.a.run.app",
+    myzooWeb: "https://myzoo-gsl5pfkg4q-ez.a.run.app",
+    mygardenWeb: "https://mygarden-ltbbj4q4qq-ez.a.run.app",
     play2d: "",                              // Google Play listing once published; "coming soon" is shown while empty
     play3d: "",
   },
   videos: [
+    { id: "eAgsoRVX1lw", title: { en: "Gravity 3D trailer: it never has to touch", cs: "Trailer Gravity 3D: nikdy se nemusí dotknout" } },
+    { id: "XWBMkMhVhJs", title: { en: "Can you steal speed from Jupiter?", cs: "Dá se Jupiteru ukrást rychlost?" } },
     { id: "LkZCKLGDsPg", title: { en: "Gravity 3D: you don't control the universe, only the initial conditions", cs: "Gravity 3D: vesmír neřídíte, jen počáteční podmínky" } },
-    { id: "QPlFDuAnmkk", title: { en: "Jednota: eight races, eight navies, every race its own AI agent", cs: "Jednota: osm ras, osm flotil, každá rasa vlastní AI agent" } },
   ],
 };
 
@@ -51,6 +56,8 @@ window.T = {
     "hero.cv": "Download CV (PDF)",
     "hero.chat": "Chat with my CV",
     "hero.youtube": "YouTube",
+    "hero.patreon": "Patreon",
+    "hero.studio": "Tojin Games · my studio",
     "hero.now.label": "Currently",
     "hero.now.big": "Senior GenAI Engineer · ABB",
     "hero.now.1": "RAG pipeline on Azure AI Search",
@@ -64,11 +71,11 @@ window.T = {
     "about.fact2.s": "Container Apps, AI Search, OpenAI, Key Vault",
     "about.fact3.b": "Python end to end",
     "about.fact3.s": "FastAPI, Dagster, Airflow, Pytest",
-    "about.fact4.b": "Physics games & simulations",
-    "about.fact4.s": "Gravity, Orbit, Quantum, HoldMyPlazma",
+    "about.fact4.b": "Tojin Games",
+    "about.fact4.s": "My own studio: nine science and strategy games",
     "about.p1": "I am an AI and Data Platform Engineer focused on system architecture, GenAI platforms and scalable data systems. At ABB I work as a Senior GenAI Engineer: I designed the architecture of a full RAG pipeline on Azure AI Search and I build the internal platform that GenAI applications run on, from FastAPI services and Docker images to Azure Container Apps, Key Vault and Log Analytics.",
     "about.p2": "Before that I spent three years as a freelance backend and data engineer for clients in energy, telecom and manufacturing (DTSE, Landis+Gyr, Vendavo), and earlier built energy-management and analytics systems at Siemens and ABB. My roots are in power engineering: eight years at a district heating utility, the last ones as technical deputy leading more than fifteen people, taught me what production reliability actually means.",
-    "about.p3": "Outside work I build physics games and simulations and publish videos about them on my YouTube channel Tojin. Gravity is a Newtonian puzzle where you only set one asteroid's velocity; HoldMyPlazma confines plasma with magnets, calibrated against my own research on the CASTOR tokamak; Jednota is a 4X strategy in which every empire is run by its own local LLM agent. I also write the music for my games, and spend the rest of the time in the garden.",
+    "about.p3": "Outside work I run Tojin Games, my one-person studio for science, space and simulation games, with a YouTube channel and a Patreon. Gravity is a Newtonian puzzle where you only set one asteroid's velocity; Orbit teaches rendezvous in the real Solar System; HoldMyPlazma confines plasma with magnets, calibrated against my own research on the CASTOR tokamak; Jednota is a 4X strategy in which every empire is run by its own local LLM agent. Five of the games are playable in the browser. I make the videos with my own automated pipeline and compose the music for my games, and spend the rest of the time in the garden with my family and our dog.",
 
     "skills.title": "Skills",
     "skills.lead": "What I reach for when the problem is a production AI or data system.",
@@ -81,17 +88,17 @@ window.T = {
     "gravity.intro": "You never control the universe. Only the initial conditions. Gravity is a Newtonian sandbox with one mechanic: set the velocity of a single small asteroid, choose the moment to release it, and watch real gravity produce the consequences. Ten story chapters take the same flyby from an asteroid to two colliding black holes. The simulation is hand-written: symmetric forces, conserved angular momentum, collisions that merge or ricochet because the physics says so. Every level is verified to be beatable and to never beat itself.",
     "gravity.gallery": "Screenshots",
     "gravity.videos": "Videos",
-    "gravity.free": "Free and ad-free, in English and Czech. The Android builds work offline and collect no data.",
+    "gravity.free": "Ad-free, in English and Czech. On the web the prologue and the first chapter are free and Patreon unlocks the rest; the Android builds are free, work offline and collect no data.",
     "gravity.soon": "Coming soon to Google Play",
 
     "projects.title": "Other projects",
-    "projects.lead": "Side projects that share ideas with the day job: agents, local models, numerical simulation and generated media. The code is private; live builds and videos are public.",
+    "projects.lead": "Side projects that share ideas with the day job: agents, local models, numerical simulation and generated media. The code is private; live builds and videos are public. In the browser games the opening is free and Patreon supporters unlock the rest.",
 
     "rag.title": "RAG & LLM in practice",
     "rag.lead": "Six things I have learned building retrieval and agent systems that had to survive real users.",
 
     "chat.title": "Chat with my CV",
-    "chat.intro": "Ask about my experience, skills and projects, or the practical things recruiters ask: availability, salary expectations, remote work, hobbies. The model runs entirely in your browser through WebGPU: it is downloaded once (then cached) and nothing you type leaves your device. It is a small model and can make mistakes; the PDF CV is the source of truth.",
+    "chat.intro": "Ask about my experience, skills and projects, or the practical things recruiters ask: salary expectations, remote work, leadership, hobbies. The model runs entirely in your browser through WebGPU: it is downloaded once (then cached) and nothing you type leaves your device. It is a small model and can make mistakes; the PDF CV is the source of truth.",
     "chat.model": "Model",
     "chat.model.small": "Fast · Qwen2.5 0.5B · about 0.4 GB download",
     "chat.model.large": "Better answers · Qwen2.5 1.5B · about 1 GB download",
@@ -118,6 +125,7 @@ window.T = {
     "contact.lead": "The fastest way is e-mail. I am based near Ostrava, Czechia, and work with remote teams across Europe.",
     "contact.email": "E-mail",
     "contact.youtube": "YouTube",
+    "contact.patreon": "Patreon",
     "contact.linkedin": "LinkedIn",
     "contact.cv": "CV (PDF)",
     "contact.location": "Location",
@@ -148,6 +156,8 @@ window.T = {
     "hero.cv": "Stáhnout CV (PDF)",
     "hero.chat": "Chat s mým CV",
     "hero.youtube": "YouTube",
+    "hero.patreon": "Patreon",
+    "hero.studio": "Tojin Games · moje studio",
     "hero.now.label": "Aktuálně",
     "hero.now.big": "Senior GenAI Engineer · ABB",
     "hero.now.1": "RAG pipeline nad Azure AI Search",
@@ -161,11 +171,11 @@ window.T = {
     "about.fact2.s": "Container Apps, AI Search, OpenAI, Key Vault",
     "about.fact3.b": "Python od začátku do konce",
     "about.fact3.s": "FastAPI, Dagster, Airflow, Pytest",
-    "about.fact4.b": "Fyzikální hry a simulace",
-    "about.fact4.s": "Gravity, Orbit, Quantum, HoldMyPlazma",
+    "about.fact4.b": "Tojin Games",
+    "about.fact4.s": "Vlastní studio: devět vědeckých a strategických her",
     "about.p1": "Jsem AI a datový platformový inženýr se zaměřením na architekturu systémů, GenAI platformy a škálovatelné datové systémy. V ABB pracuji jako Senior GenAI Engineer: navrhl jsem architekturu kompletní RAG pipeline nad Azure AI Search a stavím interní platformu, na které GenAI aplikace běží, od FastAPI služeb a Docker image po Azure Container Apps, Key Vault a Log Analytics.",
     "about.p2": "Předtím jsem tři roky pracoval jako freelance backend a datový inženýr pro klienty z energetiky, telekomunikací a výroby (DTSE, Landis+Gyr, Vendavo) a ještě dřív jsem stavěl systémy pro energetický management a analytiku v Siemensu a ABB. Kořeny mám v energetice: osm let v teplárenské distribuční společnosti, naposledy jako technický zástupce s týmem přes patnáct lidí, mě naučilo, co znamená spolehlivý provoz.",
-    "about.p3": "Mimo práci stavím fyzikální hry a simulace a videa o nich publikuji na svém YouTube kanálu Tojin. Gravity je newtonovská hádanka, kde nastavíte jen rychlost jednoho asteroidu; HoldMyPlazma drží plazma magnety a je kalibrovaná podle mého vlastního výzkumu na tokamaku CASTOR; Jednota je 4X strategie, ve které každou říši řídí vlastní lokální LLM agent. Ke svým hrám si i skládám hudbu a zbytek času trávím na zahradě.",
+    "about.p3": "Mimo práci vedu Tojin Games, své jednočlenné studio vědeckých, vesmírných a simulačních her, s kanálem na YouTube a Patreonem. Gravity je newtonovská hádanka, kde nastavíte jen rychlost jednoho asteroidu; Orbit učí setkání na oběžné dráze ve skutečné Sluneční soustavě; HoldMyPlazma drží plazma magnety a je kalibrovaná podle mého vlastního výzkumu na tokamaku CASTOR; Jednota je 4X strategie, ve které každou říši řídí vlastní lokální LLM agent. Pět her si můžete zahrát v prohlížeči. Videa vyrábím vlastní automatizovanou pipeline, ke svým hrám si skládám hudbu a zbytek času trávím na zahradě se svou rodinou a psem.",
 
     "skills.title": "Dovednosti",
     "skills.lead": "Po čem sahám, když je úkolem produkční AI nebo datový systém.",
@@ -178,17 +188,17 @@ window.T = {
     "gravity.intro": "Vesmír neřídíte. Jen počáteční podmínky. Gravity je newtonovský sandbox s jedinou mechanikou: nastavte rychlost jednomu malému asteroidu, zvolte okamžik vypuštění a sledujte, co skutečná gravitace udělá. Deset kapitol příběhu dovede tentýž průlet od asteroidu až ke srážce dvou černých děr. Simulace je ručně psaná: symetrické síly, zachovaný moment hybnosti, srážky, které slučují nebo odrážejí, protože to říká fyzika. Každý level je ověřený, že se dá vyhrát a nikdy se nevyhraje sám.",
     "gravity.gallery": "Screenshoty",
     "gravity.videos": "Videa",
-    "gravity.free": "Zdarma a bez reklam, anglicky a česky. Verze pro Android fungují offline a nesbírají žádná data.",
+    "gravity.free": "Bez reklam, anglicky a česky. Na webu jsou prolog a první kapitola zdarma a zbytek odemkne Patreon; verze pro Android jsou zdarma, fungují offline a nesbírají žádná data.",
     "gravity.soon": "Brzy na Google Play",
 
     "projects.title": "Další projekty",
-    "projects.lead": "Vedlejší projekty, které sdílejí nápady s prací: agenti, lokální modely, numerické simulace a generovaná média. Kód je soukromý; živé verze a videa jsou veřejné.",
+    "projects.lead": "Vedlejší projekty, které sdílejí nápady s prací: agenti, lokální modely, numerické simulace a generovaná média. Kód je soukromý; živé verze a videa jsou veřejné. V prohlížečových hrách je začátek zdarma a zbytek odemknou podporovatelé na Patreonu.",
 
     "rag.title": "RAG & LLM v praxi",
     "rag.lead": "Šest věcí, které jsem se naučil při stavbě retrieval a agentních systémů, které musely přežít skutečné uživatele.",
 
     "chat.title": "Chat s mým CV",
-    "chat.intro": "Zeptejte se na moji praxi, dovednosti a projekty, nebo na praktické věci, které zajímají HR: dostupnost, platová očekávání, práci na dálku, koníčky. Model běží celý ve vašem prohlížeči přes WebGPU: stáhne se jednou (pak je v cache) a nic z toho, co napíšete, neopustí vaše zařízení. Je to malý model a může se mýlit; zdrojem pravdy je CV v PDF.",
+    "chat.intro": "Zeptejte se na moji praxi, dovednosti a projekty, nebo na praktické věci, které zajímají HR: platová očekávání, práci na dálku, vedení týmu, koníčky. Model běží celý ve vašem prohlížeči přes WebGPU: stáhne se jednou (pak je v cache) a nic z toho, co napíšete, neopustí vaše zařízení. Je to malý model a může se mýlit; zdrojem pravdy je CV v PDF.",
     "chat.model": "Model",
     "chat.model.small": "Rychlý · Qwen2.5 0.5B · stažení asi 0,4 GB",
     "chat.model.large": "Lepší odpovědi · Qwen2.5 1.5B · stažení asi 1 GB",
@@ -215,6 +225,7 @@ window.T = {
     "contact.lead": "Nejrychlejší je e-mail. Sídlím u Ostravy a pracuji s remote týmy po celé Evropě.",
     "contact.email": "E-mail",
     "contact.youtube": "YouTube",
+    "contact.patreon": "Patreon",
     "contact.linkedin": "LinkedIn",
     "contact.cv": "CV (PDF)",
     "contact.location": "Kde",
@@ -229,7 +240,7 @@ window.DATA = {
   skills: [
     {
       title: { en: "Architecture & GenAI", cs: "Architektura & GenAI" },
-      items: ["Retrieval-Augmented Generation", "Hybrid search & grounding", "Multi-step LLM workflows", "Function calling / tools", "Agent systems", "LangChain", "LangGraph", "Model evaluation", "Golden datasets"],
+      items: ["Retrieval-Augmented Generation", "Hybrid search & grounding", "Multi-step LLM workflows", "Function calling / tools", "Agent systems", "Model Context Protocol (MCP)", "LangChain", "LangGraph", "Model evaluation", "Golden datasets", "Local LLMs (Ollama)"],
     },
     {
       title: { en: "Data & AI platforms", cs: "Datové a AI platformy" },
@@ -237,11 +248,11 @@ window.DATA = {
     },
     {
       title: { en: "Cloud & infrastructure", cs: "Cloud & infrastruktura" },
-      items: ["Azure Container Apps", "Azure Functions", "Blob & Table Storage", "Key Vault", "Container Registry", "Log Analytics", "GCP Cloud Run", "Docker", "Terraform", "Azure Pipelines", "GitLab CI", "GitHub Actions"],
+      items: ["Azure Container Apps", "Azure Functions", "Blob & Table Storage", "Key Vault", "Container Registry", "Log Analytics", "GCP Cloud Run", "Secret Manager", "Docker", "Terraform", "OAuth 2.0 / JWT", "Azure Pipelines", "GitLab CI", "GitHub Actions"],
     },
     {
       title: { en: "Programming", cs: "Programování" },
-      items: ["Python", "FastAPI", "Pandas", "NumPy / SciPy", "Pytest", "Playwright", "Streamlit", "NiceGUI", "SQL", "Kotlin & Jetpack Compose", "Grafana", "Power BI"],
+      items: ["Python", "FastAPI", "Pandas", "NumPy / SciPy", "Pytest", "Playwright", "Streamlit", "NiceGUI", "SQL", "JavaScript · Canvas · WebGL2", "Kotlin & Jetpack Compose", "Grafana", "Power BI"],
     },
   ],
 
@@ -355,8 +366,8 @@ window.DATA = {
       image: "assets/img/gravity-3d-feature.jpg",
       icon: "assets/img/gravity-3d-icon.png",
       desc: {
-        en: "Python, NiceGUI and one HTML5 canvas. The perspective projection is about fifty lines of maths, no WebGL. Nineteen missions and replays of solved shots: orbit the camera, aim in the ecliptic, switch the field on and watch the grid sag into the real gravitational potential. Runs on Azure Container Apps, deployed with Terraform.",
-        cs: "Python, NiceGUI a jeden HTML5 canvas. Perspektivní projekce je padesát řádků matematiky, bez WebGL. Devatenáct misí a záznamy vyřešených výstřelů: otočte kameru, miřte v rovině ekliptiky, zapněte pole a sledujte, jak se mřížka prohne do skutečného gravitačního potenciálu. Běží na Azure Container Apps, nasazeno přes Terraform.",
+        en: "Python, NiceGUI and one HTML5 canvas. The perspective projection is about fifty lines of maths, no WebGL. The simulation runs in the browser in a JavaScript copy of the Python engine that tests keep bit-identical, and the server replays every win before it counts. Twenty-one levels, including two Voyager missions and the real Solar System from JPL elements: orbit the camera, aim in the ecliptic and watch the grid sag into the real gravitational potential. Runs on Google Cloud Run, deployed with Terraform.",
+        cs: "Python, NiceGUI a jeden HTML5 canvas. Perspektivní projekce je padesát řádků matematiky, bez WebGL. Simulace běží v prohlížeči, v JavaScriptové kopii pythonového enginu, kterou testy drží bitově shodnou, a server každou výhru před započtením přehraje. Jednadvacet levelů včetně dvou misí Voyageru a skutečné Sluneční soustavy z elementů JPL: otočte kameru, miřte v rovině ekliptiky a sledujte, jak se mřížka prohne do skutečného gravitačního potenciálu. Běží na Google Cloud Run, nasazeno přes Terraform.",
       },
       links: [
         { label: { en: "Play in the browser", cs: "Hrát v prohlížeči" }, url: "links.gravityWeb3d", primary: true },
@@ -368,8 +379,8 @@ window.DATA = {
       image: "assets/img/gravity-2d-feature.jpg",
       icon: "assets/img/gravity-2d-icon.png",
       desc: {
-        en: "The original. Python, NiceGUI and a single canvas; the physics core is a deterministic implementation with no external engine. Ten chapters, free-play scenarios, progress kept in the browser, deployed as a container on Azure with Terraform.",
-        cs: "Původní verze. Python, NiceGUI a jeden canvas; fyzikální jádro je deterministická implementace bez externího enginu. Deset kapitol, volné scénáře, postup uložený v prohlížeči, nasazeno jako kontejner na Azure přes Terraform.",
+        en: "The original and the reference implementation. Python, NiceGUI and a single canvas; the physics core is deterministic, with no external engine, and the Android engine is tested against it. Ten chapters and free-play scenarios, progress kept in the browser.",
+        cs: "Původní verze a referenční implementace. Python, NiceGUI a jeden canvas; fyzikální jádro je deterministické, bez externího enginu, a engine pro Android se testuje proti němu. Deset kapitol a volné scénáře, postup uložený v prohlížeči.",
       },
       links: [
         { label: { en: "Play in the browser", cs: "Hrát v prohlížeči" }, url: "links.gravityWeb2d", primary: true },
@@ -381,8 +392,8 @@ window.DATA = {
       image: "assets/img/shots/2d-03.jpg",
       icon: "assets/img/gravity-2d-icon.png",
       desc: {
-        en: "Native Kotlin and Jetpack Compose. A hand-written Velocity Verlet integrator on a fixed timestep; the engine is a pure Kotlin module with no Android dependency, so every level is verified fair by a test before it ships.",
-        cs: "Nativní Kotlin a Jetpack Compose. Ručně psaný integrátor Velocity Verlet s pevným krokem; engine je čistý Kotlin modul bez závislosti na Androidu, takže každý level před vydáním ověří test, že je férový.",
+        en: "Native Kotlin and Jetpack Compose. A hand-written Velocity Verlet integrator on a fixed timestep; the engine is a pure Kotlin module with no Android dependency, so every level is verified fair by a test before it ships. Runs at about 60 fps on a Galaxy S24 FE and is in closed testing on Google Play.",
+        cs: "Nativní Kotlin a Jetpack Compose. Ručně psaný integrátor Velocity Verlet s pevným krokem; engine je čistý Kotlin modul bez závislosti na Androidu, takže každý level před vydáním ověří test, že je férový. Na Galaxy S24 FE běží kolem 60 fps a je v uzavřeném testování na Google Play.",
       },
       links: [
         { label: { en: "Google Play", cs: "Google Play" }, url: "links.play2d", primary: true, soon: true },
@@ -422,13 +433,28 @@ window.DATA = {
       name: "Jednota",
       sub: { en: "4X strategy with LLM agents", cs: "4X strategie s LLM agenty" },
       image: "assets/img/jednota-ui.jpg",
-      tags: ["Python", "NiceGUI", "Ollama", "pgvector", "LLM agents", "ComfyUI art"],
+      tags: ["Python", "NiceGUI", "Ollama", "pgvector", "LLM agents", "Playwright", "ComfyUI"],
       desc: {
-        en: "A galactic 4X game in the vein of Master of Orion 2. The Antarans are coming and no single race can face them alone: you do not win by wiping out your rivals, you win by unifying the galaxy, by diplomacy or by conquest. Every empire is its own agent: deterministic logic for the mechanics, a local LLM through Ollama for reasoning and diplomacy, grounded in a pgvector lore store that also remembers how previous games went. Agent decisions are recorded, so replays do not need the model, and the whole test suite runs without any of it.",
-        cs: "Galaktická 4X strategie ve stylu Master of Orion 2. Přicházejí Antarané a žádná rasa jim nemůže čelit sama: nevyhrajete vyhlazením soupeřů, ale sjednocením galaxie, diplomacií nebo dobytím. Každá říše je vlastní agent: deterministická logika pro mechaniky, lokální LLM přes Ollamu pro uvažování a diplomacii, ukotvené v pgvector úložišti lore, které si pamatuje i průběh minulých her. Rozhodnutí agentů se ukládají, takže záznamy her model nepotřebují, a celá testovací sada běží i bez toho všeho.",
+        en: "A galactic 4X strategy in the spirit of the classic 90s games. An invasion from beyond the galaxy is coming and no race can stop it alone: unify the galaxy by diplomacy or conquest, then destroy the invasion fleet and free the occupied systems. Every empire's strategist, every diplomatic envoy and every fleet admiral is an agent on a local LLM through Ollama. Deterministic rules check each decision before it takes effect; in a measured five-empire campaign they accepted 93 of 93 strategic, 80 of 88 diplomatic and 79 of 86 tactical decisions. Agents remember earlier games through a pgvector store of chronicles, and recorded decisions let replays run without the model. About 73,000 lines of Python and 1,300 tests. In development, not publicly playable yet.",
+        cs: "Galaktická 4X strategie v duchu klasik z 90. let. Z hlubin vesmíru přichází invaze a žádná rasa ji sama nezastaví: sjednoťte galaxii diplomacií nebo dobytím, pak zničte invazní flotilu a osvoboďte obsazené systémy. Stratég každé říše, každý diplomatický vyslanec i každý admirál flotily je agent na lokálním LLM přes Ollamu. Deterministická pravidla každé rozhodnutí ověří, než se projeví; v měřené kampani pěti říší přijala 93 z 93 strategických, 80 z 88 diplomatických a 79 z 86 taktických rozhodnutí. Agenti si pamatují minulé hry přes pgvector úložiště kronik a zaznamenaná rozhodnutí umožňují přehrát hru bez modelu. Zhruba 73 000 řádků Pythonu a 1 300 testů. Ve vývoji, zatím není veřejně hratelná.",
       },
       links: [
-        { label: { en: "Video", cs: "Video" }, url: "https://www.youtube.com/watch?v=QPlFDuAnmkk", primary: true },
+        { label: { en: "Battle video", cs: "Video z bitvy" }, url: "https://www.youtube.com/watch?v=0FKwCZZLfEc", primary: true },
+        { label: { en: "Soundtrack", cs: "Soundtrack" }, url: "https://www.youtube.com/watch?v=Dmcpzly1iZg" },
+      ],
+    },
+    {
+      name: "Orbit",
+      sub: { en: "Orbital mechanics in the real Solar System", cs: "Orbitální mechanika ve skutečné Sluneční soustavě" },
+      image: "assets/img/projects/orbit.webp",
+      tags: ["Python", "NiceGUI", "WebGL2", "Kepler", "GCP Cloud Run", "Terraform"],
+      desc: {
+        en: "You change your orbit, and the orbit takes you there. Rendezvous, docking and transfers to the Moon, Jupiter and Saturn in the real Solar System at real scale, with twelve hulls including NASA's own Apollo, Soyuz and Gemini models. Kepler's equation, patched conics, finite burns and six WebGL2 shader programs are hand-written, with no engine. Each of the 23 missions is verified by flying it, checking that doing nothing fails, and flying it again with timing and burn errors. The first act is free; Patreon unlocks the rest.",
+        cs: "Změníte dráhu a dráha vás tam dovede. Setkání, dokování a přelety k Měsíci, Jupiteru a Saturnu ve skutečné Sluneční soustavě ve skutečném měřítku, s dvanácti loděmi včetně NASA modelů Apolla, Sojuzu a Gemini. Keplerova rovnice, navazující kuželosečky, konečné zážehy i šest shaderových programů ve WebGL2 jsou ručně psané, bez enginu. Každá z 23 misí je ověřená skutečným proletěním, kontrolou, že nečinnost selže, a opakovaným letem s chybami v čase a tahu. První dějství je zdarma, zbytek odemkne Patreon.",
+      },
+      links: [
+        { label: { en: "Play in the browser", cs: "Hrát v prohlížeči" }, url: "links.orbitWeb", primary: true },
+        { label: { en: "Video", cs: "Video" }, url: "https://www.youtube.com/watch?v=CAu629pTp_4" },
       ],
     },
     {
@@ -437,23 +463,10 @@ window.DATA = {
       image: "assets/img/projects/holdmyplazma.webp",
       tags: ["Python", "NiceGUI", "NumPy", "SciPy", "Biot–Savart"],
       desc: {
-        en: "Hold plasma with magnets: choose the coils, current, radius and tilt, fire a shot and read what happened from Langmuir-probe diagnostics. Magnetic fields from Biot–Savart, field-line tracing with Poincaré sections, the q(r) profile and a 0-D energy balance, calibrated against my own research on the CASTOR tokamak. Eleven scenarios from a magnetic bottle to a stellarator; the last one is an open research problem: where the heat leaving the plasma should go.",
-        cs: "Udržte plazma magnety: zvolte cívky, proud, poloměr a náklon, vystřelte a z diagnostiky Langmuirových sond vyčtěte, co se stalo. Magnetické pole z Biot–Savartova zákona, trasování siločar s Poincarého řezy, profil q(r) a 0-D energetická bilance, kalibrované podle mého vlastního výzkumu na tokamaku CASTOR. Jedenáct scénářů od magnetické láhve po stelarátor; poslední je otevřený výzkumný problém: kam odvést teplo, které z plazmatu uniká.",
+        en: "Hold plasma with magnets: choose the coils, current, radius and tilt, fire a shot and read what happened from Langmuir-probe diagnostics. Magnetic fields from Biot–Savart, field-line tracing with Poincaré sections, the q(r) profile and a 0-D energy balance, calibrated against my own research on the CASTOR tokamak, with presets for CASTOR, COMPASS, ITER and Wendelstein 7-X. Eleven scenarios from a straight tube and a magnetic bottle through a tokamak and a stellarator to an open research problem: where the heat leaving the plasma should go.",
+        cs: "Udržte plazma magnety: zvolte cívky, proud, poloměr a náklon, vystřelte a z diagnostiky Langmuirových sond vyčtěte, co se stalo. Magnetické pole z Biot–Savartova zákona, trasování siločar s Poincarého řezy, profil q(r) a 0-D energetická bilance, kalibrované podle mého vlastního výzkumu na tokamaku CASTOR, s předvolbami pro CASTOR, COMPASS, ITER a Wendelstein 7-X. Jedenáct scénářů od rovné trubice a magnetické láhve přes tokamak a stelarátor po otevřený výzkumný problém: kam odvést teplo, které z plazmatu uniká.",
       },
       links: [],
-    },
-    {
-      name: "Orbit",
-      sub: { en: "Orbital mechanics trainer", cs: "Trenažér orbitální mechaniky" },
-      image: "assets/img/projects/orbit.webp",
-      tags: ["Python", "NiceGUI", "Kepler", "GCP Cloud Run", "Terraform"],
-      desc: {
-        en: "You change your orbit, and the orbit takes you there. Rendezvous, plane changes and docking with four hulls from Apollo to an ion probe; Kepler's equation and finite burns are hand-written. Every scenario is verified by actually flying the plan, checking that doing nothing fails, and flying it again with small timing and burn errors.",
-        cs: "Změníte dráhu a dráha vás tam dovede. Setkání na oběžné dráze, změny roviny a dokování se čtyřmi loděmi od Apolla po iontovou sondu; Keplerova rovnice a konečné zážehy jsou ručně psané. Každý scénář je ověřený skutečným proletěním plánu, kontrolou, že nečinnost selže, a opakovaným letem s drobnými chybami v čase a tahu.",
-      },
-      links: [
-        { label: { en: "Play in the browser", cs: "Hrát v prohlížeči" }, url: "links.orbitWeb", primary: true },
-      ],
     },
     {
       name: "Quantum",
@@ -461,42 +474,65 @@ window.DATA = {
       image: "assets/img/projects/quantum.jpg",
       tags: ["Python", "NiceGUI", "NumPy", "Split-step Fourier"],
       desc: {
-        en: "Prepare a wave packet and let the Schrödinger equation decide. Eight scenes: single and double slit with a which-path detector, uncertainty, tunnelling, identical atoms on a beam splitter and an open question on how long tunnelling takes. The split-step Fourier integrator is hand-written with no quantum library, and tests compare it against analytic solutions.",
-        cs: "Připravte vlnový balík a nechte rozhodnout Schrödingerovu rovnici. Osm scén: jedna a dvě štěrbiny s detektorem dráhy, relace neurčitosti, tunelování, identické atomy na děliči svazku a otevřená otázka, jak dlouho tunelování trvá. Integrátor split-step Fourier je ručně psaný bez kvantové knihovny a testy ho porovnávají s analytickými řešeními.",
+        en: "Prepare a wave packet and let the Schrödinger equation decide. Eight scenes, from the double slit with a which-path detector and a double slit in time, through tunnelling and uncertainty, to string breaking, identical atoms on a beam splitter and an open question: how long does tunnelling take? The split-step Fourier integrator is hand-written with no quantum library, and tests compare it against analytic solutions.",
+        cs: "Připravte vlnový balík a nechte rozhodnout Schrödingerovu rovnici. Osm scén, od dvojštěrbiny s detektorem dráhy a dvojštěrbiny v čase přes tunelování a relace neurčitosti po trhání struny, identické atomy na děliči svazku a otevřenou otázku, jak dlouho tunelování trvá. Integrátor split-step Fourier je ručně psaný bez kvantové knihovny a testy ho porovnávají s analytickými řešeními.",
       },
       links: [],
     },
     {
-      name: "Starforge3D",
+      name: "Starforge",
       sub: { en: "Hard sci-fi incremental strategy", cs: "Hard sci-fi budovatelská strategie" },
-      tags: ["Python", "NiceGUI", "Google Cloud Storage", "Terraform"],
+      image: "assets/img/projects/starforge.webp",
+      tags: ["Python", "NiceGUI", "Canvas", "GCP Cloud Run", "Cloud Storage", "Terraform"],
       desc: {
-        en: "From a single orbital station to mining Mercury and the first Dyson-swarm collector, in real units: joules, watts, kilograms. Atomic, versioned saves with migrations, up to eight hours of offline progress, and bot playthroughs that prove the economy can actually be finished.",
-        cs: "Od jediné orbitální stanice po těžbu na Merkuru a první kolektor Dysonova roje, ve skutečných jednotkách: joulech, wattech, kilogramech. Atomické verzované savy s migracemi, až osm hodin offline postupu a boti, kteří dokazují, že se ekonomika dá opravdu dohrát.",
+        en: "From a single orbital station to mining Mercury and the first Dyson-swarm collector, in real units: joules, watts, kilograms. Ten scripted bot strategies prove the economy can be finished, eight hours of offline progress are computed analytically in about a millisecond, and versioned saves follow a signed-in player across devices. Chapter I is free; Patreon unlocks the rest.",
+        cs: "Od jediné orbitální stanice po těžbu na Merkuru a první kolektor Dysonova roje, ve skutečných jednotkách: joulech, wattech, kilogramech. Deset skriptovaných botů dokazuje, že se ekonomika dá dohrát, osm hodin offline postupu se spočítá analyticky zhruba za milisekundu a verzované savy jdou s přihlášeným hráčem mezi zařízeními. První kapitola je zdarma, zbytek odemkne Patreon.",
       },
-      links: [],
+      links: [
+        { label: { en: "Play in the browser", cs: "Hrát v prohlížeči" }, url: "links.starforgeWeb", primary: true },
+        { label: { en: "Trailer", cs: "Trailer" }, url: "https://www.youtube.com/watch?v=z9QhHmhaYA0" },
+      ],
     },
     {
       name: "MyZoo",
       sub: { en: "Zoo and animal-care simulation", cs: "Simulace zoo a péče o zvířata" },
       image: "assets/img/projects/myzoo.webp",
-      tags: ["Python", "NiceGUI", "Flux", "Wan 2.2"],
+      tags: ["Python", "NiceGUI", "GCP Cloud Run", "Flux", "Wan 2.2"],
       desc: {
-        en: "From one enclosure to a wildlife institute. Animals keep their names and personalities, and welfare comes from real causes rather than a meter. Up to eight hours of offline simulation, a bot that plays to five stars, and art and animated loops generated locally with Flux and Wan 2.2.",
-        cs: "Od jednoho výběhu po institut pro divokou přírodu. Zvířata mají jména a povahy a jejich pohoda vychází ze skutečných příčin, ne z ukazatele. Až osm hodin offline simulace, bot, který hru dohraje na pět hvězd, a art i animace generované lokálně přes Flux a Wan 2.2.",
+        en: "From one enclosure to a wildlife institute. Animals keep their names and personalities, and welfare comes from real causes rather than a meter. Up to eight hours of offline simulation, a bot that plays to five stars, and art and animated loops generated locally with Flux and Wan 2.2. The first chapter is free; Patreon unlocks the rest.",
+        cs: "Od jednoho výběhu po institut pro divokou přírodu. Zvířata mají jména a povahy a jejich pohoda vychází ze skutečných příčin, ne z ukazatele. Až osm hodin offline simulace, bot, který hru dohraje na pět hvězd, a art i animace generované lokálně přes Flux a Wan 2.2. První kapitola je zdarma, zbytek odemkne Patreon.",
       },
-      links: [],
+      links: [
+        { label: { en: "Play in the browser", cs: "Hrát v prohlížeči" }, url: "links.myzooWeb", primary: true },
+        { label: { en: "Trailer", cs: "Trailer" }, url: "https://www.youtube.com/watch?v=N7I-aePNBMw" },
+      ],
     },
     {
       name: "My Garden",
       sub: { en: "Ecosystem-building game", cs: "Hra o budování ekosystému" },
       image: "assets/img/projects/mygarden.jpg",
-      tags: ["Python", "NiceGUI", "SVG", "ComfyUI"],
+      tags: ["Python", "NiceGUI", "SVG", "GCP Cloud Run", "ComfyUI"],
       desc: {
-        en: "Start by looking after one snail and grow a self-sustaining garden in five phases: soil, pests and predators, pollinators. The garden keeps living while you are away, and an inspector explains where every number comes from.",
-        cs: "Začnete péčí o jednoho šneka a v pěti fázích vypěstujete soběstačnou zahradu: půda, škůdci a predátoři, opylovači. Zahrada žije i když jste pryč a inspektor vysvětlí, odkud se bere každé číslo.",
+        en: "Start by looking after one snail and grow a self-sustaining garden in five phases: soil, pests and predators, pollinators. The garden keeps living while you are away, and an inspector explains where every number comes from. Bots with four play styles and 800 simulated games test the balance. The first two phases are free; Patreon unlocks the rest.",
+        cs: "Začnete péčí o jednoho šneka a v pěti fázích vypěstujete soběstačnou zahradu: půda, škůdci a predátoři, opylovači. Zahrada žije, i když jste pryč, a inspektor vysvětlí, odkud se bere každé číslo. Boti se čtyřmi styly hry a 800 simulovaných her testují vyváženost. První dvě fáze jsou zdarma, zbytek odemkne Patreon.",
       },
-      links: [],
+      links: [
+        { label: { en: "Play in the browser", cs: "Hrát v prohlížeči" }, url: "links.mygardenWeb", primary: true },
+        { label: { en: "Video", cs: "Video" }, url: "https://www.youtube.com/watch?v=6L86hMXRAcg" },
+      ],
+    },
+    {
+      name: "Tojin platform",
+      sub: { en: "One login, five games, a video pipeline", cs: "Jedno přihlášení, pět her, video pipeline" },
+      tags: ["FastAPI", "OAuth 2.0", "JWT", "GCP Cloud Run", "Secret Manager", "Terraform", "Playwright", "ffmpeg"],
+      desc: {
+        en: "The shared layer behind the web games. A small FastAPI service turns a Patreon OAuth 2.0 login into a short-lived RS256 JWT, so five games share one login and one free/supporter model without ever holding a Patreon credential, and the token never appears in a URL. Every game runs on Google Cloud Run with Terraform, scales to zero and has a one-instance cost cap. A code-driven video pipeline films the real games in native 4K through Playwright and the Chrome DevTools Protocol, adds captions from on-screen events, local TTS narration and loudness-checked audio, and validates every file before upload: more than forty videos in September 2026.",
+        cs: "Společná vrstva pod webovými hrami. Malá služba ve FastAPI promění přihlášení přes Patreon (OAuth 2.0) v krátkodobý RS256 JWT, takže pět her sdílí jedno přihlášení a jeden model zdarma/podporovatel, žádná z nich nedrží přístup k Patreonu a token se nikdy neobjeví v URL. Každá hra běží na Google Cloud Run přes Terraform, škáluje k nule a má strop jedné instance. Pipeline řízená kódem natáčí skutečné hry v nativním 4K přes Playwright a Chrome DevTools Protocol, přidá titulky z dění na obrazovce, lokální TTS komentář a zvuk s kontrolou hlasitosti a každý soubor před nahráním ověří: přes čtyřicet videí za září 2026.",
+      },
+      links: [
+        { label: { en: "YouTube", cs: "YouTube" }, url: "https://www.youtube.com/@tojin111", primary: true },
+        { label: { en: "Patreon", cs: "Patreon" }, url: "https://www.patreon.com/cw/TojinGames" },
+      ],
     },
   ],
 
@@ -581,7 +617,7 @@ window.DATA = {
   ],
 
   chatSuggestions: {
-    en: ["What does Michal do at ABB?", "What are his salary expectations?", "When can he start, and does he work remotely?", "Has he led a team?", "What are his hobbies?", "Tell me about his physics simulations."],
-    cs: ["Co dělá Michal v ABB?", "Jaké má platové představy?", "Kdy může nastoupit a pracuje na dálku?", "Vedl už tým?", "Jaké má koníčky?", "Řekni mi o jeho fyzikálních simulacích."],
+    en: ["What does Michal do at ABB?", "What are his salary expectations?", "Does he work remotely?", "Has he led a team?", "What are his hobbies?", "Tell me about his physics simulations."],
+    cs: ["Co dělá Michal v ABB?", "Jaké má platové představy?", "Pracuje na dálku?", "Vedl už tým?", "Jaké má koníčky?", "Řekni mi o jeho fyzikálních simulacích."],
   },
 };

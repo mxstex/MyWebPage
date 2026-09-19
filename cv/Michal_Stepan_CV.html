@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Michal Štěpán · CV</title>
+<!-- Source of cv/Michal_Stepan_CV.pdf. Re-export after every change (see README). -->
+<style>
+  @page { size: A4; margin: 12mm 15mm 12mm 15mm; }
+  :root { --ink: #16223a; --muted: #52607a; --accent: #9a6e08; --rule: #d9dde6; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body { font-family: "Segoe UI", Arial, Helvetica, sans-serif; font-size: 9.4pt; line-height: 1.38; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: inherit; text-decoration: none; }
+  header { border-bottom: 2px solid var(--accent); padding-bottom: 7px; margin-bottom: 9px; }
+  h1 { font-size: 21pt; line-height: 1.1; margin: 0; letter-spacing: 0.01em; }
+  .role { font-size: 11pt; color: var(--accent); font-weight: 600; margin: 2px 0 6px; }
+  .contact { display: flex; flex-wrap: wrap; gap: 2px 14px; font-size: 8.8pt; color: var(--muted); }
+  .contact b { color: var(--ink); font-weight: 600; }
+  h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.02em; color: var(--accent); margin: 12px 0 5px; padding-bottom: 2px; border-bottom: 1px solid var(--rule); break-after: avoid; }
+  p { margin: 0 0 5px; }
+  ul { margin: 2px 0 0; padding-left: 15px; }
+  li { margin: 0 0 1.5px; }
+  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 18px; }
+  .skills div b { display: block; font-size: 9pt; }
+  .skills div span { color: var(--muted); font-size: 8.8pt; }
+  .job { margin: 0 0 8px; break-inside: avoid; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .job-head h3 { font-size: 10pt; margin: 0; }
+  .job-head h3 span { font-weight: 400; color: var(--muted); }
+  .when { font-size: 8.8pt; color: var(--muted); white-space: nowrap; }
+  .note { font-size: 8.8pt; color: var(--muted); font-style: italic; margin: 1px 0 2px; }
+  .stack { font-size: 8.6pt; color: var(--muted); margin-top: 2px; }
+  .stack b { color: var(--ink); font-weight: 600; }
+  .proj { margin: 0 0 4px; }
+  .proj b { font-weight: 600; }
+  .cols3 { display: grid; grid-template-columns: 1.5fr 1.1fr 0.8fr; gap: 0 16px; }
+  .edu { margin: 0 0 5px; }
+  .edu b { display: block; }
+  .edu span { color: var(--muted); font-size: 8.8pt; }
+  .keep { break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ing. Michal Štěpán</h1>
+  <div class="role">AI &amp; Data Platform Architect · Senior GenAI Engineer · Azure &amp; GCP</div>
+  <div class="contact">
+    <span><b>michalstepan82@seznam.cz</b></span>
+    <span>+420 608 464 905</span>
+    <span>Sviadnov (Ostrava), Czechia · remote / hybrid</span>
+    <span>Portfolio <a href="https://mxstex.github.io/MyWebPage/">mxstex.github.io/MyWebPage</a></span>
+  </div>
+</header>
+
+<h2>Profile</h2>
+<p>AI and data platform engineer with about 20 years across physics research, energy, software, data and AI. At ABB I design and run production GenAI: a RAG pipeline on Azure AI Search, the internal platform GenAI applications run on, and Document Intelligence pipelines. Before that, three years as a freelance data and backend engineer for DTSE, Landis+Gyr and Vendavo, and eight years at a district-heating utility, the last ones leading a team of more than fifteen people. Physics background: nuclear engineering at ČVUT FJFI and tokamak research. In my own time I run Tojin Games, where I build and ship simulation games, LLM agents and cloud services end to end. Moving towards AI and data platform architecture and technical leadership.</p>
+
+<h2>Core skills</h2>
+<div class="skills">
+  <div><b>Architecture &amp; GenAI</b><span>RAG (hybrid search, grounding, citations) · multi-step LLM workflows · function calling / tools · Model Context Protocol (MCP) · agent systems (LangChain, LangGraph) · model evaluation with golden datasets · local LLMs (Ollama)</span></div>
+  <div><b>Data &amp; AI platforms</b><span>Azure AI Search · Azure OpenAI · Azure Document Intelligence · pgvector · ChromaDB · Dagster · Airflow · PostgreSQL · DuckDB · BigQuery · RabbitMQ · data quality &amp; observability</span></div>
+  <div><b>Cloud &amp; infrastructure</b><span>Azure (Container Apps, Functions, Storage, Key Vault, Container Registry, Log Analytics) · GCP (Cloud Run, GCS, BigQuery, Secret Manager) · Docker · Terraform · OAuth 2.0 / JWT · Azure Pipelines · GitLab CI · GitHub Actions</span></div>
+  <div><b>Programming</b><span>Python (FastAPI, Pandas, NumPy/SciPy, Pytest, Playwright, Streamlit, NiceGUI) · SQL · JavaScript (Canvas, WebGL2) · Kotlin + Jetpack Compose · Grafana · Power BI</span></div>
+</div>
+
+<h2>Professional experience</h2>
+
+<div class="job">
+  <div class="job-head"><h3>Senior GenAI Engineer <span>· ABB s.r.o.</span></h3><span class="when">Sep 2025 – present</span></div>
+  <ul>
+    <li>Designed the architecture of a full RAG pipeline: Azure AI Search, vector embeddings, hybrid retrieval and grounding.</li>
+    <li>Integrate GenAI into business processes; build golden datasets and model-evaluation workflows.</li>
+    <li>Develop the internal GenAI application platform: FastAPI, Streamlit, Docker, Azure Container Apps.</li>
+    <li>Run the platform: Key Vault, Container Registry, Log Analytics, containerized deployments.</li>
+    <li>Implement Document Intelligence and multimodal processing pipelines.</li>
+  </ul>
+  <div class="stack"><b>Stack:</b> Python · FastAPI · Streamlit · Azure OpenAI · Azure AI Search · Document Intelligence · Docker · Azure Container Apps</div>
+</div>
+
+<div class="job">
+  <div class="job-head"><h3>Freelance Software / Data Engineer</h3><span class="when">Sep 2022 – Sep 2025</span></div>
+  <div class="note">DTSE, Landis+Gyr, Vendavo and other clients in energy, telecom and manufacturing · remote, international teams</div>
+  <ul>
+    <li>Designed and built end-to-end data workflows in Python, orchestrated with Dagster and Airflow, stored in PostgreSQL, DuckDB and BigQuery.</li>
+    <li>Built backend components for high-volume ingestion and message-based processing with RabbitMQ, and REST services.</li>
+    <li>Migrated services from Kubernetes to cloud-native GCP (Cloud Run, GCS, BigQuery).</li>
+    <li>Maintained CI/CD in GitLab CI and GitHub Actions with unit, integration and end-to-end tests in Pytest.</li>
+    <li>Delivered high-performance processing pipelines for recommender systems (multiprocessing, optimisation); L2 support for production systems.</li>
+  </ul>
+  <div class="stack"><b>Stack:</b> Python · Dagster · Airflow · PostgreSQL · DuckDB · BigQuery · RabbitMQ · GCP · Kubernetes · GitLab CI · GitHub Actions</div>
+</div>
+
+<div class="job">
+  <div class="job-head"><h3>Senior Software Developer <span>· Siemens s.r.o.</span></h3><span class="when">Jan 2021 – Aug 2022</span></div>
+  <ul>
+    <li>Developed an Energy Management System consolidating and analysing data from many sources.</li>
+    <li>Implemented ARIMA and SARIMA models for time-series forecasting.</li>
+    <li>Mentored junior developers.</li>
+  </ul>
+  <div class="stack"><b>Stack:</b> Python · Flask · FastAPI · Docker · PostgreSQL · Grafana · Power BI · RabbitMQ · AWS S3 · AWS Lambda</div>
+</div>
+
+<div class="job">
+  <div class="job-head"><h3>Software Project Engineer <span>· ABB s.r.o.</span></h3><span class="when">Oct 2018 – Jan 2021</span></div>
+  <ul>
+    <li>Developed a water and energy consumption evaluation system; designed and implemented predictive-analytics features.</li>
+  </ul>
+  <div class="stack"><b>Stack:</b> Python · Docker · PostgreSQL · Azure Functions · Azure Blob Storage · Grafana · Power BI</div>
+</div>
+
+<div class="job">
+  <div class="job-head"><h3>IT Specialist · Power Engineer · Technical Deputy <span>· DISTEP a.s.</span></h3><span class="when">May 2010 – Oct 2018</span></div>
+  <ul>
+    <li>As technical deputy, led an operations team of more than fifteen people in water and heat distribution.</li>
+    <li>Improved resource efficiency through optimised calculations and monitoring; streamlined data collection with PDA barcode readers (MS SQL, VBA).</li>
+  </ul>
+</div>
+
+<div class="job">
+<h2>Tojin Games · own studio, in my own time</h2>
+<div class="note">Independent science, space and simulation games · YouTube <a href="https://www.youtube.com/@tojin111">youtube.com/@tojin111</a> · live builds on the portfolio site</div>
+<ul>
+  <li>Built nine science, space and strategy games solo; five are live in the browser on Google Cloud Run. Hand-written simulation engines for Newtonian gravity, Kepler orbital mechanics with WebGL2 rendering, plasma confinement and the Schrödinger equation; golden-trace tests keep the Python, JavaScript and Kotlin engines in agreement.</li>
+  <li><b>Jednota</b>, a multi-agent LLM strategy game (~73,000 lines of Python, 1,300 tests): strategist, envoy and admiral agents on local LLMs through Ollama; deterministic rules validate every model decision (accepted 93/93 strategic, 80/88 diplomatic, 79/86 tactical in a measured campaign); memory across games through pgvector RAG.</li>
+  <li><b>Platform:</b> an OAuth 2.0 to RS256 JWT entitlement service (FastAPI, Cloud Run, Secret Manager, Terraform, 54 tests) gives five games one shared login and access tiers; every service scales to zero under a one-instance cost cap.</li>
+  <li><b>Video pipeline:</b> code-driven 4K capture of real game sessions (Playwright, Chrome DevTools Protocol, ffmpeg/NVENC), captions from on-screen events, local TTS, loudness-checked masters and automated validation, plus local ComfyUI models (FLUX, Wan 2.2): more than forty videos published in September 2026.</li>
+  <li>Built with AI coding agents (Claude Code) under automated test gates: level verifiers, bots that play the games through, cross-language golden traces.</li>
+</ul>
+</div>
+
+<div class="keep">
+<h2>Education, certificates, languages</h2>
+<div class="cols3">
+  <div>
+    <div class="edu"><b>Ing. (MSc), Electrical Engineering and Computer Science · 2012</b><span>VŠB – Technical University of Ostrava. Thesis: VBA Utilization for Power Engineering Data Processing and Presentation</span></div>
+    <div class="edu"><b>Bc., Nuclear Engineering · 2009</b><span>Czech Technical University in Prague, Faculty of Nuclear Sciences and Physical Engineering. Thesis: Physical Analysis of Fast Reactor Cores in Up-to-Date Tendencies</span></div>
+    <div class="edu"><b>Research project · 2006</b><span>Institute of Plasma Physics, Czech Academy of Sciences: electrostatic turbulence in the edge plasma of the CASTOR tokamak</span></div>
+  </div>
+  <div>
+    <div class="edu"><b>Microsoft AZ-305</b><span>Designing Microsoft Azure Infrastructure Solutions · training</span></div>
+    <div class="edu"><b>Microsoft AZ-400</b><span>Designing and Implementing Microsoft DevOps Solutions · training</span></div>
+    <div class="edu"><b>Cambridge English: First (FCE)</b><span>Grade B · CEFR B2 · 2019</span></div>
+  </div>
+  <div>
+    <div class="edu"><b>Czech</b><span>native</span></div>
+    <div class="edu"><b>English</b><span>B2–C1 (Cambridge FCE)</span></div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

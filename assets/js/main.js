@@ -59,6 +59,11 @@
     $("#contact-email").setAttribute("href", "mailto:" + SITE.email); $("#contact-email-v").innerHTML = esc(SITE.email).replace("@", "@<wbr>");
     $("#hero-location").textContent = tr(SITE.location);
     $("#contact-location").textContent = tr(SITE.location);
+    ["#patreon-link", "#contact-patreon"].forEach((id) => {
+      const el = $(id); if (!el) return;
+      if (SITE.patreon) { el.classList.remove("hidden"); el.setAttribute("href", SITE.patreon); }
+      else el.classList.add("hidden");
+    });
     const li = $("#contact-linkedin");
     if (SITE.linkedin) { li.classList.remove("hidden"); li.setAttribute("href", SITE.linkedin); $("#contact-linkedin-v").textContent = SITE.linkedin.replace(/^https?:\/\/(www\.)?/, ""); }
     else li.classList.add("hidden");
