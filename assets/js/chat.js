@@ -17,17 +17,17 @@
      does not need chunking or a vector index - it fits in the prompt. */
   const FACTS = `
 IDENTITY
-- Name: Ing. Michal Štěpán (Michal Stepan). Title: Senior GenAI Engineer. Based in Sviadnov near Ostrava, Czech Republic.
+- Name: Ing. Michal Štěpán (Michal Stepan). Title: Senior GenAI Application Engineer. Based in Sviadnov near Ostrava, Czech Republic.
 - Contact: e-mail michalstepan82@seznam.cz. YouTube channel Tojin (youtube.com/@tojin111) with videos of his games; Patreon page Tojin Games (patreon.com/cw/TojinGames), where supporters unlock the full browser games. A PDF CV can be downloaded from this website. The source code of his projects is private.
 - Languages: Czech (native), English (B2-C1, Cambridge First Certificate, grade B, 2019). Interviews in Czech or English are fine.
 
 PRACTICAL QUESTIONS FROM RECRUITERS
-- Current situation: employed at ABB as Senior GenAI Engineer.
-- What he is looking for: to keep doing what he does now, building LLM applications and agents end to end (LLM plus deterministic rules, evaluation on golden datasets, MCP tools, delivery on Azure or GCP), with a larger share of the design and technical lead.
+- Current situation: employed at ABB as Senior GenAI Application Engineer.
+- What he is looking for: to keep building production GenAI applications and agents end to end - architecture, evaluation, deterministic validation, backend services and cloud delivery - with a larger share of technical ownership and GenAI architecture.
 - Salary expectations: no figures are published. They depend on the specific position, its scope and responsibilities, and the form of cooperation, and are discussed in person during the hiring process.
 - Work mode: full remote, or hybrid in and around Ostrava. Occasional travel (workshops, client visits, abroad) is fine. He is not relocating.
 - Leadership: led a team of more than 15 people as technical deputy at DISTEP; mentored junior developers at Siemens; built the evaluation and the deployment pipelines of an LLM application at ABB; worked directly with clients as a freelancer (requirements, estimates, communication).
-- Why him: builds an LLM application end to end, from the rules and the evaluation to a deployed service with its pipelines; a physics and engineering foundation (nuclear engineering, power engineering, numerical simulation); about 16 years of work in energy, software, data and AI.
+- Why him: builds production GenAI systems end to end, from architecture and evaluation to backend services and deployment; combines cloud/software engineering with a physics and engineering foundation (nuclear engineering, power engineering, numerical simulation); about 16 years of work across energy, software, data and AI.
 - Benefits and other conditions: discussed during the hiring process. To arrange an interview, e-mail michalstepan82@seznam.cz.
 
 HOBBIES AND INTERESTS
@@ -38,19 +38,19 @@ HOBBIES AND INTERESTS
 - Music: he composes the music for his own games, and likes listening to music and going to concerts.
 
 SUMMARY
-- Senior GenAI Engineer who builds LLM applications end to end: RAG on Azure AI Search (since 2025), an LLM working alongside deterministic rules, evaluation on golden datasets, MCP servers for AI coding assistants, delivery to Azure Container Apps or Google Cloud Run.
+- Senior GenAI Application Engineer who builds production GenAI applications end to end: RAG and agents, deterministic validation, golden-dataset evaluation, MCP integrations, FastAPI backends and delivery to Azure Container Apps or Google Cloud Run.
 - Works with AI coding agents (Claude Code), at ABB and in his own games.
 - Earlier background in data and backend engineering (freelance, Siemens, ABB) and in energy (district heating).
 
 CORE SKILLS
-- GenAI and LLM applications (current work): Azure OpenAI / Azure AI Foundry, RAG on Azure AI Search with vector and hybrid retrieval, LangChain and LangGraph, ChromaDB, Azure Document Intelligence (these four mostly in 2025 at ABB), structured outputs, LLM validation combined with deterministic rules, golden datasets and evaluation, Model Context Protocol (MCP) servers, LLM agents on local models through Ollama, pgvector memory, AI coding agents (Claude Code, GitHub Copilot).
+- GenAI and LLM applications (current work): Azure OpenAI / Azure AI Foundry, Azure AI Agents, RAG and retrieval with Azure AI Search and ChromaDB, Azure Document Intelligence, structured outputs, LLM validation combined with deterministic rules, golden datasets and evaluation, Model Context Protocol (MCP/FastMCP), local LLM agents through Ollama, pgvector memory, AI coding agents (Claude Code, GitHub Copilot). LangChain and LangGraph are earlier experience, mainly from 2025.
 - Cloud and delivery (current work): Azure Container Apps, Container Registry, Key Vault with managed identity, Log Analytics, Blob and Table Storage, Azure Pipelines for dev, test, stage and prod; Google Cloud Run, Secret Manager, Terraform on GCP; Docker; OAuth 2.0 / JWT.
-- Programming and testing (current work): Python (FastAPI, Pandas, NumPy, SciPy, NiceGUI), Pytest, Playwright, load and stress tests, SQL and PostgreSQL, JavaScript (Canvas, WebGL2), Kotlin with Jetpack Compose for Android.
+- Programming and testing (current work): Python, FastAPI, Pandas, Pytest, SQL and PostgreSQL, Redis, Neo4j, NiceGUI, Vue 3, Playwright, load and stress tests, NumPy and SciPy. Earlier project work also includes JavaScript/WebGL2 and Kotlin/Jetpack Compose.
 - Worked with earlier, in previous jobs: Dagster, Airflow, DuckDB, BigQuery, RabbitMQ, Kubernetes, GitLab CI, GitHub Actions, Flask, Streamlit, AWS S3 and Lambda, Azure Functions, Grafana, Power BI, ARIMA and SARIMA forecasting.
 
 WORK EXPERIENCE (most recent first)
-1. ABB s.r.o. - Senior GenAI Engineer, September 2025 to present.
-   Has built RAG since 2025: retrieval over Azure AI Search with vector embeddings and hybrid retrieval, LangChain and LangGraph workflows, ChromaDB, and Azure Document Intelligence to turn documents into indexable content. Now works on an AI-assisted validation app for engineering spreadsheets, where an LLM works alongside deterministic rules. Built its evaluation (golden datasets, acceptance evaluation, performance and stress tests). In the FastAPI backend: a YAML rule engine next to the LLM validators, switchable model profiles (Azure OpenAI or a local model through Ollama) with structured outputs, quotas. Built the delivery: Azure Pipelines for dev, test, stage and prod, Docker images in Container Registry, Azure Container Apps, Key Vault through managed identity, Log Analytics. Built a proof-of-concept MCP server (Python, FastMCP) that gives AI coding assistants (Claude Code, GitHub Copilot) access to Azure DevOps work items. Wrote the architecture documentation for a RAG assistant (Azure AI Search, LangGraph, Azure OpenAI).
+1. ABB s.r.o. - Senior GenAI Application Engineer, September 2025 to present.
+   Builds production GenAI applications for industrial engineering workflows: document extraction and RAG, structured LLM validation beside deterministic rules, and agent-based assistants with Azure OpenAI / AI Foundry and Azure AI Agents. Owns evaluation with golden datasets, acceptance checks, performance/stress tests and cloud-vs-local model comparison through Ollama. Develops Python/FastAPI application services and works with PostgreSQL, Redis and Neo4j where needed. Delivers through Azure Pipelines to Azure Container Apps with Container Registry, Key Vault via managed identity and Log Analytics. Built a proof-of-concept MCP server (Python, FastMCP) for controlled access to Azure DevOps work items from AI coding assistants.
 2. Freelance Software / Data Engineer, September 2022 to September 2025.
    Projects for DTSE, Landis+Gyr, Vendavo and other clients in energy, telecom and manufacturing. Designed end-to-end data workflows in Python with Dagster and Airflow, storage in PostgreSQL, DuckDB and BigQuery. Built backend components for high-volume ingestion and message-based processing with RabbitMQ. Migrated services from Kubernetes to GCP (Cloud Run, GCS, BigQuery). Maintained CI/CD (GitLab CI, GitHub Actions) with unit, integration and e2e tests in Pytest. Delivered high-performance pipelines for recommender systems. Provided L2 engineering support for production systems.
 3. Siemens s.r.o. - Senior Software Developer, January 2021 to August 2022.
@@ -75,14 +75,14 @@ PERSONAL PROJECTS: TOJIN GAMES (his own studio, built in his own time; the sourc
 - Quantum: a wave-mechanics sandbox where the Schrödinger equation decides (double slit, tunnelling, uncertainty, string breaking, beam splitter). Hand-written split-step Fourier integrator tested against analytic solutions. Not deployed yet.
 - Starforge: a hard sci-fi incremental strategy game from an orbital station to a Dyson swarm, in real physical units, with versioned cloud saves, offline progress and bot playthroughs that prove the economy can be finished. Playable online; Chapter I is free.
 - MyZoo and My Garden: simulation games about animal care and building a garden ecosystem, with offline simulation, bots that play them through, and art generated locally with ComfyUI, FLUX and Wan 2.2. Both playable online.
-- The platform behind the games: his own FastAPI service turns a Patreon OAuth 2.0 login into a short-lived RS256 JWT, so five games share one login and one free/supporter model without holding any Patreon credential. Everything runs on Google Cloud Run with Terraform, scales to zero and costs almost nothing when idle.
+- The platform behind the games: his own FastAPI service completes Patreon OAuth 2.0, maps membership to internal entitlements and signs short-lived RS256 JWTs. Browser redirects carry only a random one-time code (60-second TTL, stored hashed); the game server exchanges it for the JWT. Patreon access tokens are never stored, games hold only the public verification key/JWKS, and Cloud Run reads secrets from Secret Manager provisioned with Terraform.
 - Video pipeline: code-driven 4K videos of the real games (Playwright and the Chrome DevTools Protocol for capture, captions from on-screen events, Kokoro text-to-speech narration, loudness-checked audio, automated validation), plus a local storyboard-to-video tool on ComfyUI (Wan 2.2) and Ollama. More than forty videos were published in September 2026.
-- How he builds them: Python and NiceGUI, pytest and Playwright tests, level verifiers and bots that play the games through, Docker and Terraform, AI coding agents (Claude Code, about 70% of the commits are co-written with it), local generative models for art (ComfyUI), his own music, Kokoro for narration.
+- How he builds them: Python and NiceGUI, pytest and Playwright tests, level verifiers and bots that play the games through, Docker and Terraform, AI-assisted development with Claude Code, local generative models for art (ComfyUI), his own music and Kokoro for narration.
 - Other: he has built a Model Context Protocol (MCP) server that connects Claude to a PostgreSQL notes database, and a peer-to-peer file-sync tool for home networks in pure Python.
 - This website: plain HTML, CSS and JavaScript on GitHub Pages. The chat you are reading runs a small Qwen2.5 model in the browser via WebLLM and WebGPU; nothing is sent to a server.
 
 LLM PRINCIPLES MICHAL FOLLOWS
-- Measure with golden datasets and an acceptance evaluation before tuning prompts, for retrieval (hybrid vector + keyword search in Azure AI Search) as much as for the model; compare local and cloud models the same way.
+- Measure with golden datasets and an acceptance evaluation before tuning prompts, for retrieval as much as for the model; compare local and cloud models under the same evaluation and treat retrieval changes as measurable system changes.
 - Deterministic rules wherever they can do the job and the model only where judgement is needed; structured outputs keep answers machine-checkable.
 - Give AI assistants tools through MCP instead of pasted copies of data.
 - Ship it, not a prototype: containers, pipelines for every environment, secrets in Key Vault, telemetry.
