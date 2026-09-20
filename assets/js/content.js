@@ -601,8 +601,8 @@ window.DATA = {
     {
       title: { en: "Right-sized: the chat on this page", cs: "Správná velikost: chat na této stránce" },
       body: {
-        en: "A small instruction-tuned model runs in your browser through WebGPU with my CV as context. A one-page document does not need a vector index, so the whole system is a prompt and a model. Sizing RAG honestly is part of the job.",
-        cs: "Malý instrukčně laděný model běží ve vašem prohlížeči přes WebGPU a jako kontext má moje CV. Jednostránkový dokument nepotřebuje vektorový index, takže celý systém je prompt a model. Poctivé dimenzování RAG je součást práce.",
+        en: "A small instruction-tuned model runs in your browser through WebGPU with my CV as context. A short document does not need a vector index, so the whole system is a prompt and a model. Sizing RAG honestly is part of the job.",
+        cs: "Malý instrukčně laděný model běží ve vašem prohlížeči přes WebGPU a jako kontext má moje CV. Krátký dokument nepotřebuje vektorový index, takže celý systém je prompt a model. Poctivé dimenzování RAG je součást práce.",
       },
       link: "#chat",
     },
@@ -644,6 +644,18 @@ window.DATA = {
 
   // Newest first. The header shows the version of the first entry.
   changelog: [
+    {
+      version: "1.6.1",
+      date: "2026-09-20",
+      items: {
+        en: [
+          "Downloadable PDF regenerated from the current CV; the job title, profile and skills now match the site.",
+        ],
+        cs: [
+          "PDF ke stažení znovu vygenerováno z aktuálního CV; název pozice, profil a dovednosti nyní odpovídají webu.",
+        ],
+      },
+    },
     {
       version: "1.6.0",
       date: "2026-09-20",
