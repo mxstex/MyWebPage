@@ -11,7 +11,7 @@ window.SITE = {
   email: "michalstepan82@seznam.cz",
   youtube: "https://www.youtube.com/@tojin111",
   patreon: "https://www.patreon.com/cw/TojinGames",  // hidden while empty
-  linkedin: "",                              // e.g. "https://www.linkedin.com/in/…"; hidden while empty
+  linkedin: "https://www.linkedin.com/in/michal-%C5%A1t%C4%9Bp%C3%A1n-7b81631a5/",
   cv: "cv/Michal_Stepan_CV.pdf",
   location: { en: "Sviadnov, Czechia", cs: "Sviadnov, Česko" },
   links: {
@@ -34,8 +34,8 @@ window.SITE = {
 /* ---------- static UI strings, keyed by data-i18n attributes ---------- */
 window.T = {
   en: {
-    "meta.title": "Michal Štěpán · Senior GenAI Engineer",
-    "meta.description": "Michal Štěpán builds LLM applications end to end: RAG on Azure AI Search, LLM and rule-based validation, golden-dataset evaluation, MCP servers and delivery on Azure and GCP. Also the author of physics games and simulations.",
+    "meta.title": "Michal Štěpán · Senior GenAI Application Engineer",
+    "meta.description": "Michal Štěpán builds production GenAI applications end to end: LLM/RAG/agents, deterministic validation, golden-dataset evaluation, MCP, FastAPI and delivery on Azure and GCP.",
     "nav.about": "About",
     "nav.skills": "Skills",
     "nav.experience": "Experience",
@@ -62,31 +62,31 @@ window.T = {
     "scene.orbits": "Click the sky to launch a planet",
     "skip": "Skip to content",
 
-    "hero.kicker": "Senior GenAI Engineer · LLM applications, RAG, evaluation, MCP · Azure & GCP",
-    "hero.tagline": "I build LLM applications end to end: the model working alongside deterministic rules, measured against golden datasets and delivered to the cloud. I work this way at ABB and in my own games.",
+    "hero.kicker": "Senior GenAI Application Engineer · LLM/RAG/agents · Python/FastAPI · Azure & GCP",
+    "hero.tagline": "I build production GenAI applications end to end: retrieval and agents, deterministic validation, evaluation, secure APIs and cloud delivery. I work across architecture, backend, quality and operations.",
     "hero.cv": "Download CV (PDF)",
     "hero.chat": "Chat with my CV",
     "hero.youtube": "YouTube",
     "hero.patreon": "Patreon",
     "hero.studio": "Tojin Games · my studio",
     "hero.now.label": "Currently",
-    "hero.now.big": "Senior GenAI Engineer · ABB",
-    "hero.now.1": "RAG on Azure AI Search, since 2025",
-    "hero.now.2": "LLM and rule-based validation, measured on golden datasets",
-    "hero.now.3": "MCP servers for AI coding assistants",
+    "hero.now.big": "Senior GenAI Application Engineer · ABB",
+    "hero.now.1": "Production LLM, RAG and agent applications for industrial engineering",
+    "hero.now.2": "Golden-dataset evaluation plus deterministic validation",
+    "hero.now.3": "FastAPI, Azure AI/OpenAI, MCP and CI/CD",
 
     "about.title": "About",
-    "about.fact1.b": "Senior GenAI Engineer",
+    "about.fact1.b": "Senior GenAI Application Engineer",
     "about.fact1.s": "ABB, since 2025",
-    "about.fact2.b": "Azure platform",
-    "about.fact2.s": "OpenAI, Container Apps, Key Vault, Pipelines",
-    "about.fact3.b": "Python end to end",
-    "about.fact3.s": "FastAPI, Pandas, Pytest, Playwright",
+    "about.fact2.b": "Production GenAI on Azure",
+    "about.fact2.s": "OpenAI / AI Foundry / Agents, Container Apps, Key Vault",
+    "about.fact3.b": "Python application stack",
+    "about.fact3.s": "FastAPI, Pandas, Pytest, PostgreSQL, Redis, Neo4j",
     "about.fact4.b": "Tojin Games",
-    "about.fact4.s": "My own studio: eight science and strategy games",
-    "about.p1": "I build LLM applications end to end. At ABB I work as a Senior GenAI Engineer: since 2025 I have built RAG with Azure AI Search, LangChain, LangGraph and Document Intelligence, and now I work on an AI-assisted validation app, where an LLM works alongside deterministic rules. I built its evaluation on golden datasets, parts of the FastAPI backend, and its delivery through Azure Pipelines to Azure Container Apps with Key Vault and Log Analytics. I also write MCP servers that give AI coding assistants such as Claude Code access to team tools. That is the work I want to keep doing, with a larger share of the design and technical lead.",
+    "about.fact4.s": "My engineering lab: agents, simulations and cloud platform",
+    "about.p1": "I build production GenAI applications end to end. At ABB I work as a Senior GenAI Application Engineer on industrial engineering workflows: document extraction and RAG, structured LLM validation beside deterministic rules, and agent-based assistants. I work across architecture, evaluation, backend and delivery: golden datasets and acceptance/performance tests, FastAPI services, Azure OpenAI / AI Foundry and Azure AI Agents, and CI/CD to Azure Container Apps with Key Vault and Log Analytics. I also build MCP integrations that let AI coding assistants work directly with team tools. I want to keep moving toward technical ownership and GenAI architecture.",
     "about.p2": "Before that I spent three years as a freelance backend and data engineer for clients in energy, telecom and manufacturing (DTSE, Landis+Gyr, Vendavo), and earlier built energy-management and analytics systems at Siemens and ABB. My roots are in power engineering: eight years at a district heating utility, the last ones as technical deputy leading more than fifteen people, taught me what production reliability actually means.",
-    "about.p3": "Outside work I run Tojin Games, my one-person studio for science, space and simulation games, with a YouTube channel and a Patreon. Gravity is a Newtonian puzzle where you only set one asteroid's velocity; Orbit teaches rendezvous in the real Solar System; HoldMyPlazma confines plasma with magnets, calibrated against my own research on the CASTOR tokamak; Jednota is a 4X strategy in which every empire is run by its own local LLM agent. Five of the games are playable in the browser. I make the videos with my own automated pipeline and compose the music for my games, and spend the rest of the time in the garden with my family and our dog.",
+    "about.p3": "Outside work I run Tojin Games, a one-person engineering lab for science, space and strategy games. I use it to explore local LLM agents, deterministic validation, pgvector memory, numerical simulation and cloud architecture. The browser games share my own FastAPI authentication service: Patreon OAuth 2.0 is exchanged for short-lived RS256 JWTs through one-time codes, while games hold only the public verification key. Services run on Google Cloud Run with Secret Manager and Terraform. The projects are also where I experiment with AI-assisted development, automated test bots and local generative models.",
 
     "skills.title": "Skills",
     "skills.lead": "What I work with today, and what I have worked with before.",
@@ -147,8 +147,8 @@ window.T = {
     "changelog.open": "What's new on this site",
   },
   cs: {
-    "meta.title": "Michal Štěpán · Senior GenAI Engineer",
-    "meta.description": "Michal Štěpán staví LLM aplikace od začátku do konce: RAG nad Azure AI Search, validace pomocí LLM a pravidel, evaluace na golden datasetech, MCP servery a nasazení na Azure a GCP. Autor fyzikálních her a simulací.",
+    "meta.title": "Michal Štěpán · Senior GenAI Application Engineer",
+    "meta.description": "Michal Štěpán staví produkční GenAI aplikace od začátku do konce: LLM/RAG/agenty, deterministickou validaci, evaluaci na golden datasetech, MCP, FastAPI a nasazení na Azure a GCP.",
     "nav.about": "O mně",
     "nav.skills": "Dovednosti",
     "nav.experience": "Praxe",
@@ -175,31 +175,31 @@ window.T = {
     "scene.orbits": "Klikni do oblohy a vypusť planetu",
     "skip": "Přeskočit na obsah",
 
-    "hero.kicker": "Senior GenAI Engineer · LLM aplikace, RAG, evaluace, MCP · Azure a GCP",
-    "hero.tagline": "Stavím LLM aplikace od začátku do konce: model spolu s deterministickými pravidly, měřený proti golden datasetům a nasazený do cloudu. Takhle pracuji v ABB i na svých hrách.",
+    "hero.kicker": "Senior GenAI Application Engineer · LLM/RAG/agenti · Python/FastAPI · Azure a GCP",
+    "hero.tagline": "Stavím produkční GenAI aplikace od začátku do konce: retrieval a agenty, deterministickou validaci, evaluaci, bezpečná API a cloudové nasazení. Pracuji napříč architekturou, backendem, kvalitou i provozem.",
     "hero.cv": "Stáhnout CV (PDF)",
     "hero.chat": "Chat s mým CV",
     "hero.youtube": "YouTube",
     "hero.patreon": "Patreon",
     "hero.studio": "Tojin Games · moje studio",
     "hero.now.label": "Aktuálně",
-    "hero.now.big": "Senior GenAI Engineer · ABB",
-    "hero.now.1": "RAG nad Azure AI Search, od roku 2025",
-    "hero.now.2": "Validace pomocí LLM a pravidel, měřená na golden datasetech",
-    "hero.now.3": "MCP servery pro AI coding asistenty",
+    "hero.now.big": "Senior GenAI Application Engineer · ABB",
+    "hero.now.1": "Produkční LLM, RAG a agentní aplikace pro průmyslové inženýrství",
+    "hero.now.2": "Evaluace na golden datasetech plus deterministická validace",
+    "hero.now.3": "FastAPI, Azure AI/OpenAI, MCP a CI/CD",
 
     "about.title": "O mně",
-    "about.fact1.b": "Senior GenAI Engineer",
+    "about.fact1.b": "Senior GenAI Application Engineer",
     "about.fact1.s": "ABB, od roku 2025",
-    "about.fact2.b": "Platforma na Azure",
-    "about.fact2.s": "OpenAI, Container Apps, Key Vault, Pipelines",
-    "about.fact3.b": "Python od začátku do konce",
-    "about.fact3.s": "FastAPI, Pandas, Pytest, Playwright",
+    "about.fact2.b": "Produkční GenAI na Azure",
+    "about.fact2.s": "OpenAI / AI Foundry / Agents, Container Apps, Key Vault",
+    "about.fact3.b": "Python aplikační stack",
+    "about.fact3.s": "FastAPI, Pandas, Pytest, PostgreSQL, Redis, Neo4j",
     "about.fact4.b": "Tojin Games",
-    "about.fact4.s": "Vlastní studio: osm vědeckých a strategických her",
-    "about.p1": "Stavím LLM aplikace od začátku do konce. V ABB pracuji jako Senior GenAI Engineer: od roku 2025 stavím RAG nad Azure AI Search s LangChainem, LangGraphem a Document Intelligence a teď pracuji na aplikaci pro validaci s pomocí AI, ve které LLM spolupracuje s deterministickými pravidly. Postavil jsem její evaluaci na golden datasetech, části backendu ve FastAPI a nasazení přes Azure Pipelines do Azure Container Apps s Key Vaultem a Log Analytics. Píšu také MCP servery, přes které AI coding asistenti, třeba Claude Code, pracují s nástroji týmu. Právě tohle chci dělat dál, s větším podílem návrhu a technického vedení.",
+    "about.fact4.s": "Moje technická laboratoř: agenti, simulace a cloud platforma",
+    "about.p1": "Stavím produkční GenAI aplikace od začátku do konce. V ABB pracuji jako Senior GenAI Application Engineer na průmyslových inženýrských workflow: extrakci dokumentů a RAG, strukturované LLM validaci vedle deterministických pravidel a agentních asistentech. Pracuji napříč architekturou, evaluací, backendem a nasazením: golden datasety a akceptační/výkonnostní testy, FastAPI služby, Azure OpenAI / AI Foundry a Azure AI Agents a CI/CD do Azure Container Apps s Key Vaultem a Log Analytics. Stavím také MCP integrace, přes které AI coding asistenti pracují přímo s týmovými nástroji. Chci se dál posouvat k technickému ownershipu a GenAI architektuře.",
     "about.p2": "Předtím jsem tři roky pracoval jako freelance backend a datový inženýr pro klienty z energetiky, telekomunikací a výroby (DTSE, Landis+Gyr, Vendavo) a ještě dřív jsem stavěl systémy pro energetický management a analytiku v Siemensu a ABB. Kořeny mám v energetice: osm let v teplárenské distribuční společnosti, naposledy jako technický zástupce s týmem přes patnáct lidí, mě naučilo, co znamená spolehlivý provoz.",
-    "about.p3": "Mimo práci vedu Tojin Games, své jednočlenné studio vědeckých, vesmírných a simulačních her, s kanálem na YouTube a Patreonem. Gravity je newtonovská hádanka, kde nastavíte jen rychlost jednoho asteroidu; Orbit učí setkání na oběžné dráze ve skutečné Sluneční soustavě; HoldMyPlazma drží plazma magnety a je kalibrovaná podle mého vlastního výzkumu na tokamaku CASTOR; Jednota je 4X strategie, ve které každou říši řídí vlastní lokální LLM agent. Pět her si můžete zahrát v prohlížeči. Videa vyrábím vlastní automatizovanou pipeline, ke svým hrám si skládám hudbu a zbytek času trávím na zahradě se svou rodinou a psem.",
+    "about.p3": "Mimo práci vedu Tojin Games, jednočlennou technickou laboratoř pro vědecké, vesmírné a strategické hry. Zkouším v ní lokální LLM agenty, deterministickou validaci, pgvector paměť, numerické simulace a cloudovou architekturu. Webové hry sdílejí mou vlastní autentizační službu ve FastAPI: Patreon OAuth 2.0 se přes jednorázové kódy mění na krátkodobé RS256 JWT a hry drží jen veřejný ověřovací klíč. Služby běží na Google Cloud Run se Secret Managerem a Terraformem. Projekty používám také pro AI-assisted development, automatické testovací boty a lokální generativní modely.",
 
     "skills.title": "Dovednosti",
     "skills.lead": "S čím pracuji dnes a s čím jsem pracoval dřív.",
@@ -266,45 +266,45 @@ window.DATA = {
   skills: [
     {
       title: { en: "GenAI & LLM applications", cs: "GenAI a LLM aplikace" },
-      items: ["Azure OpenAI / AI Foundry", "RAG on Azure AI Search", "Hybrid retrieval", "LangChain", "LangGraph", "ChromaDB", "Document Intelligence", "Structured outputs", "LLM + deterministic rules", "Golden datasets", "Evaluation", "Model Context Protocol (MCP) servers", "LLM agents on local models (Ollama)", "pgvector memory", "Claude Code", "GitHub Copilot"],
+      items: ["Azure OpenAI / AI Foundry", "Azure AI Agents", "RAG / retrieval (Azure AI Search, ChromaDB)", "Document Intelligence", "Structured outputs", "LLM + deterministic rules", "Golden datasets & evaluation", "Model Context Protocol (MCP) / FastMCP", "LLM agents on local models (Ollama)", "pgvector memory", "Claude Code", "GitHub Copilot"],
     },
     {
       title: { en: "Cloud & delivery", cs: "Cloud a nasazení" },
-      items: ["Azure Container Apps", "Container Registry", "Key Vault · managed identity", "Log Analytics", "Blob & Table Storage", "Azure Pipelines", "GCP Cloud Run", "Secret Manager", "Terraform (GCP)", "Docker", "OAuth 2.0 / JWT"],
+      items: ["Azure Container Apps", "Container Registry", "Key Vault · managed identity", "Log Analytics", "Blob & Table Storage", "Azure DevOps / Pipelines", "GCP Cloud Run", "Secret Manager", "Terraform (GCP)", "Docker", "OAuth 2.0 / RS256 JWT"],
     },
     {
       title: { en: "Programming & testing", cs: "Programování a testy" },
-      items: ["Python", "FastAPI", "Pandas", "NumPy / SciPy", "NiceGUI", "Pytest", "Playwright", "Load & stress tests", "SQL / PostgreSQL", "JavaScript · Canvas · WebGL2", "Kotlin & Jetpack Compose"],
+      items: ["Python", "FastAPI", "Pandas", "Pytest", "SQL / PostgreSQL", "Redis", "Neo4j", "NiceGUI", "Vue 3", "Playwright", "Load & stress tests", "NumPy / SciPy"],
     },
     {
       title: { en: "Worked with earlier", cs: "Dříve jsem pracoval s" },
-      items: ["Dagster", "Airflow", "DuckDB", "BigQuery", "RabbitMQ", "Kubernetes", "GitLab CI", "GitHub Actions", "Flask", "Streamlit", "AWS S3 · Lambda", "Azure Functions", "Grafana", "Power BI", "ARIMA / SARIMA"],
+      items: ["LangChain", "LangGraph", "Dagster", "Airflow", "DuckDB", "BigQuery", "RabbitMQ", "Kubernetes", "GitLab CI", "GitHub Actions", "Flask", "Streamlit", "AWS S3 · Lambda", "Azure Functions", "Grafana", "Power BI", "Kotlin · WebGL2", "ARIMA / SARIMA"],
     },
   ],
 
   experience: [
     {
       company: "ABB s.r.o.",
-      role: { en: "Senior GenAI Engineer", cs: "Senior GenAI Engineer" },
+      role: { en: "Senior GenAI Application Engineer", cs: "Senior GenAI Application Engineer" },
       period: { en: "Sep 2025 – present", cs: "září 2025 – dosud" },
       current: true,
       bullets: {
         en: [
-          "RAG since 2025: retrieval over Azure AI Search with vector embeddings and hybrid retrieval, LangChain and LangGraph workflows, ChromaDB, and Azure Document Intelligence to turn documents into indexable content. In 2026 wrote the architecture documentation for a RAG assistant.",
-          "AI-assisted validation of engineering spreadsheets: built the evaluation (golden datasets, acceptance evaluation, performance and stress tests) that every change is measured against.",
-          "Backend in FastAPI: a YAML rule engine that runs deterministic checks next to the LLM validators, switchable model profiles (Azure OpenAI or a local model through Ollama) with structured outputs, quotas and session cleanup.",
-          "Delivery: Azure Pipelines for dev, test, stage and prod; Docker images in Container Registry, Azure Container Apps, Key Vault secrets through managed identity, Log Analytics.",
-          "A proof-of-concept MCP server (Python, FastMCP) that gives AI coding assistants (Claude Code, GitHub Copilot) access to Azure DevOps work items, with a mock API and tests.",
+          "Build production GenAI applications for industrial engineering workflows: document extraction and RAG, structured LLM validation, and agent-based assistants using Azure OpenAI / AI Foundry and Azure AI Agents.",
+          "Own quality and evaluation for AI features: golden datasets, acceptance evaluation, deterministic rule checks, performance and stress tests, and cloud-vs-local model comparison through Ollama.",
+          "Develop Python/FastAPI backends and application services; work with PostgreSQL, Redis and Neo4j where the product architecture requires relational, cache/session and graph data.",
+          "Deliver through Azure Pipelines across dev, test, stage and prod; Docker images in Container Registry, Azure Container Apps, Key Vault via managed identity and Log Analytics.",
+          "Built a proof-of-concept MCP server (Python, FastMCP) that gives AI coding assistants such as Claude Code and GitHub Copilot controlled access to Azure DevOps work items, with a mock API and tests.",
         ],
         cs: [
-          "RAG od roku 2025: vyhledávání nad Azure AI Search s vektorovými embeddingy a hybridním vyhledáváním, workflow v LangChainu a LangGraphu, ChromaDB a Azure Document Intelligence pro převod dokumentů do indexovatelné podoby. V roce 2026 dokumentace architektury RAG asistenta.",
-          "Validace technických tabulek s pomocí AI: evaluace, proti které se měří každá změna (golden datasety, akceptační evaluace, výkonnostní a zátěžové testy).",
-          "Backend ve FastAPI: pravidlový engine v YAML, který spouští deterministické kontroly vedle LLM validátorů, přepínatelné profily modelů (Azure OpenAI nebo lokální model přes Ollamu) se strukturovanými výstupy, kvóty a úklid relací.",
-          "Nasazení: Azure Pipelines pro dev, test, stage a prod; Docker image v Container Registry, Azure Container Apps, tajemství v Key Vaultu přes managed identity, Log Analytics.",
-          "Proof of concept MCP serveru (Python, FastMCP), přes který AI coding asistenti (Claude Code, GitHub Copilot) pracují s work itemy v Azure DevOps, s mock API a testy.",
+          "Stavím produkční GenAI aplikace pro průmyslové inženýrské workflow: extrakci dokumentů a RAG, strukturovanou LLM validaci a agentní asistenty nad Azure OpenAI / AI Foundry a Azure AI Agents.",
+          "Mám na starosti kvalitu a evaluaci AI funkcí: golden datasety, akceptační evaluaci, deterministické kontroly, výkonnostní a zátěžové testy a porovnání cloudových a lokálních modelů přes Ollamu.",
+          "Vyvíjím backendy a aplikační služby v Pythonu/FastAPI; podle architektury pracuji s PostgreSQL, Redisem a Neo4j pro relační data, cache/relace a grafová data.",
+          "Nasazuji přes Azure Pipelines do dev, test, stage a prod; Docker image v Container Registry, Azure Container Apps, Key Vault přes managed identity a Log Analytics.",
+          "Postavil jsem proof of concept MCP serveru (Python, FastMCP), přes který AI coding asistenti jako Claude Code a GitHub Copilot řízeně pracují s work itemy v Azure DevOps, s mock API a testy.",
         ],
       },
-      stack: "Python · FastAPI · Azure OpenAI / AI Foundry · Azure AI Search · LangChain · LangGraph · Document Intelligence · Pandas · Pytest · Docker · Azure Container Apps · Key Vault · Azure Pipelines · MCP · Ollama",
+      stack: "Python · FastAPI · Azure OpenAI / AI Foundry · Azure AI Agents · RAG · ChromaDB · Document Intelligence · PostgreSQL · Redis · Neo4j · Pandas · Pytest · Docker · Azure Container Apps · Key Vault · Azure Pipelines · MCP · Ollama",
     },
     {
       company: { en: "Freelance", cs: "Freelance" },
@@ -552,8 +552,8 @@ window.DATA = {
       sub: { en: "One login, five games, a video pipeline", cs: "Jedno přihlášení, pět her, video pipeline" },
       tags: ["FastAPI", "OAuth 2.0", "JWT", "GCP Cloud Run", "Secret Manager", "Terraform", "Playwright", "ffmpeg"],
       desc: {
-        en: "The shared layer behind the web games. A small FastAPI service turns a Patreon OAuth 2.0 login into a short-lived RS256 JWT, so five games share one login and one free/supporter model without ever holding a Patreon credential, and the token never appears in a URL. Every game runs on Google Cloud Run with Terraform, scales to zero and has a one-instance cost cap. A code-driven video pipeline films the real games in native 4K through Playwright and the Chrome DevTools Protocol, adds captions from on-screen events, local TTS narration and loudness-checked audio, and validates every file before upload: more than forty videos in September 2026.",
-        cs: "Společná vrstva pod webovými hrami. Malá služba ve FastAPI promění přihlášení přes Patreon (OAuth 2.0) v krátkodobý RS256 JWT, takže pět her sdílí jedno přihlášení a jeden model zdarma/podporovatel, žádná z nich nedrží přístup k Patreonu a token se nikdy neobjeví v URL. Každá hra běží na Google Cloud Run přes Terraform, škáluje k nule a má strop jedné instance. Pipeline řízená kódem natáčí skutečné hry v nativním 4K přes Playwright a Chrome DevTools Protocol, přidá titulky z dění na obrazovce, lokální TTS komentář a zvuk s kontrolou hlasitosti a každý soubor před nahráním ověří: přes čtyřicet videí za září 2026.",
+        en: "The shared layer behind the web games. A FastAPI service completes Patreon OAuth 2.0, maps membership to internal entitlements and signs short-lived RS256 JWTs. Browser redirects carry only a hashed, one-time code with a 60-second TTL; the game server exchanges it for the JWT, while the Patreon access token is never stored and each game holds only the public verification key/JWKS. Cloud Run reads the Patreon secret and RSA private key from Secret Manager, provisioned with Terraform. A separate code-driven pipeline records real gameplay in 4K through Playwright/CDP, adds local TTS and validates output before upload.",
+        cs: "Společná vrstva pod webovými hrami. Služba ve FastAPI dokončí Patreon OAuth 2.0, převede členství na interní oprávnění a podepíše krátkodobý RS256 JWT. Přesměrování v prohlížeči nese jen hashovaný jednorázový kód s TTL 60 sekund; herní server ho vymění za JWT, Patreon access token se nikde neukládá a každá hra drží jen veřejný ověřovací klíč/JWKS. Cloud Run načítá Patreon secret a RSA private key ze Secret Manageru vytvořeného přes Terraform. Samostatná pipeline řízená kódem nahrává skutečný gameplay ve 4K přes Playwright/CDP, přidává lokální TTS a výstup před uploadem automaticky ověřuje.",
       },
       links: [
         { label: { en: "YouTube", cs: "YouTube" }, url: "https://www.youtube.com/@tojin111", primary: true },
@@ -566,8 +566,8 @@ window.DATA = {
     {
       title: { en: "Measure before tuning prompts", cs: "Nejdřív měřit, pak ladit prompty" },
       body: {
-        en: "Golden datasets and an acceptance evaluation come first, for retrieval as much as for the model. Hybrid retrieval (vector plus keyword) in Azure AI Search gets measured before prompts are tuned, and a new prompt or model counts as better only when the numbers say so.",
-        cs: "Nejdřív golden datasety a akceptační evaluace, pro retrieval stejně jako pro model. Hybridní vyhledávání (vektory plus klíčová slova) v Azure AI Search se měří dřív, než se ladí prompty, a nový prompt nebo model je lepší, jen když to ukážou čísla.",
+        en: "Golden datasets and an acceptance evaluation come first, for retrieval as much as for the model. Whether retrieval is hybrid search in Azure AI Search or a ChromaDB pipeline, it gets measured before prompts are tuned; a new prompt, model or retrieval strategy counts as better only when the numbers say so.",
+        cs: "Nejdřív golden datasety a akceptační evaluace, pro retrieval stejně jako pro model. Ať jde o hybridní vyhledávání v Azure AI Search nebo pipeline nad ChromaDB, měří se dřív, než se ladí prompty; nový prompt, model nebo retrieval strategie je lepší, jen když to ukážou čísla.",
       },
     },
     {
@@ -644,6 +644,24 @@ window.DATA = {
 
   // Newest first. The header shows the version of the first entry.
   changelog: [
+    {
+      version: "1.6.0",
+      date: "2026-09-20",
+      items: {
+        en: [
+          "CV repositioned around production GenAI applications and technical ownership: LLM/RAG/agents, evaluation, deterministic validation and cloud delivery.",
+          "ABB stack updated with Azure AI Agents and the application data layer (PostgreSQL, Redis, Neo4j); older LangChain/LangGraph experience moved out of the headline skills.",
+          "Tojin platform now documents the real OAuth 2.0 -> one-time code -> RS256 JWT flow, Secret Manager and public-key verification.",
+          "LinkedIn profile added to the contact section.",
+        ],
+        cs: [
+          "CV je nově postavené kolem produkčních GenAI aplikací a technického ownershipu: LLM/RAG/agentů, evaluace, deterministické validace a cloudového nasazení.",
+          "ABB stack doplněn o Azure AI Agents a aplikační datovou vrstvu (PostgreSQL, Redis, Neo4j); starší LangChain/LangGraph zkušenost se přesunula mimo hlavní skills.",
+          "Tojin platforma teď popisuje skutečný tok OAuth 2.0 -> jednorázový kód -> RS256 JWT, Secret Manager a ověřování veřejným klíčem.",
+          "Do kontaktů přidán LinkedIn profil.",
+        ],
+      },
+    },
     {
       version: "1.5.1",
       date: "2026-09-19",
