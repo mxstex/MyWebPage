@@ -21,6 +21,8 @@ window.SITE = {
     starforgeWeb: "https://starforge-4zrmoo7y3a-ez.a.run.app",
     myzooWeb: "https://myzoo-gsl5pfkg4q-ez.a.run.app",
     mygardenWeb: "https://mygarden-ltbbj4q4qq-ez.a.run.app",
+    iondriveWeb: "https://iondrive-tgz74cquha-ez.a.run.app",
+    reactorWeb: "https://reactor-operator-tgz74cquha-ez.a.run.app",
     play2d: "",                              // Google Play listing once published; "coming soon" is shown while empty
     play3d: "",
   },
@@ -34,8 +36,8 @@ window.SITE = {
 /* ---------- static UI strings, keyed by data-i18n attributes ---------- */
 window.T = {
   en: {
-    "meta.title": "Michal Štěpán · Senior GenAI Application Engineer",
-    "meta.description": "Michal Štěpán builds production GenAI applications end to end: LLM/RAG/agents, deterministic validation, golden-dataset evaluation, MCP, FastAPI and delivery on Azure and GCP.",
+    "meta.title": "Michal Štěpán · Senior GenAI Engineer · AI Solution Architecture",
+    "meta.description": "Michal Štěpán turns ambiguous AI use cases into production systems: AI solution architecture, RAG and agents, deterministic validation, golden-dataset evaluation, MCP, FastAPI and delivery on Azure and GCP. Open to B2B / contract consulting.",
     "nav.about": "About",
     "nav.skills": "Skills",
     "nav.experience": "Experience",
@@ -62,8 +64,9 @@ window.T = {
     "scene.orbits": "Click the sky to launch a planet",
     "skip": "Skip to content",
 
-    "hero.kicker": "Senior GenAI Application Engineer · LLM/RAG/agents · Python/FastAPI · Azure & GCP",
-    "hero.tagline": "I build production GenAI applications end to end: retrieval and agents, deterministic validation, evaluation, secure APIs and cloud delivery. I work across architecture, backend, quality and operations.",
+    "hero.kicker": "Senior GenAI Engineer · AI Solution Architecture · RAG & Agents · Python/FastAPI · Azure",
+    "hero.tagline": "I turn ambiguous AI use cases into production systems: solution architecture, RAG and agents, deterministic validation, evaluation, secure APIs and cloud delivery. I work end to end across architecture, backend, quality and operations.",
+    "hero.b2b": "Open to B2B / contract consulting",
     "hero.cv": "Download CV (PDF)",
     "hero.chat": "Chat with my CV",
     "hero.youtube": "YouTube",
@@ -71,22 +74,22 @@ window.T = {
     "hero.studio": "Tojin Games · my studio",
     "hero.now.label": "Currently",
     "hero.now.big": "Senior GenAI Application Engineer · ABB",
-    "hero.now.1": "Production LLM, RAG and agent applications for industrial engineering",
+    "hero.now.1": "Production GenAI solutions for industrial engineering: architecture, implementation, evaluation, delivery",
     "hero.now.2": "Golden-dataset evaluation plus deterministic validation",
     "hero.now.3": "FastAPI, Azure AI/OpenAI, MCP and CI/CD",
 
     "about.title": "About",
-    "about.fact1.b": "Senior GenAI Application Engineer",
-    "about.fact1.s": "ABB, since 2025",
+    "about.fact1.b": "Senior GenAI Engineer",
+    "about.fact1.s": "ABB since 2025 · open to B2B / contract consulting",
     "about.fact2.b": "Production GenAI on Azure",
     "about.fact2.s": "OpenAI / AI Foundry / Agents, Container Apps, Key Vault",
     "about.fact3.b": "Python application stack",
     "about.fact3.s": "FastAPI, Pandas, Pytest, PostgreSQL, Redis, Neo4j",
     "about.fact4.b": "Tojin Games",
-    "about.fact4.s": "My engineering lab: agents, simulations and cloud platform",
-    "about.p1": "I build production GenAI applications end to end. At ABB I work as a Senior GenAI Application Engineer on industrial engineering workflows: document extraction and RAG, structured LLM validation beside deterministic rules, and agent-based assistants. I work across architecture, evaluation, backend and delivery: golden datasets and acceptance/performance tests, FastAPI services, Azure OpenAI / AI Foundry and Azure AI Agents, and CI/CD to Azure Container Apps with Key Vault and Log Analytics. I also build MCP integrations that let AI coding assistants work directly with team tools. I want to keep moving toward technical ownership and GenAI architecture.",
-    "about.p2": "Before that I spent three years as a freelance backend and data engineer for clients in energy, telecom and manufacturing (DTSE, Landis+Gyr, Vendavo), and earlier built energy-management and analytics systems at Siemens and ABB. My roots are in power engineering: eight years at a district heating utility, the last ones as technical deputy leading more than fifteen people, taught me what production reliability actually means.",
-    "about.p3": "Outside work I run Tojin Games, a one-person engineering lab for science, space and strategy games. I use it to explore local LLM agents, deterministic validation, pgvector memory, numerical simulation and cloud architecture. The browser games share my own FastAPI authentication service: Patreon OAuth 2.0 is exchanged for short-lived RS256 JWTs through one-time codes, while games hold only the public verification key. Services run on Google Cloud Run with Secret Manager and Terraform. The projects are also where I experiment with AI-assisted development, automated test bots and local generative models.",
+    "about.fact4.s": "Live products, public demos and pre-release engineering: agents, simulations, cloud",
+    "about.p1": "I turn ambiguous AI use cases into production systems. At ABB I work as a Senior GenAI Application Engineer on industrial engineering workflows, from use-case analysis and architecture through implementation, evaluation and cloud delivery: document extraction and RAG, structured LLM outputs with deterministic validation, agent-based assistants on Azure OpenAI / AI Foundry and Azure AI Agents, golden datasets and acceptance/performance tests, FastAPI services and CI/CD to Azure Container Apps with Key Vault and Log Analytics. I also build MCP integrations that let AI coding assistants work directly with team tools. I am strongest where AI must be reliable, testable and integrated into real business workflows, and I am open to B2B / contract work in GenAI engineering, AI solution architecture and production AI delivery.",
+    "about.p2": "Before that I spent three years as a freelance backend and data engineer delivering B2B directly into client environments in energy, telecom and manufacturing (DTSE, Landis+Gyr, Vendavo), and earlier built energy-management and analytics systems at Siemens and ABB. My roots are in power engineering: eight years at a district heating utility, the last ones as technical deputy leading more than fifteen people, taught me what production reliability actually means. Altogether more than fifteen years across industrial software, data, cloud and energy.",
+    "about.p3": "Outside work I run Tojin Games, a one-person engineering lab with live browser products, public YouTube demos and pre-release projects. Live science software on Google Cloud Run includes Gravity 3D, Orbit, Ion Drive, Starforge, MyZoo, My Garden and Reactor Operator. Jednota runs local LLM strategist, diplomat and fleet agents with structured outputs, deterministic validation and pgvector memory, and Tojin Forge is my local multi-repository coding agent with an Ollama tool loop, sandboxed write scopes, tests, checkpoints, CLI/MCP integration and unattended runs. Particle Forge is in pre-release. The browser games share my own FastAPI authentication service: Patreon OAuth 2.0 is exchanged for short-lived RS256 JWTs through one-time codes, while games hold only the public verification key. Services run on Cloud Run with Secret Manager and Terraform, and a code-driven pipeline records real gameplay in 4K.",
 
     "skills.title": "Skills",
     "skills.lead": "What I work with today, and what I have worked with before.",
@@ -103,7 +106,7 @@ window.T = {
     "gravity.soon": "Coming soon to Google Play",
 
     "projects.title": "Other projects",
-    "projects.lead": "Side projects that share ideas with the day job: agents, local models, numerical simulation and generated media. The code is private; live builds and videos are public. In the browser games the opening is free and Patreon supporters unlock the rest.",
+    "projects.lead": "Live browser products, public YouTube demos and pre-release engineering projects that share ideas with the day job: agents, local models, numerical simulation and generated media. The code is private; live builds and videos are public. In the browser games the opening is free and Patreon supporters unlock the rest.",
 
     "rag.title": "LLM applications in practice",
     "rag.lead": "Six things I have learned building LLM applications and agents, at work and in my own games.",
@@ -133,7 +136,7 @@ window.T = {
     "education.thesis": "Thesis",
 
     "contact.title": "Contact",
-    "contact.lead": "The fastest way is e-mail. I am based near Ostrava, Czechia, and work with remote teams across Europe.",
+    "contact.lead": "The fastest way is e-mail. I am based near Ostrava, Czechia, work remote-first with teams across Europe, and I am open to B2B / contract consulting.",
     "contact.email": "E-mail",
     "contact.youtube": "YouTube",
     "contact.patreon": "Patreon",
@@ -147,8 +150,8 @@ window.T = {
     "changelog.open": "What's new on this site",
   },
   cs: {
-    "meta.title": "Michal Štěpán · Senior GenAI Application Engineer",
-    "meta.description": "Michal Štěpán staví produkční GenAI aplikace od začátku do konce: LLM/RAG/agenty, deterministickou validaci, evaluaci na golden datasetech, MCP, FastAPI a nasazení na Azure a GCP.",
+    "meta.title": "Michal Štěpán · Senior GenAI Engineer · AI Solution Architecture",
+    "meta.description": "Michal Štěpán mění nejasná AI zadání v produkční systémy: AI solution architecture, RAG a agenti, deterministická validace, evaluace na golden datasetech, MCP, FastAPI a nasazení na Azure a GCP. Otevřený B2B / kontraktové spolupráci.",
     "nav.about": "O mně",
     "nav.skills": "Dovednosti",
     "nav.experience": "Praxe",
@@ -175,8 +178,9 @@ window.T = {
     "scene.orbits": "Klikni do oblohy a vypusť planetu",
     "skip": "Přeskočit na obsah",
 
-    "hero.kicker": "Senior GenAI Application Engineer · LLM/RAG/agenti · Python/FastAPI · Azure a GCP",
-    "hero.tagline": "Stavím produkční GenAI aplikace od začátku do konce: retrieval a agenty, deterministickou validaci, evaluaci, bezpečná API a cloudové nasazení. Pracuji napříč architekturou, backendem, kvalitou i provozem.",
+    "hero.kicker": "Senior GenAI Engineer · AI Solution Architecture · RAG a agenti · Python/FastAPI · Azure",
+    "hero.tagline": "Měním nejasná AI zadání v produkční systémy: architekturu řešení, RAG a agenty, deterministickou validaci, evaluaci, bezpečná API a cloudové nasazení. Pracuji od začátku do konce napříč architekturou, backendem, kvalitou i provozem.",
+    "hero.b2b": "Otevřený B2B / kontraktové spolupráci",
     "hero.cv": "Stáhnout CV (PDF)",
     "hero.chat": "Chat s mým CV",
     "hero.youtube": "YouTube",
@@ -184,22 +188,22 @@ window.T = {
     "hero.studio": "Tojin Games · moje studio",
     "hero.now.label": "Aktuálně",
     "hero.now.big": "Senior GenAI Application Engineer · ABB",
-    "hero.now.1": "Produkční LLM, RAG a agentní aplikace pro průmyslové inženýrství",
+    "hero.now.1": "Produkční GenAI řešení pro průmyslové inženýrství: architektura, implementace, evaluace, nasazení",
     "hero.now.2": "Evaluace na golden datasetech plus deterministická validace",
     "hero.now.3": "FastAPI, Azure AI/OpenAI, MCP a CI/CD",
 
     "about.title": "O mně",
-    "about.fact1.b": "Senior GenAI Application Engineer",
-    "about.fact1.s": "ABB, od roku 2025",
+    "about.fact1.b": "Senior GenAI Engineer",
+    "about.fact1.s": "ABB od roku 2025 · otevřený B2B / kontraktové spolupráci",
     "about.fact2.b": "Produkční GenAI na Azure",
     "about.fact2.s": "OpenAI / AI Foundry / Agents, Container Apps, Key Vault",
     "about.fact3.b": "Python aplikační stack",
     "about.fact3.s": "FastAPI, Pandas, Pytest, PostgreSQL, Redis, Neo4j",
     "about.fact4.b": "Tojin Games",
-    "about.fact4.s": "Moje technická laboratoř: agenti, simulace a cloud platforma",
-    "about.p1": "Stavím produkční GenAI aplikace od začátku do konce. V ABB pracuji jako Senior GenAI Application Engineer na průmyslových inženýrských workflow: extrakci dokumentů a RAG, strukturované LLM validaci vedle deterministických pravidel a agentních asistentech. Pracuji napříč architekturou, evaluací, backendem a nasazením: golden datasety a akceptační/výkonnostní testy, FastAPI služby, Azure OpenAI / AI Foundry a Azure AI Agents a CI/CD do Azure Container Apps s Key Vaultem a Log Analytics. Stavím také MCP integrace, přes které AI coding asistenti pracují přímo s týmovými nástroji. Chci se dál posouvat k technickému ownershipu a GenAI architektuře.",
-    "about.p2": "Předtím jsem tři roky pracoval jako freelance backend a datový inženýr pro klienty z energetiky, telekomunikací a výroby (DTSE, Landis+Gyr, Vendavo) a ještě dřív jsem stavěl systémy pro energetický management a analytiku v Siemensu a ABB. Kořeny mám v energetice: osm let v teplárenské distribuční společnosti, naposledy jako technický zástupce s týmem přes patnáct lidí, mě naučilo, co znamená spolehlivý provoz.",
-    "about.p3": "Mimo práci vedu Tojin Games, jednočlennou technickou laboratoř pro vědecké, vesmírné a strategické hry. Zkouším v ní lokální LLM agenty, deterministickou validaci, pgvector paměť, numerické simulace a cloudovou architekturu. Webové hry sdílejí mou vlastní autentizační službu ve FastAPI: Patreon OAuth 2.0 se přes jednorázové kódy mění na krátkodobé RS256 JWT a hry drží jen veřejný ověřovací klíč. Služby běží na Google Cloud Run se Secret Managerem a Terraformem. Projekty používám také pro AI-assisted development, automatické testovací boty a lokální generativní modely.",
+    "about.fact4.s": "Živé produkty, veřejná dema a projekty před vydáním: agenti, simulace, cloud",
+    "about.p1": "Měním nejasná AI zadání v produkční systémy. V ABB pracuji jako Senior GenAI Application Engineer na průmyslových inženýrských workflow, od analýzy use casu a architektury přes implementaci a evaluaci po cloudové nasazení: extrakce dokumentů a RAG, strukturované LLM výstupy s deterministickou validací, agentní asistenti nad Azure OpenAI / AI Foundry a Azure AI Agents, golden datasety a akceptační/výkonnostní testy, FastAPI služby a CI/CD do Azure Container Apps s Key Vaultem a Log Analytics. Stavím také MCP integrace, přes které AI coding asistenti pracují přímo s týmovými nástroji. Nejsilnější jsem tam, kde AI musí být spolehlivá, testovatelná a zapojená do skutečných firemních procesů, a jsem otevřený B2B / kontraktové spolupráci v GenAI engineeringu, AI solution architecture a produkčním nasazení AI.",
+    "about.p2": "Předtím jsem tři roky pracoval jako freelance backend a datový inženýr a dodával B2B přímo do prostředí klientů z energetiky, telekomunikací a výroby (DTSE, Landis+Gyr, Vendavo); ještě dřív jsem stavěl systémy pro energetický management a analytiku v Siemensu a ABB. Kořeny mám v energetice: osm let v teplárenské distribuční společnosti, naposledy jako technický zástupce s týmem přes patnáct lidí, mě naučilo, co znamená spolehlivý provoz. Dohromady víc než patnáct let v průmyslovém softwaru, datech, cloudu a energetice.",
+    "about.p3": "Mimo práci vedu Tojin Games, jednočlennou technickou laboratoř s živými produkty v prohlížeči, veřejnými YouTube demy a projekty před vydáním. Živý vědecký software na Google Cloud Run zahrnuje Gravity 3D, Orbit, Ion Drive, Starforge, MyZoo, My Garden a Reactor Operator. V Jednotě běží lokální LLM agenti stratéga, diplomata a flotily se strukturovanými výstupy, deterministickou validací a pgvector pamětí a Tojin Forge je můj lokální coding agent pro více repozitářů s Ollama tool loopem, sandboxovanými zápisy, testy, checkpointy, CLI/MCP integrací a bezobslužnými běhy. Particle Forge je před vydáním. Webové hry sdílejí mou vlastní autentizační službu ve FastAPI: Patreon OAuth 2.0 se přes jednorázové kódy mění na krátkodobé RS256 JWT a hry drží jen veřejný ověřovací klíč. Služby běží na Cloud Run se Secret Managerem a Terraformem a pipeline řízená kódem nahrává skutečný gameplay ve 4K.",
 
     "skills.title": "Dovednosti",
     "skills.lead": "S čím pracuji dnes a s čím jsem pracoval dřív.",
@@ -216,7 +220,7 @@ window.T = {
     "gravity.soon": "Brzy na Google Play",
 
     "projects.title": "Další projekty",
-    "projects.lead": "Vedlejší projekty, které sdílejí nápady s prací: agenti, lokální modely, numerické simulace a generovaná média. Kód je soukromý; živé verze a videa jsou veřejné. V prohlížečových hrách je začátek zdarma a zbytek odemknou podporovatelé na Patreonu.",
+    "projects.lead": "Živé produkty v prohlížeči, veřejná YouTube dema a projekty před vydáním, které sdílejí nápady s prací: agenti, lokální modely, numerické simulace a generovaná média. Kód je soukromý; živé verze a videa jsou veřejné. V prohlížečových hrách je začátek zdarma a zbytek odemknou podporovatelé na Patreonu.",
 
     "rag.title": "LLM aplikace v praxi",
     "rag.lead": "Šest věcí, které jsem se naučil při stavbě LLM aplikací a agentů, v práci i ve svých hrách.",
@@ -246,7 +250,7 @@ window.T = {
     "education.thesis": "Práce",
 
     "contact.title": "Kontakt",
-    "contact.lead": "Nejrychlejší je e-mail. Sídlím u Ostravy a pracuji s remote týmy po celé Evropě.",
+    "contact.lead": "Nejrychlejší je e-mail. Sídlím u Ostravy, pracuji remote-first s týmy po celé Evropě a jsem otevřený B2B / kontraktové spolupráci.",
     "contact.email": "E-mail",
     "contact.youtube": "YouTube",
     "contact.patreon": "Patreon",
@@ -290,18 +294,18 @@ window.DATA = {
       current: true,
       bullets: {
         en: [
-          "Build production GenAI applications for industrial engineering workflows: document extraction and RAG, structured LLM validation, and agent-based assistants using Azure OpenAI / AI Foundry and Azure AI Agents.",
-          "Own quality and evaluation for AI features: golden datasets, acceptance evaluation, deterministic rule checks, performance and stress tests, and cloud-vs-local model comparison through Ollama.",
-          "Develop Python/FastAPI backends and application services; work with PostgreSQL, Redis and Neo4j where the product architecture requires relational, cache/session and graph data.",
-          "Deliver through Azure Pipelines across dev, test, stage and prod; Docker images in Container Registry, Azure Container Apps, Key Vault via managed identity and Log Analytics.",
-          "Built a proof-of-concept MCP server (Python, FastMCP) that gives AI coding assistants such as Claude Code and GitHub Copilot controlled access to Azure DevOps work items, with a mock API and tests.",
+          "Design and build production GenAI solutions for industrial engineering workflows, from use-case analysis and architecture through implementation, evaluation and cloud delivery.",
+          "Implement document extraction and RAG, structured LLM outputs with deterministic validation, and agent-based assistants using Azure OpenAI / AI Foundry and Azure AI Agents.",
+          "Own AI quality and evaluation: golden datasets, acceptance criteria, deterministic checks, performance and stress tests, and cloud-vs-local model comparison through Ollama.",
+          "Develop Python/FastAPI services and integrate PostgreSQL, Redis and Neo4j where relational, session/cache and graph data are required.",
+          "Deliver across dev, test, stage and prod using Azure Pipelines, Docker, Container Registry, Azure Container Apps, Key Vault with managed identity and Log Analytics; built an MCP/FastMCP proof of concept that exposes Azure DevOps work items to coding assistants such as Claude Code and GitHub Copilot through controlled tools, with a mock API and tests.",
         ],
         cs: [
-          "Stavím produkční GenAI aplikace pro průmyslové inženýrské workflow: extrakci dokumentů a RAG, strukturovanou LLM validaci a agentní asistenty nad Azure OpenAI / AI Foundry a Azure AI Agents.",
-          "Mám na starosti kvalitu a evaluaci AI funkcí: golden datasety, akceptační evaluaci, deterministické kontroly, výkonnostní a zátěžové testy a porovnání cloudových a lokálních modelů přes Ollamu.",
-          "Vyvíjím backendy a aplikační služby v Pythonu/FastAPI; podle architektury pracuji s PostgreSQL, Redisem a Neo4j pro relační data, cache/relace a grafová data.",
-          "Nasazuji přes Azure Pipelines do dev, test, stage a prod; Docker image v Container Registry, Azure Container Apps, Key Vault přes managed identity a Log Analytics.",
-          "Postavil jsem proof of concept MCP serveru (Python, FastMCP), přes který AI coding asistenti jako Claude Code a GitHub Copilot řízeně pracují s work itemy v Azure DevOps, s mock API a testy.",
+          "Navrhuji a stavím produkční GenAI řešení pro průmyslové inženýrské workflow, od analýzy use casu a architektury přes implementaci a evaluaci po cloudové nasazení.",
+          "Implementuji extrakci dokumentů a RAG, strukturované LLM výstupy s deterministickou validací a agentní asistenty nad Azure OpenAI / AI Foundry a Azure AI Agents.",
+          "Mám na starosti kvalitu a evaluaci AI: golden datasety, akceptační kritéria, deterministické kontroly, výkonnostní a zátěžové testy a porovnání cloudových a lokálních modelů přes Ollamu.",
+          "Vyvíjím služby v Pythonu/FastAPI a integruji PostgreSQL, Redis a Neo4j tam, kde jsou potřeba relační data, cache/relace a grafová data.",
+          "Nasazuji do dev, test, stage a prod přes Azure Pipelines, Docker, Container Registry, Azure Container Apps, Key Vault s managed identity a Log Analytics; postavil jsem MCP/FastMCP proof of concept, který přes řízené nástroje zpřístupňuje work itemy z Azure DevOps coding asistentům jako Claude Code a GitHub Copilot, s mock API a testy.",
         ],
       },
       stack: "Python · FastAPI · Azure OpenAI / AI Foundry · Azure AI Agents · RAG · ChromaDB · Document Intelligence · PostgreSQL · Redis · Neo4j · Pandas · Pytest · Docker · Azure Container Apps · Key Vault · Azure Pipelines · MCP · Ollama",
@@ -310,21 +314,21 @@ window.DATA = {
       company: { en: "Freelance", cs: "Freelance" },
       role: { en: "Software / Data Engineer", cs: "Software / Data Engineer" },
       period: { en: "Sep 2022 – Sep 2025", cs: "září 2022 – září 2025" },
-      note: { en: "DTSE, Landis+Gyr, Vendavo and other clients in energy, telecom and manufacturing", cs: "DTSE, Landis+Gyr, Vendavo a další klienti z energetiky, telekomunikací a výroby" },
+      note: { en: "B2B delivery for DTSE, Landis+Gyr, Vendavo and other clients in energy, telecom and manufacturing · remote, international teams", cs: "B2B dodávky pro DTSE, Landis+Gyr, Vendavo a další klienty z energetiky, telekomunikací a výroby · remote, mezinárodní týmy" },
       bullets: {
         en: [
-          "End-to-end data workflows in Python, orchestrated with Dagster and Airflow, stored in PostgreSQL, DuckDB and BigQuery.",
-          "Backend components for high-volume ingestion and message-based processing with RabbitMQ.",
-          "Migration of services from Kubernetes to cloud-native GCP (Cloud Run, GCS, BigQuery).",
-          "CI/CD in GitLab CI and GitHub Actions with unit, integration and end-to-end tests in Pytest.",
-          "High-performance processing pipelines for recommender systems; L2 support for production systems.",
+          "Delivered backend and data-engineering work directly into client environments, taking features from requirements through implementation, testing and production support.",
+          "Designed end-to-end Python data workflows with Dagster and Airflow using PostgreSQL, DuckDB and BigQuery; built REST services and RabbitMQ-based high-volume processing.",
+          "Migrated services from Kubernetes to cloud-native GCP services including Cloud Run, GCS and BigQuery.",
+          "Maintained CI/CD in GitLab CI and GitHub Actions with Pytest-based unit, integration and end-to-end testing.",
+          "Optimised high-performance processing pipelines for recommender systems and provided L2 engineering support for production systems.",
         ],
         cs: [
-          "End-to-end datové workflow v Pythonu, orchestrace v Dagsteru a Airflow, úložiště PostgreSQL, DuckDB a BigQuery.",
-          "Backendové komponenty pro objemový ingest a zpracování zpráv přes RabbitMQ.",
-          "Migrace služeb z Kubernetes na cloud-native GCP (Cloud Run, GCS, BigQuery).",
-          "CI/CD v GitLab CI a GitHub Actions, unit, integrační a end-to-end testy v Pytestu.",
-          "Výkonné pipeline pro doporučovací systémy; L2 podpora produkčních systémů.",
+          "Dodával jsem backend a datové inženýrství přímo do prostředí klientů, od požadavků přes implementaci a testování po produkční podporu.",
+          "Navrhoval jsem end-to-end datové workflow v Pythonu s Dagsterem a Airflow nad PostgreSQL, DuckDB a BigQuery; stavěl REST služby a objemové zpracování přes RabbitMQ.",
+          "Migroval jsem služby z Kubernetes na cloud-native služby GCP včetně Cloud Run, GCS a BigQuery.",
+          "Udržoval jsem CI/CD v GitLab CI a GitHub Actions s unit, integračními a end-to-end testy v Pytestu.",
+          "Optimalizoval jsem výkonné pipeline pro doporučovací systémy a poskytoval L2 podporu produkčních systémů.",
         ],
       },
       stack: "Python · Dagster · Airflow · PostgreSQL · DuckDB · BigQuery · RabbitMQ · GCP · GitLab CI · GitHub Actions",
@@ -484,6 +488,33 @@ window.DATA = {
       ],
     },
     {
+      name: "Ion Drive",
+      sub: { en: "Electric and nuclear propulsion trajectory game", cs: "Hra o trajektoriích s elektrickým a jaderným pohonem" },
+      image: "assets/img/projects/iondrive.webp",
+      tags: ["Python", "NiceGUI", "Three.js", "N-body", "GCP Cloud Run", "Terraform"],
+      desc: {
+        en: "Fly one deep-space vehicle through the Solar System on Newtonian N-body gravity and cross a prescribed exit corridor as fast as physics allows. Ion engines whose efficiency comes from the ionisation cost of the propellant, a nuclear thermal rocket whose exhaust speed comes from its chamber temperature, layered atmospheres you can scoop for propellant, an 8th-order adaptive integrator and JPL elements for the planets, all hand-written with no physics library. Seven chapters from a spiral out of Earth orbit to the Proxima Window, each certified by a mission verifier. The first three chapters are free; Patreon unlocks the rest.",
+        cs: "Proveďte jednu loď Sluneční soustavou na newtonovské N-body gravitaci a protněte předepsaný výstupní koridor tak rychle, jak fyzika dovolí. Iontové motory, jejichž účinnost vychází z ionizační energie paliva, jaderný tepelný raketový motor s výtokovou rychlostí danou teplotou komory, vrstvené atmosféry, ze kterých se dá nabírat palivo, adaptivní integrátor 8. řádu a elementy planet z JPL, vše ručně psané bez fyzikální knihovny. Sedm kapitol od spirály z oběžné dráhy Země po Proxima Window, každou ověřuje verifikátor misí. První tři kapitoly jsou zdarma, zbytek odemkne Patreon.",
+      },
+      links: [
+        { label: { en: "Play in the browser", cs: "Hrát v prohlížeči" }, url: "links.iondriveWeb", primary: true },
+        { label: { en: "Trailer", cs: "Trailer" }, url: "https://www.youtube.com/watch?v=EhqMRiwYiRc" },
+      ],
+    },
+    {
+      name: "Reactor Operator",
+      sub: { en: "Nuclear reactor control-room simulator", cs: "Simulátor velína jaderného reaktoru" },
+      image: "assets/img/projects/reactor.webp",
+      tags: ["Python", "NiceGUI", "Canvas", "Point kinetics", "GCP Cloud Run", "Terraform"],
+      desc: {
+        en: "A teaching simulator of the BN-600 fast reactor and the VVER-440, played from the control room. The lesson: control rods do not set power, they set reactivity; reactivity sets the rate of change, and power is only the consequence. Point kinetics with six delayed-neutron groups, a two-node thermal model, iodine and xenon, decay heat, a Fuchs–Nordheim excursion above prompt critical, protections and an automatic controller, grounded in my bachelor thesis on fast reactor cores. 31 physics and 23 learning tests. Everything educational is free; Patreon unlocks free play.",
+        cs: "Výukový simulátor rychlého reaktoru BN-600 a VVER-440 hraný z velína. Lekce: regulační tyče nenastavují výkon, nastavují reaktivitu; reaktivita určuje rychlost změny a výkon je až důsledek. Bodová kinetika se šesti skupinami zpožděných neutronů, dvouuzlový tepelný model, jód a xenon, zbytkové teplo, Fuchsův–Nordheimův exkurz nad okamžitou kritičností, ochrany a automatický regulátor, opřené o mou bakalářskou práci o aktivních zónách rychlých reaktorů. 31 fyzikálních a 23 výukových testů. Vše výukové je zdarma, volnou hru odemkne Patreon.",
+      },
+      links: [
+        { label: { en: "Play in the browser", cs: "Hrát v prohlížeči" }, url: "links.reactorWeb", primary: true },
+      ],
+    },
+    {
       name: "HoldMyPlazma",
       sub: { en: "Plasma confinement game", cs: "Hra o udržení plazmatu" },
       image: "assets/img/projects/holdmyplazma.webp",
@@ -502,6 +533,17 @@ window.DATA = {
       desc: {
         en: "Prepare a wave packet and let the Schrödinger equation decide. Eight scenes, from the double slit with a which-path detector and a double slit in time, through tunnelling and uncertainty, to string breaking, identical atoms on a beam splitter and an open question: how long does tunnelling take? The split-step Fourier integrator is hand-written with no quantum library, and tests compare it against analytic solutions.",
         cs: "Připravte vlnový balík a nechte rozhodnout Schrödingerovu rovnici. Osm scén, od dvojštěrbiny s detektorem dráhy a dvojštěrbiny v čase přes tunelování a relace neurčitosti po trhání struny, identické atomy na děliči svazku a otevřenou otázku, jak dlouho tunelování trvá. Integrátor split-step Fourier je ručně psaný bez kvantové knihovny a testy ho porovnávají s analytickými řešeními.",
+      },
+      links: [],
+    },
+    {
+      name: "Particle Forge",
+      sub: { en: "Discover the Standard Model · pre-release", cs: "Objevte Standardní model · před vydáním" },
+      image: "assets/img/projects/particleforge.webp",
+      tags: ["Python", "NiceGUI", "Playwright", "Docker", "ComfyUI"],
+      desc: {
+        en: "Build the Standard Model from measured evidence: ten chapters and an epilogue, fifteen experiment modes, guided setups, detector and analysis views, explicit hypotheses and a persistent research notebook, with twelve photorealistic laboratory backgrounds generated locally in ComfyUI. Browser tests play the complete campaign, and persistence and Docker validation are done; the public video and cloud release is still in progress.",
+        cs: "Poskládejte Standardní model z naměřených důkazů: deset kapitol a epilog, patnáct experimentálních režimů, vedené sestavy, pohledy detektoru a analýzy, explicitní hypotézy a trvalý výzkumný zápisník, s dvanácti fotorealistickými pozadími laboratoří generovanými lokálně v ComfyUI. Testy v prohlížeči projdou celou kampaň a validace persistence a Dockeru je hotová; veřejné video a cloudové vydání se teprve chystají.",
       },
       links: [],
     },
@@ -548,8 +590,18 @@ window.DATA = {
       ],
     },
     {
+      name: "Tojin Forge",
+      sub: { en: "Local autonomous coding agent", cs: "Lokální autonomní coding agent" },
+      tags: ["Python", "NiceGUI", "Ollama", "LLM agents", "MCP", "CLI"],
+      desc: {
+        en: "A local, autonomous, multi-repository coding agent on Ollama models: a NiceGUI control room and a headless CLI over the same engine. Not a chat window but an engineering loop: task, model, tool call, tool result, tests, fix, verify, report. It indexes the whole development workspace, writes only inside sandboxed scopes, keeps checkpoints, runs the tests before it finishes and takes task files with screenshots and mockups. Full-access and unattended overnight runs across several repositories, with an MCP server that exposes its tools to other agents.",
+        cs: "Lokální autonomní coding agent pro více repozitářů na modelech z Ollamy: velín v NiceGUI a headless CLI nad stejným enginem. Není to chatovací okno, ale inženýrská smyčka: úkol, model, volání nástroje, výsledek, testy, oprava, ověření, report. Indexuje celý vývojový workspace, zapisuje jen v sandboxovaných rozsazích, drží checkpointy, před dokončením spouští testy a bere zadání i se screenshoty a mockupy. Full-access a bezobslužné noční běhy napříč repozitáři, s MCP serverem, který jeho nástroje nabízí dalším agentům.",
+      },
+      links: [],
+    },
+    {
       name: "Tojin platform",
-      sub: { en: "One login, five games, a video pipeline", cs: "Jedno přihlášení, pět her, video pipeline" },
+      sub: { en: "One login, seven games, a video pipeline", cs: "Jedno přihlášení, sedm her, video pipeline" },
       tags: ["FastAPI", "OAuth 2.0", "JWT", "GCP Cloud Run", "Secret Manager", "Terraform", "Playwright", "ffmpeg"],
       desc: {
         en: "The shared layer behind the web games. A FastAPI service completes Patreon OAuth 2.0, maps membership to internal entitlements and signs short-lived RS256 JWTs. Browser redirects carry only a hashed, one-time code with a 60-second TTL; the game server exchanges it for the JWT, while the Patreon access token is never stored and each game holds only the public verification key/JWKS. Cloud Run reads the Patreon secret and RSA private key from Secret Manager, provisioned with Terraform. A separate code-driven pipeline records real gameplay in 4K through Playwright/CDP, adds local TTS and validates output before upload.",
@@ -644,6 +696,22 @@ window.DATA = {
 
   // Newest first. The header shows the version of the first entry.
   changelog: [
+    {
+      version: "1.8.0",
+      date: "2026-09-23",
+      items: {
+        en: [
+          "Site aligned with the new CV: Senior GenAI Engineer with AI solution architecture in the headline, and an explicit \"Open to B2B / contract consulting\" note in the hero, About and Contact.",
+          "ABB and freelance bullets now follow the CV: architecture, implementation, evaluation and production delivery; B2B delivery directly into client environments.",
+          "New project cards for Ion Drive and Reactor Operator (both live on Cloud Run), Particle Forge (pre-release) and Tojin Forge (local autonomous coding agent); the chat facts and the LinkedIn draft updated to match.",
+        ],
+        cs: [
+          "Web sladěn s novým CV: Senior GenAI Engineer s AI solution architecture v titulku a výslovná poznámka „otevřený B2B / kontraktové spolupráci“ v úvodu, O mně a Kontaktu.",
+          "Body u ABB a freelance teď odpovídají CV: architektura, implementace, evaluace a produkční nasazení; B2B dodávky přímo do prostředí klientů.",
+          "Nové karty projektů Ion Drive a Reactor Operator (oba živě na Cloud Run), Particle Forge (před vydáním) a Tojin Forge (lokální autonomní coding agent); fakta pro chat a LinkedIn profil aktualizovány.",
+        ],
+      },
+    },
     {
       version: "1.7.0",
       date: "2026-09-23",
@@ -819,7 +887,7 @@ window.DATA = {
   ],
 
   chatSuggestions: {
-    en: ["What does Michal do at ABB?", "What are his salary expectations?", "Does he work remotely?", "Has he led a team?", "What are his hobbies?", "Tell me about his physics simulations."],
-    cs: ["Co dělá Michal v ABB?", "Jaké má platové představy?", "Pracuje na dálku?", "Vedl už tým?", "Jaké má koníčky?", "Řekni mi o jeho fyzikálních simulacích."],
+    en: ["What does Michal do at ABB?", "What are his salary expectations?", "Does he work remotely?", "Has he led a team?", "What are his hobbies?", "Tell me about his physics simulations.", "Is he open to B2B / contract work?"],
+    cs: ["Co dělá Michal v ABB?", "Jaké má platové představy?", "Pracuje na dálku?", "Vedl už tým?", "Jaké má koníčky?", "Řekni mi o jeho fyzikálních simulacích.", "Je otevřený B2B / kontraktové spolupráci?"],
   },
 };
