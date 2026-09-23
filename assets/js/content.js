@@ -591,6 +591,7 @@ window.DATA = {
     },
     {
       name: "Tojin Forge",
+      image: "assets/img/projects/tojinforge.webp",
       sub: { en: "Local autonomous coding agent", cs: "Lokální autonomní coding agent" },
       tags: ["Python", "NiceGUI", "Ollama", "LLM agents", "MCP", "CLI"],
       desc: {
@@ -696,6 +697,14 @@ window.DATA = {
 
   // Newest first. The header shows the version of the first entry.
   changelog: [
+    {
+      version: "1.8.1",
+      date: "2026-09-24",
+      items: {
+        en: ["Cover picture for the Tojin Forge project card."],
+        cs: ["Titulní obrázek u karty projektu Tojin Forge."],
+      },
+    },
     {
       version: "1.8.0",
       date: "2026-09-23",
