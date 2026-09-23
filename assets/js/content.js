@@ -645,6 +645,22 @@ window.DATA = {
   // Newest first. The header shows the version of the first entry.
   changelog: [
     {
+      version: "1.7.0",
+      date: "2026-09-23",
+      items: {
+        en: [
+          "CV repositioned for GenAI B2B / contract consulting: Senior GenAI Engineer headline, an explicit \"Open to B2B / contract consulting\" line, and the ABB role described as architecture, implementation, evaluation and production delivery.",
+          "Tojin portfolio in the CV now separates live products, public YouTube demos and pre-release projects (Ion Drive, Reactor Operator, Particle Forge, Jednota, Tojin Forge) instead of counting games.",
+          "Downloadable PDF regenerated from the new CV; still two A4 pages.",
+        ],
+        cs: [
+          "CV nově cílí na GenAI B2B / kontraktové poradenství: titulek Senior GenAI Engineer, výslovná poznámka „Open to B2B / contract consulting“ a pozice v ABB popsaná jako architektura, implementace, evaluace a produkční nasazení.",
+          "Portfolio Tojin v CV nyní rozlišuje živé produkty, veřejná YouTube dema a projekty před vydáním (Ion Drive, Reactor Operator, Particle Forge, Jednota, Tojin Forge) místo počítání her.",
+          "PDF ke stažení znovu vygenerováno z nového CV; stále na dvě strany A4.",
+        ],
+      },
+    },
+    {
       version: "1.6.1",
       date: "2026-09-20",
       items: {
