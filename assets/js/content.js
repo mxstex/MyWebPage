@@ -493,7 +493,7 @@ window.DATA = {
       image: "assets/img/projects/iondrive.webp",
       tags: ["Python", "NiceGUI", "Three.js", "N-body", "GCP Cloud Run", "Terraform"],
       desc: {
-        en: "Fly one deep-space vehicle through the Solar System on Newtonian N-body gravity and cross a prescribed exit corridor as fast as physics allows. Ion engines whose efficiency comes from the ionisation cost of the propellant, a nuclear thermal rocket whose exhaust speed comes from its chamber temperature, layered atmospheres you can scoop for propellant, an 8th-order adaptive integrator and JPL elements for the planets, all hand-written with no physics library. Seven chapters from a spiral out of Earth orbit to the Proxima Window, each certified by a mission verifier. The first three chapters are free; Patreon unlocks the rest.",
+        en: "Fly one deep-space vehicle through the Solar System on Newtonian N-body gravity and cross a prescribed exit corridor as fast as physics allows. Ion engines whose efficiency comes from the ionisation cost of the propellant, a nuclear thermal rocket whose exhaust speed comes from its chamber temperature, layered atmospheres you can scoop for propellant, an 8th-order adaptive integrator and JPL elements for the planets, all hand-written with no physics library. Seven chapters from a spiral out of Earth orbit to the Proxima Window, each flown end to end by a mission verifier. The first three chapters are free; Patreon unlocks the rest.",
         cs: "Proveďte jednu loď Sluneční soustavou na newtonovské N-body gravitaci a protněte předepsaný výstupní koridor tak rychle, jak fyzika dovolí. Iontové motory, jejichž účinnost vychází z ionizační energie paliva, jaderný tepelný raketový motor s výtokovou rychlostí danou teplotou komory, vrstvené atmosféry, ze kterých se dá nabírat palivo, adaptivní integrátor 8. řádu a elementy planet z JPL, vše ručně psané bez fyzikální knihovny. Sedm kapitol od spirály z oběžné dráhy Země po Proxima Window, každou ověřuje verifikátor misí. První tři kapitoly jsou zdarma, zbytek odemkne Patreon.",
       },
       links: [
@@ -704,10 +704,12 @@ window.DATA = {
         en: [
           "Reactor Operator: test counts updated to the current suite (46 physics and 32 learning tests).",
           "The plasma confinement game is listed under its game title, Fusion (formerly HoldMyPlazma).",
+          "Ion Drive: the chapters are flown by a mission verifier; the text no longer calls every chapter certified.",
         ],
         cs: [
           "Reactor Operator: počty testů odpovídají aktuální sadě (46 fyzikálních a 32 výukových testů).",
           "Hra o udržení plazmatu je uvedena pod svým herním názvem Fusion (dříve HoldMyPlazma).",
+          "Ion Drive: kapitoly prolétá verifikátor misí; text už netvrdí, že je každá certifikovaná.",
         ],
       },
     },
