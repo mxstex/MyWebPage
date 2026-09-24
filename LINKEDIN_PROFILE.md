@@ -1,6 +1,6 @@
 # LinkedIn profile — Michal Štěpán
 
-Updated: 2026-09-23
+Updated: 2026-09-24
 
 ## Headline
 
@@ -14,7 +14,7 @@ At ABB, I design and build production GenAI solutions for industrial engineering
 
 My core stack is Python and FastAPI, with PostgreSQL, Redis and Neo4j where relational, session/cache or graph data are required. I deliver across dev, test, stage and prod through Azure Pipelines, Docker and Azure Container Apps, with Key Vault, managed identity and Log Analytics. I also build MCP integrations for AI coding assistants and run local LLM agents through Ollama.
 
-Outside work, Tojin Games is my engineering portfolio: live browser products on Google Cloud Run (Gravity 3D, Orbit, Ion Drive, Starforge, MyZoo, My Garden, Reactor Operator), public YouTube demos and pre-release projects such as Particle Forge. Jednota runs local LLM strategist, diplomat and fleet agents with structured outputs, deterministic validation and pgvector memory. Tojin Forge is a local multi-repository coding agent with an Ollama tool loop, workspace indexing, sandboxed write scopes, tests, checkpoints, CLI/MCP integration and unattended runs. The shared platform is a FastAPI authentication service that completes Patreon OAuth 2.0 and issues short-lived RS256 JWTs through one-time codes, on Cloud Run with Secret Manager and Terraform.
+Outside work, Tojin Games is my engineering portfolio: live browser products on Google Cloud Run (Gravity 3D, Orbit, Ion Drive, Starforge, MyZoo, My Garden, Reactor Operator), public YouTube demos and pre-release projects such as Particle Forge. Jednota runs local LLM strategist, diplomat and fleet agents with structured outputs, deterministic validation and pgvector memory. Tojin Forge, now in a public development preview on YouTube, is a local multi-repository coding agent with an Ollama tool loop, workspace indexing, sandboxed write scopes, checkpoints, CLI/MCP integration, a GPU-aware model picker and unattended overnight runs that keep a change only when the repository's own tests and linter pass. The shared platform is a FastAPI authentication service that completes Patreon OAuth 2.0 and issues short-lived RS256 JWTs through one-time codes, on Cloud Run with Secret Manager and Terraform.
 
 I bring more than fifteen years across industrial software, data, cloud and energy, including three years of freelance B2B delivery and earlier technical leadership. I am strongest where AI must be reliable, testable and integrated into real business workflows.
 
@@ -77,8 +77,8 @@ May 2010 – Oct 2018
 
 Live browser products, public YouTube demos and pre-release engineering projects. YouTube: youtube.com/@tojin111 · playable builds on the portfolio site.
 
-- Production science software: live Cloud Run projects include Gravity 3D, Orbit, Ion Drive, Starforge, MyZoo, My Garden and Reactor Operator. Ion Drive models N-body trajectories, electric/nuclear propulsion and atmospheric scooping; Reactor Operator models reactor kinetics, delayed neutrons, xenon and thermal feedback. Public demos and trailers are on YouTube.
-- GenAI & autonomous agents: Jednota uses local LLM strategist, diplomat and fleet agents with structured outputs, deterministic validation and pgvector memory. Tojin Forge is a local multi-repository coding agent with an Ollama tool loop, workspace indexing, sandboxed write scopes, tests, checkpoints, CLI/MCP integration and unattended runs.
+- Production science software: live Cloud Run projects include Gravity 3D, Orbit, Ion Drive, Starforge, MyZoo, My Garden and Reactor Operator. Ion Drive models N-body trajectories, electric/nuclear propulsion and atmospheric scooping; Reactor Operator models reactor kinetics, delayed neutrons, xenon and thermal feedback across seven reactor designs. More than 80 public demos, trailers and explainers are on YouTube, including a nine-part Reactor Physics series.
+- GenAI & autonomous agents: Jednota uses local LLM strategist, diplomat and fleet agents with structured outputs, deterministic validation and pgvector memory; an online multiplayer version (FastAPI, PostgreSQL, Vue 3) is in development. Tojin Forge (development preview on YouTube: https://www.youtube.com/watch?v=xFeAN1Bb9v0) is a local multi-repository coding agent with an Ollama tool loop, workspace indexing, sandboxed write scopes, checkpoints, CLI/MCP integration, a GPU-aware model picker and unattended overnight runs gated by each repository's own tests and linter.
 - Pre-release engineering: Particle Forge teaches the Standard Model through simulated experiments across a complete tested campaign; browser, persistence and Docker validation are complete while public video/cloud release work continues.
 - Platform & automation: shared FastAPI authentication/entitlements use OAuth 2.0, one-time codes and short-lived RS256 JWTs; services run on GCP with Secret Manager and Terraform. A code-driven pipeline records real gameplay in 4K through Playwright/CDP and ffmpeg/NVENC, with local TTS/ComfyUI and automated output validation.
 
