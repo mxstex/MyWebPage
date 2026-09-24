@@ -507,8 +507,8 @@ window.DATA = {
       image: "assets/img/projects/reactor.webp",
       tags: ["Python", "NiceGUI", "Canvas", "Point kinetics", "GCP Cloud Run", "Terraform"],
       desc: {
-        en: "A teaching simulator of the BN-600 fast reactor and the VVER-440, played from the control room. The lesson: control rods do not set power, they set reactivity; reactivity sets the rate of change, and power is only the consequence. Point kinetics with six delayed-neutron groups, a two-node thermal model, iodine and xenon, decay heat, a Fuchs–Nordheim excursion above prompt critical, protections and an automatic controller, grounded in my bachelor thesis on fast reactor cores. 31 physics and 23 learning tests. Everything educational is free; Patreon unlocks free play.",
-        cs: "Výukový simulátor rychlého reaktoru BN-600 a VVER-440 hraný z velína. Lekce: regulační tyče nenastavují výkon, nastavují reaktivitu; reaktivita určuje rychlost změny a výkon je až důsledek. Bodová kinetika se šesti skupinami zpožděných neutronů, dvouuzlový tepelný model, jód a xenon, zbytkové teplo, Fuchsův–Nordheimův exkurz nad okamžitou kritičností, ochrany a automatický regulátor, opřené o mou bakalářskou práci o aktivních zónách rychlých reaktorů. 31 fyzikálních a 23 výukových testů. Vše výukové je zdarma, volnou hru odemkne Patreon.",
+        en: "A teaching simulator of the BN-600 fast reactor and the VVER-440, played from the control room. The lesson: control rods do not set power, they set reactivity; reactivity sets the rate of change, and power is only the consequence. Point kinetics with six delayed-neutron groups, a two-node thermal model, iodine and xenon, decay heat, a Fuchs–Nordheim excursion above prompt critical, protections and an automatic controller, grounded in my bachelor thesis on fast reactor cores. 46 physics and 32 learning tests. Everything educational is free; Patreon unlocks free play.",
+        cs: "Výukový simulátor rychlého reaktoru BN-600 a VVER-440 hraný z velína. Lekce: regulační tyče nenastavují výkon, nastavují reaktivitu; reaktivita určuje rychlost změny a výkon je až důsledek. Bodová kinetika se šesti skupinami zpožděných neutronů, dvouuzlový tepelný model, jód a xenon, zbytkové teplo, Fuchsův–Nordheimův exkurz nad okamžitou kritičností, ochrany a automatický regulátor, opřené o mou bakalářskou práci o aktivních zónách rychlých reaktorů. 46 fyzikálních a 32 výukových testů. Vše výukové je zdarma, volnou hru odemkne Patreon.",
       },
       links: [
         { label: { en: "Play in the browser", cs: "Hrát v prohlížeči" }, url: "links.reactorWeb", primary: true },
@@ -697,6 +697,14 @@ window.DATA = {
 
   // Newest first. The header shows the version of the first entry.
   changelog: [
+    {
+      version: "1.8.2",
+      date: "2026-09-24",
+      items: {
+        en: ["Reactor Operator: test counts updated to the current suite (46 physics and 32 learning tests)."],
+        cs: ["Reactor Operator: počty testů odpovídají aktuální sadě (46 fyzikálních a 32 výukových testů)."],
+      },
+    },
     {
       version: "1.8.1",
       date: "2026-09-24",
