@@ -515,7 +515,7 @@ window.DATA = {
       ],
     },
     {
-      name: "HoldMyPlazma",
+      name: "Fusion",
       sub: { en: "Plasma confinement game", cs: "Hra o udržení plazmatu" },
       image: "assets/img/projects/holdmyplazma.webp",
       tags: ["Python", "NiceGUI", "NumPy", "SciPy", "Biot–Savart"],
@@ -701,8 +701,14 @@ window.DATA = {
       version: "1.8.2",
       date: "2026-09-24",
       items: {
-        en: ["Reactor Operator: test counts updated to the current suite (46 physics and 32 learning tests)."],
-        cs: ["Reactor Operator: počty testů odpovídají aktuální sadě (46 fyzikálních a 32 výukových testů)."],
+        en: [
+          "Reactor Operator: test counts updated to the current suite (46 physics and 32 learning tests).",
+          "The plasma confinement game is listed under its game title, Fusion (formerly HoldMyPlazma).",
+        ],
+        cs: [
+          "Reactor Operator: počty testů odpovídají aktuální sadě (46 fyzikálních a 32 výukových testů).",
+          "Hra o udržení plazmatu je uvedena pod svým herním názvem Fusion (dříve HoldMyPlazma).",
+        ],
       },
     },
     {
