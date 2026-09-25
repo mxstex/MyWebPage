@@ -25,6 +25,7 @@ would not publish.
 | `assets/img/` | screenshots and covers, already downscaled |
 | `cv/` | `Michal_Stepan_CV.html` (source) and `Michal_Stepan_CV.pdf` (published; re-export command in README) |
 | `LINKEDIN_PROFILE.md` | LinkedIn draft that follows the CV |
+| `tools/check_links.mjs` | link checker (Node, no dependencies); like every committed file it is served too |
 | `docs/` | git-ignored on purpose (source documents stay local) |
 
 ## Rules
@@ -49,8 +50,12 @@ would not publish.
 ```bash
 for f in assets/js/*.js; do node --check "$f"; done
 node -e "global.window={}; require('./assets/js/content.js'); const e=Object.keys(window.T.en), c=Object.keys(window.T.cs); console.log(e.length, c.length, e.filter(k=>!c.includes(k)), c.filter(k=>!e.includes(k)))"
+node tools/check_links.mjs   # every href/src of the pages and content.js; internal targets offline
 python -m http.server 8000   # then open http://localhost:8000 and switch both languages
 ```
 
-When links change, request each one with `curl -s -o /dev/null -L -w "%{http_code}"`. LinkedIn
-answers scripts with 999; check it in a browser.
+`tools/check_links.mjs` exits 1 on a broken internal link: a file that is missing, git-ignored (so
+not published) or differs in letter case, a `#id` the page lacks, or a `links.<key>` missing from
+`SITE.links`. When links change, add `--external` (8 s timeout, `--timeout=MS`; one retry for a
+game's cold start; YouTube videos through oEmbed). LinkedIn answers scripts with 999, reported as a
+warning; check it in a browser.

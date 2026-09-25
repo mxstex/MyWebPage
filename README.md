@@ -42,6 +42,10 @@ Open `index.html` in a browser, or serve the folder:
 python -m http.server 8000
 ```
 
+Check links before committing: `node tools/check_links.mjs` checks every internal link offline
+(the file is published, the `#id` exists); `--external` also requests the live builds, videos and
+other external URLs.
+
 ## Deploy (GitHub Pages)
 
 Repository settings → Pages → Source: *Deploy from a branch* → branch `main`, folder `/ (root)`.

@@ -2,7 +2,7 @@
 
 Status: LIVE
 Live: https://mxstex.github.io/MyWebPage/
-Tests: 2026-09-24 – `node --check` on assets/js/*.js: OK; EN/CS keys 101/101; all live links and the new video links 200; CV PDF 2 pages
+Tests: 2026-09-25 – `node --check` on assets/js/*.js: OK; EN/CS keys 101/101; `node tools/check_links.mjs`: 50 internal links OK; `--external`: 26 of 27 external OK, LinkedIn 999 (browser only)
 
 ## Completed
 - Single-page bilingual (English / Czech) portfolio on GitHub Pages: profile, skills, experience,
@@ -19,6 +19,10 @@ Tests: 2026-09-24 – `node --check` on assets/js/*.js: OK; EN/CS keys 101/101; 
   Reactor Operator shows seven reactors / twenty scenarios and links its how-to and Reactor Physics series;
   Jednota figures re-measured (81,086 tracked lines of Python incl. tests, 1,405 passing tests) and the online
   multiplayer version mentioned. CV, chat `FACTS` and LinkedIn draft follow.
+- `tools/check_links.mjs` (Node, no dependencies): every href/src/srcset/poster and CSS url() in the
+  pages plus the links and images `main.js` renders from `content.js`; internal targets offline against
+  the published files (`git ls-files`, case-sensitive, `#id` checked), external ones only with `--external`.
+  First run 2026-09-25: no broken internal link, nothing to fix.
 - 2026-09-24 audit: every play link, the YouTube channel, Patreon and all ten linked videos answer 200;
   every referenced image exists; the served site is identical to `main`; no project the portfolio
   registry marks private appears in the files or the git history.
@@ -31,7 +35,7 @@ Tests: 2026-09-24 – `node --check` on assets/js/*.js: OK; EN/CS keys 101/101; 
   does not show yet get project cards (needs copy in both languages and a cover image).
 
 ## Known issues
-- No automated checks: no link checker, no CI. Verification is manual (see CLAUDE.md).
+- No CI: the link checker and the checks in CLAUDE.md run by hand before a commit.
 - "Gravity for Android is in closed testing on Google Play" rests on the gravityAndroid docs (1.0.1 uploaded to
   closed testing on 2026-09-01); the Play Console itself was not checked.
 - LinkedIn answers automated requests with HTTP 999, so that link can only be checked in a browser.
