@@ -2,7 +2,7 @@
 
 Status: LIVE
 Live: https://mxstex.github.io/MyWebPage/
-Tests: 2026-09-25 – `node --check` on assets/js/*.js: OK; EN/CS keys 101/101; `node tools/check_links.mjs`: 50 internal links OK; `--external`: 26 of 27 external OK, LinkedIn 999 (browser only)
+Tests: 2026-09-26 – `node --check` on assets/js/*.js: OK; EN/CS keys 115/115; `node tools/check_links.mjs`: no broken internal link; `node tools/test_chat_loader.mjs`: 7 OK; real browser (Edge 153, RTX 4070 Ti, WebGPU nvidia/lovelace, `tools/webllm_probe.py`): Fast model ready in 6 s, a CV question answered, reload from cache ready in 1 s
 
 ## Completed
 - Single-page bilingual (English / Czech) portfolio on GitHub Pages: profile, skills, experience,
@@ -30,11 +30,29 @@ Tests: 2026-09-25 – `node --check` on assets/js/*.js: OK; EN/CS keys 101/101; 
 ## Current
 - Nothing in progress.
 
+## 2026-09-26 – Chat with my CV: the model loaded, the first answer failed
+- Reproduced on the live site and locally in a real Edge 153 with WebGPU (`tools/webllm_probe.py`, evidence in
+  `tools/webllm_evidence/`): WebLLM 0.2.85 imported, `Qwen2.5-0.5B-Instruct-q4f16_1-MLC` downloaded (8 shards, ~280 MB) and
+  initialized in 6 s, then the first question threw `ContextWindowSizeExceededError: prompt tokens 4276 > context
+  window 4096` - the `FACTS` prompt alone is over the prebuilt model's 4,096-token window - and the page showed the
+  generic "Something went wrong while loading the model", which read as a download/start failure.
+- Root cause: the context window, not the download, WebGPU or the model id (both Qwen2.5 ids are in the 0.2.85 catalogue).
+- Fix: `CreateMLCEngine(..., {context_window_size: 8192})`; `assets/js/chat_loader.js` (pure decisions, tested under Node)
+  and a staged loader in `chat.js`: `requestAdapter()` is called (a null adapter has its own message), adapter features
+  and buffer limits are checked against the model, the model id is checked in `prebuiltAppConfig.model_list`, import /
+  download / GPU / context / generation failures each have a specific EN+CS message, a "Technical details" disclosure
+  carries stage, error, browser and adapter, progress values are normalised, a failed engine is unloaded before a
+  retry, a context overflow clears the history. No cloud fallback: local or off.
+- Verified after the fix in the same Edge: ready in 6 s, "What does Michal do at ABB..." answered from the FACTS,
+  reload from cache ready in 1 s. The small model's download-size copy corrected to about 0.3 GB (measured shards).
+
 ## Next
 - Decide whether the two in-development games that the portfolio registry marks public but the site
   does not show yet get project cards (needs copy in both languages and a cover image).
 
 ## Known issues
+- The 1.5B model was not exercised in the browser tonight (the 0.5B path was the reported failure); its 8,192 window
+  costs more VRAM and small adapters may refuse it - the loader then says so instead of "something went wrong".
 - No CI: the link checker and the checks in CLAUDE.md run by hand before a commit.
 - "Gravity for Android is in closed testing on Google Play" rests on the gravityAndroid docs (1.0.1 uploaded to
   closed testing on 2026-09-01); the Play Console itself was not checked.

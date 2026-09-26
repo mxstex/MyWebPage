@@ -1,0 +1,87 @@
+{
+ "url": "https://mxstex.github.io/MyWebPage/",
+ "browser": "msedge",
+ "model": "small",
+ "console": [
+  "info: Images loaded lazily and replaced with placeholders. Load events are deferred. See https://go.microsoft.com/fwlink/?linkid=2048113",
+  "warning: The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+  "error: ContextWindowSizeExceededError: Prompt tokens exceed context window size: number of prompt tokens: 4276; context window size: 4096\nConsider shortening the prompt, or increase `context_window_size`, or using sliding window via `sliding_window_size`.\n    at YQ.<anonymous> (https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.85/+esm:86:18098)\n    at Generator.next (<anonymous>)\n    at d (https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.85/+esm:19:46838)",
+  "info: Images loaded lazily and replaced with placeholders. Load events are deferred. See https://go.microsoft.com/fwlink/?linkid=2048113",
+  "warning: The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127"
+ ],
+ "errors": [],
+ "failed_requests": [],
+ "progress": [
+  {
+   "t": 1.0,
+   "text": "Loading model…"
+  },
+  {
+   "t": 2.0,
+   "text": "Start to fetch params"
+  },
+  {
+   "t": 4.1,
+   "text": "Fetching param cache[3/8]: 96MB fetched. 35% completed, 3 secs elapsed. It can take a while when we first visit this page to populate the cache. Later refreshes will become faster."
+  },
+  {
+   "t": 5.1,
+   "text": "Fetching param cache[5/8]: 175MB fetched. 65% completed, 4 secs elapsed. It can take a while when we first visit this page to populate the cache. Later refreshes will become faster."
+  },
+  {
+   "t": 6.1,
+   "text": "Model ready. Ask away."
+  }
+ ],
+ "started": "2026-09-26 21:43:06",
+ "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0",
+ "gpu": {
+  "has_navigator_gpu": true,
+  "adapter": true,
+  "features": [
+   "bgra8unorm-storage",
+   "chromium-experimental-multi-draw-indirect",
+   "chromium-experimental-sampling-resource-table",
+   "chromium-experimental-timestamp-query-inside-passes",
+   "clip-distances",
+   "core-features-and-limits",
+   "depth-clip-control",
+   "depth32float-stencil8",
+   "dual-source-blending",
+   "float32-blendable",
+   "float32-filterable",
+   "indirect-first-instance",
+   "primitive-index",
+   "rg11b10ufloat-renderable",
+   "shader-f16",
+   "subgroup-size-control",
+   "subgroups",
+   "texture-component-swizzle",
+   "texture-compression-bc",
+   "texture-compression-bc-sliced-3d",
+   "texture-compression-unaligned",
+   "texture-formats-tier1",
+   "texture-formats-tier2",
+   "timestamp-query"
+  ],
+  "limits": {
+   "maxBufferSize": 2147483648,
+   "maxStorageBufferBindingSize": 2147483644,
+   "maxComputeWorkgroupStorageSize": 32768
+  },
+  "info": {
+   "vendor": "nvidia",
+   "architecture": "lovelace",
+   "device": "",
+   "description": ""
+  },
+  "device": true
+ },
+ "ready": true,
+ "load_seconds": 6.1,
+ "messages_after_load": "Model ready. Ask away.",
+ "answer": "Something went wrong while loading the model. Reload the page and try again, or pick the smaller model.",
+ "answer_seconds": 1.0,
+ "cached_reload_ready": true,
+ "cached_reload_seconds": 1.0
+}

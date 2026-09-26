@@ -2,16 +2,23 @@
    chat.js - "Chat with my CV" running fully in the browser.
    Uses WebLLM (MLC) through WebGPU: the model is downloaded once from
    the MLC/HuggingFace CDN, cached by the browser, and nothing typed
-   here ever leaves the device. No server is involved.
+   here ever leaves the device. No server is involved, and no server
+   ever will be a fallback: the feature is local or it is off.
+
+   Loading is staged - WebGPU adapter, WebLLM runtime, model download,
+   initialisation, first answer - and a failure names its stage
+   (chat_loader.js decides; the visitor sees a specific line and can
+   open the technical details). 2026-09-26: the model loaded fine and
+   the first question failed with ContextWindowSizeExceededError, which
+   the old code reported as "something went wrong while loading" - see
+   docs/webllm and PROGRESS.md.
    ===================================================================== */
 (function () {
   "use strict";
 
   const WEBLLM_URL = "https://esm.run/@mlc-ai/web-llm@0.2.85";
-  const MODELS = {
-    small: "Qwen2.5-0.5B-Instruct-q4f16_1-MLC",
-    large: "Qwen2.5-1.5B-Instruct-q4f16_1-MLC",
-  };
+  const L = window.ChatLoader;
+  const MODELS = { small: L.MODELS.small.id, large: L.MODELS.large.id };
 
   /* The whole "knowledge base": one page of facts. A document this small
      does not need chunking or a vector index - it fits in the prompt. */
@@ -114,6 +121,7 @@ LLM PRINCIPLES MICHAL FOLLOWS
   const t = (k) => (window.T[window.getLang()] || {})[k] || k;
   let engine = null, loading = false, generating = false;
   const history = [];
+  let details = null;
 
   function addMsg(role, text) {
     const div = document.createElement("div");
@@ -122,11 +130,33 @@ LLM PRINCIPLES MICHAL FOLLOWS
     return div;
   }
   function setStatus(text) { ui.status.textContent = text || ""; }
-  function setProgress(p) { ui.progress.hidden = p == null; if (p != null) ui.progress.firstElementChild.style.width = Math.round(p * 100) + "%"; }
+  function setProgress(p) {
+    const share = L.normalizeProgress({ progress: p });
+    ui.progress.hidden = share == null;
+    if (share != null) ui.progress.firstElementChild.style.width = Math.round(share * 100) + "%";
+  }
   function setReady(ready) {
     ui.input.disabled = !ready; ui.send.disabled = !ready;
     if (ready) ui.input.focus();
   }
+
+  /* The technical details a visitor (or Michal, debugging) can open under
+     the status line: stage, error name and message, browser and adapter. */
+  function showDetails(info) {
+    if (!details) {
+      details = document.createElement("details");
+      details.className = "chat-details";
+      const summary = document.createElement("summary");
+      summary.textContent = t("chat.details");
+      const pre = document.createElement("pre");
+      details.appendChild(summary); details.appendChild(pre);
+      ui.status.insertAdjacentElement("afterend", details);
+    }
+    details.querySelector("summary").textContent = t("chat.details");
+    details.querySelector("pre").textContent = Object.entries(info).map(([k, v]) => k + ": " + v).join("\n");
+    details.hidden = false;
+  }
+  function hideDetails() { if (details) details.hidden = true; }
 
   function renderSuggestions() {
     const list = window.DATA.chatSuggestions[window.getLang()] || window.DATA.chatSuggestions.en;
@@ -141,25 +171,83 @@ LLM PRINCIPLES MICHAL FOLLOWS
   renderSuggestions();
 
   /* ---------------- engine ---------------- */
+  let adapterInfo = null;
+
+  async function probeGpu() {
+    if (!("gpu" in navigator) || !navigator.gpu) return { ok: false, code: "nogpu" };
+    let adapter = null;
+    try {
+      adapter = await navigator.gpu.requestAdapter();
+    } catch (err) {
+      return { ok: false, code: "gpu", error: err };
+    }
+    if (!adapter) return { ok: false, code: "noadapter" };
+    const info = adapter.info || {};
+    adapterInfo = {
+      vendor: info.vendor || "?", architecture: info.architecture || "?",
+      f16: adapter.features && adapter.features.has ? adapter.features.has("shader-f16") : "?",
+      maxStorageBufferBindingSize: adapter.limits ? adapter.limits.maxStorageBufferBindingSize : "?",
+    };
+    return { ok: true, adapter };
+  }
+
+  function fail(code, stage, err, extra) {
+    console.error("[chat] stage=" + stage + " code=" + code, err || "");
+    const key = { nogpu: "chat.nogpu", noadapter: "chat.noadapter", gpu: "chat.err.gpu", memory: "chat.err.memory",
+                  import: "chat.err.import", download: "chat.err.download", init: "chat.err.gpu", context: "chat.err.context",
+                  generate: "chat.err.generate", catalog: "chat.err.catalog", unsupported: "chat.err.unsupported" }[code] || "chat.error";
+    setProgress(null); setStatus(t(key)); addMsg("sys", t(key));
+    showDetails(Object.assign({
+      stage: stage, code: code,
+      error: err ? (err.name ? err.name + ": " : "") + (err.message || String(err)) : "-",
+      browser: navigator.userAgent, model: MODELS[ui.model.value] || MODELS.small,
+    }, adapterInfo || {}, extra || {}));
+  }
+
+  async function disposeEngine() {
+    const old = engine; engine = null;
+    if (old) { try { await old.unload(); } catch (e) { /* a half-built engine may have nothing to unload */ } }
+  }
+
   async function loadEngine() {
     if (engine || loading) return;
-    if (!("gpu" in navigator)) { addMsg("sys", t("chat.nogpu")); setStatus(""); return; }
-    loading = true; ui.start.disabled = true; ui.model.disabled = true;
-    setStatus(t("chat.loading")); setProgress(0);
+    loading = true; ui.start.disabled = true; ui.model.disabled = true; hideDetails();
+    setStatus(t("chat.checking")); setProgress(null);
+    let stage = "gpu";
     try {
+      const gpu = await probeGpu();
+      if (!gpu.ok) { fail(gpu.code, "gpu", gpu.error); return; }
+      const wanted = ui.model.value in MODELS ? ui.model.value : "small";
+      const why = L.checkAdapterFor(wanted, gpu.adapter);
+      if (why) { fail("unsupported", "gpu", null, { reason: why }); return; }
+
+      stage = "import";
+      setStatus(t("chat.runtime"));
       const webllm = await import(WEBLLM_URL);
-      const modelId = MODELS[ui.model.value] || MODELS.small;
+      const modelId = MODELS[wanted];
+      if (!L.modelInCatalog(webllm, modelId)) { fail("catalog", "import", null, { catalog: "missing " + modelId }); return; }
+
+      stage = "download";
+      setStatus(t("chat.downloading")); setProgress(0);
       engine = await webllm.CreateMLCEngine(modelId, {
-        initProgressCallback: (r) => { setProgress(r.progress); setStatus(r.text || t("chat.loading")); },
-      });
+        initProgressCallback: (r) => {
+          stage = L.stageOf(r);
+          setProgress(r && r.progress);
+          setStatus((stage === "init" ? t("chat.initializing") : t("chat.downloading")) + (r && r.text ? " · " + r.text : ""));
+        },
+      }, { context_window_size: L.CONTEXT_WINDOW });
+      stage = "init";
       setProgress(null); setStatus(t("chat.ready")); setReady(true);
       ui.start.hidden = true;
       addMsg("sys", t("chat.ready"));
     } catch (err) {
-      console.error(err);
-      engine = null; setProgress(null); setStatus(t("chat.error")); addMsg("sys", t("chat.error"));
-      ui.start.disabled = false; ui.model.disabled = false;
-    } finally { loading = false; }
+      const kind = L.classifyError(err, stage);
+      await disposeEngine();
+      fail(kind.code, kind.stage, err);
+    } finally {
+      loading = false;
+      if (!engine) { ui.start.disabled = false; ui.model.disabled = false; ui.start.hidden = false; }
+    }
   }
 
   async function ask(question) {
@@ -177,11 +265,17 @@ LLM PRINCIPLES MICHAL FOLLOWS
         if (delta) { answer += delta; bot.textContent = answer; ui.messages.scrollTop = ui.messages.scrollHeight; }
       }
     } catch (err) {
-      console.error(err);
-      if (!answer) bot.textContent = t("chat.error");
+      const kind = L.classifyError(err, "generate");
+      console.error("[chat] stage=generate code=" + kind.code, err);
+      if (!answer) {
+        bot.textContent = t(kind.code === "context" ? "chat.err.context" : "chat.err.generate");
+        showDetails({ stage: "generate", code: kind.code, error: (err && (err.name + ": " + err.message)) || String(err),
+                      browser: navigator.userAgent, model: MODELS[ui.model.value] || MODELS.small });
+      }
+      if (kind.code === "context") history.length = 0;   // start clean: the history was part of the overflow
     } finally {
       bot.classList.remove("pending");
-      history.push({ role: "assistant", content: answer });
+      if (answer) history.push({ role: "assistant", content: answer });
       generating = false; ui.stop.hidden = true; setReady(true);
     }
   }
