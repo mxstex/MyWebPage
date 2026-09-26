@@ -16,6 +16,7 @@ python tools/webllm_probe.py --url https://mxstex.github.io/MyWebPage/ --browser
 | file | site | result |
 | --- | --- | --- |
 | `msedge-mxstex.github.io-small.json` | live, before the fix | model ready in 6.1 s; first answer: `ContextWindowSizeExceededError: number of prompt tokens: 4276; context window size: 4096`; the page said "Something went wrong while loading the model" |
+| `msedge-mxstex.github.io-small-after-fix.json` | live, after the Pages deploy | ready in 6.1 s, a B2B/location question answered, cached reload 1.0 s |
 | `msedge-127.0.0.1-8000-small.json` | local, after the fix | ready in 6.1 s, answer "Michal Štěpán is a Senior GenAI Engineer at ABB, working on AI solutions and RAG.", cached reload ready in 1.0 s |
 
 The failure the owner saw ("the model does not download/start") was therefore the first inference,

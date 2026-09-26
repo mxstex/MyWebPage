@@ -45,6 +45,9 @@ Tests: 2026-09-26 – `node --check` on assets/js/*.js: OK; EN/CS keys 115/115; 
   retry, a context overflow clears the history. No cloud fallback: local or off.
 - Verified after the fix in the same Edge: ready in 6 s, "What does Michal do at ABB..." answered from the FACTS,
   reload from cache ready in 1 s. The small model's download-size copy corrected to about 0.3 GB (measured shards).
+- Verified on the live site after the Pages deploy (2026-09-26 22:05, `tools/webllm_evidence/msedge-mxstex.github.io-small-after-fix.json`):
+  ready in 6.1 s, "Is Michal open to B2B consulting and where is he based?" answered (yes / Sviadnov near Ostrava - the
+  0.5B model also mixed in the DISTEP team size, which is why the intro says the PDF is the source of truth), cached reload 1.0 s.
 
 ## Next
 - Decide whether the two in-development games that the portfolio registry marks public but the site
