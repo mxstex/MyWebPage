@@ -5,6 +5,11 @@ Live: https://mxstex.github.io/MyWebPage/
 Tests: 2026-09-26 – `node --check` on assets/js/*.js: OK; EN/CS keys 115/115; `node tools/check_links.mjs`: no broken internal link; `node tools/test_chat_loader.mjs`: 7 OK; real browser (Edge 153, RTX 4070 Ti, WebGPU nvidia/lovelace, `tools/webllm_probe.py`): Fast model ready in 6 s, a CV question answered, reload from cache ready in 1 s
 
 ## Completed
+- 2026-09-27: publication policy excludes non-public/adult products and their safe editions.
+  Private-registry check covers committed text, filenames and CV PDF text/metadata; `tools/pre-push`
+  is installed locally. Excluded names remain outside this public repository. No public cards changed.
+  Verification: 59 public files including PDF passed the private gate; JS syntax,
+  115/115 EN/CS keys, internal links and all seven chat-loader checks passed.
 - Single-page bilingual (English / Czech) portfolio on GitHub Pages: profile, skills, experience,
   the Gravity games, other projects, LLM notes, education, contact; six backgrounds with their own
   hero animations; changelog dialog behind the version number in the header (site version 1.9.0).
@@ -50,8 +55,7 @@ Tests: 2026-09-26 – `node --check` on assets/js/*.js: OK; EN/CS keys 115/115; 
   0.5B model also mixed in the DISTEP team size, which is why the intro says the PDF is the source of truth), cached reload 1.0 s.
 
 ## Next
-- Decide whether the two in-development games that the portfolio registry marks public but the site
-  does not show yet get project cards (needs copy in both languages and a cover image).
+- Keep project cards limited to the public portfolio registry and run the publication gate before pushes.
 
 ## Known issues
 - The 1.5B model was not exercised in the browser tonight (the 0.5B path was the reported failure); its 8,192 window

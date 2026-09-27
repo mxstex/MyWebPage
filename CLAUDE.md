@@ -41,6 +41,12 @@ would not publish.
   `LINKEDIN_PROFILE.md`: project names, live or pre-release status, figures.
 - The project list follows the portfolio registry (display name, status, live URL). Never add a
   project the registry marks private, and never name employer or client internal projects.
+- Owner policy (2026-09-27): products with adult/Mature content stay out of this public site,
+  including their safe editions, links, images, CV, chat facts and published documentation.
+  Keep the exclusion list in the private portfolio registry; never copy it into this repository.
+- Before publishing, run `uv run ../TojinOps/scripts/check_public_portfolio.py --site .`.
+  Install `tools/pre-push` as `.git/hooks/pre-push` (preserve any existing hook); it checks the
+  committed tree being pushed, including PDF text/metadata, and fails if private tooling is absent.
 - Project source code is private: link to live builds, videos, the YouTube channel and Patreon, never
   to source.
 - `FACTS` is public. Salary is only ever "depends on the role"; no figures, no private details.

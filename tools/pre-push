@@ -1,0 +1,13 @@
+#!/bin/sh
+# Validate committed public files using the private workspace registry.
+# Fail closed if the private publication tooling is unavailable.
+set -eu
+root=$(git rev-parse --show-toplevel)
+gate="$root/../TojinOps/scripts/check_public_portfolio.py"
+test -f "$gate" || { echo "Private publication checker is unavailable." >&2; exit 1; }
+while read -r local_ref local_oid remote_ref remote_oid; do
+  case "$local_oid" in
+    0000000000000000000000000000000000000000) continue ;;
+  esac
+  uv run "$gate" --site "$root" --ref "$local_oid" || exit 1
+done
