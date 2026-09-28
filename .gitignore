@@ -181,3 +181,4 @@ cython_debug/
 .cursorindexingignore
 # Source documents (diplomas, thesis, CV source) stay local; only the exported PDF in cv/ is published.
 docs/
+.claude/settings.local.json
