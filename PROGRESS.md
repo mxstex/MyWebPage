@@ -8,6 +8,8 @@ Tests: 2026-09-28 – `node --check` on assets/js/*.js: OK; EN/CS keys 115/115; 
 - 2026-09-28: 1.10.0 portfolio refresh after a full GitHub workspace scan: Gravity 2D removed from the active showcase and chat facts; Quantum corrected to LIVE; Jednota links its live Tactics build; Starforge card switched to the new project-generated Dyson-swarm visual; Forge copy now includes startup sync + Observer integration; Video Generator workflow refreshed. Remote edit validated by JavaScript parse and targeted asset/link checks; the full local suite, the live UI and the chat were verified afterwards (Tests line).
 - 2026-09-28: 1.10.1 the CV (HTML + PDF, still two pages) and the LinkedIn draft follow 1.10.0: Quantum among the live
   Cloud Run projects, Jednota: Tactics live. Statuses checked against the portfolio registry and each project's PROGRESS.
+- 2026-09-28: 1.10.2 Gravity 2D archived for good: its screenshots, icon and feature image deleted (plus the unused old
+  Starforge cover), the chat facts no longer mention it; the Jednota card and facts describe the newer battle rules generically.
 - 2026-09-27: publication policy excludes non-public/adult products and their safe editions.
   Private-registry check covers committed text, filenames and CV PDF text/metadata; `tools/pre-push`
   is installed locally. Excluded names remain outside this public repository. No public cards changed.
@@ -15,7 +17,7 @@ Tests: 2026-09-28 – `node --check` on assets/js/*.js: OK; EN/CS keys 115/115; 
   115/115 EN/CS keys, internal links and all seven chat-loader checks passed.
 - Single-page bilingual (English / Czech) portfolio on GitHub Pages: profile, skills, experience,
   the Gravity games, other projects, LLM notes, education, contact; six backgrounds with their own
-  hero animations; changelog dialog behind the version number in the header (site version 1.10.1).
+  hero animations; changelog dialog behind the version number in the header (site version 1.10.2).
 - "Chat with my CV": a small Qwen2.5 model runs in the visitor's browser (WebLLM + WebGPU) and answers
   only from the public `FACTS` in `assets/js/chat.js`.
 - Downloadable two-page CV (`cv/Michal_Stepan_CV.pdf`) exported from `cv/Michal_Stepan_CV.html`;
@@ -64,9 +66,10 @@ Tests: 2026-09-28 – `node --check` on assets/js/*.js: OK; EN/CS keys 115/115; 
 - The 1.5B model was not exercised in the browser tonight (the 0.5B path was the reported failure); its 8,192 window
   costs more VRAM and small adapters may refuse it - the loader then says so instead of "something went wrong".
 - No CI: the link checker and the checks in CLAUDE.md run by hand before a commit.
-- 1.10.0 removed both Gravity 2D cards, the web build (registry: legacy) and the Android 2D app, although the
-  registry keeps `gravity-android` active and in closed testing on Google Play. Whether the Android 2D card returns
-  is the owner's call; the site no longer claims closed testing anywhere.
+- Owner decision 2026-09-28: Gravity 2D (web and Android) is obsolete/archived and nothing of it stays on the site.
+  The portfolio registry still lists `gravity-android` as active; do not re-add a card from that entry.
+- The Jednota invaders are to be renamed (owner, 2026-09-28): the site describes them generically until the new name
+  lands in the game repositories.
 - LinkedIn answers automated requests with HTTP 999, so that link can only be checked in a browser.
 - Figures in the cards (test counts, levels, chapters) drift as the games grow; re-check them against
   each game's README when a game ships a larger update.

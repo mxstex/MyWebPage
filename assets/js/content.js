@@ -462,8 +462,8 @@ window.DATA = {
       image: "assets/img/jednota-ui.jpg",
       tags: ["Python", "NiceGUI", "Ollama", "pgvector", "LLM agents", "FastAPI", "Playwright", "ComfyUI"],
       desc: {
-        en: "A galactic 4X strategy in the spirit of the classic 90s games. An invasion from beyond the galaxy is coming and no race can stop it alone: unify the galaxy by diplomacy or conquest, then destroy the invasion fleet and free the occupied systems. Every empire's strategist, every diplomatic envoy and every fleet admiral is an agent on a local LLM through Ollama. Deterministic rules check each decision before it takes effect; in a measured five-empire campaign they accepted 93 of 93 strategic, 80 of 88 diplomatic and 79 of 86 tactical decisions. Agents remember earlier games through a pgvector store of chronicles, and recorded decisions let replays run without the model. More than 80,000 lines of Python and 1,400 tests. The core 4X game remains in active development. A persistent online version is also in development on FastAPI, PostgreSQL and Vue 3. Its standalone tactical companion, Jednota: Tactics, already has a live Cloud Run build; newer local rules add semi-realtime fleet combat, subsystem damage, boarding/raid actions and Mk X Antaran rules and are awaiting deployment.",
-        cs: "Galaktická 4X strategie v duchu klasik z 90. let. Z hlubin vesmíru přichází invaze a žádná rasa ji sama nezastaví: sjednoťte galaxii diplomacií nebo dobytím, pak zničte invazní flotilu a osvoboďte obsazené systémy. Stratég každé říše, každý diplomatický vyslanec i každý admirál flotily je agent na lokálním LLM přes Ollamu. Deterministická pravidla každé rozhodnutí ověří, než se projeví; v měřené kampani pěti říší přijala 93 z 93 strategických, 80 z 88 diplomatických a 79 z 86 taktických rozhodnutí. Agenti si pamatují minulé hry přes pgvector úložiště kronik a zaznamenaná rozhodnutí umožňují přehrát hru bez modelu. Přes 80 000 řádků Pythonu a 1 400 testů. Hlavní 4X hra zůstává v aktivním vývoji. Ve vývoji je i trvalá online verze nad FastAPI, PostgreSQL a Vue 3. Samostatný taktický doplněk Jednota: Tactics už má živý build na Cloud Run; novější lokální pravidla přidávají semi-realtime bitvy flotil, poškození subsystémů, boarding/raid akce a Antarany na Mk X a teprve čekají na nasazení.",
+        en: "A galactic 4X strategy in the spirit of the classic 90s games. An invasion from beyond the galaxy is coming and no race can stop it alone: unify the galaxy by diplomacy or conquest, then destroy the invasion fleet and free the occupied systems. Every empire's strategist, every diplomatic envoy and every fleet admiral is an agent on a local LLM through Ollama. Deterministic rules check each decision before it takes effect; in a measured five-empire campaign they accepted 93 of 93 strategic, 80 of 88 diplomatic and 79 of 86 tactical decisions. Agents remember earlier games through a pgvector store of chronicles, and recorded decisions let replays run without the model. More than 80,000 lines of Python and 1,400 tests. The core 4X game remains in active development. A persistent online version is also in development on FastAPI, PostgreSQL and Vue 3. Its standalone tactical companion, Jednota: Tactics, already has a live Cloud Run build; newer local rules add semi-realtime fleet combat, subsystem damage, boarding/raid actions and a tougher invader fleet and are awaiting deployment.",
+        cs: "Galaktická 4X strategie v duchu klasik z 90. let. Z hlubin vesmíru přichází invaze a žádná rasa ji sama nezastaví: sjednoťte galaxii diplomacií nebo dobytím, pak zničte invazní flotilu a osvoboďte obsazené systémy. Stratég každé říše, každý diplomatický vyslanec i každý admirál flotily je agent na lokálním LLM přes Ollamu. Deterministická pravidla každé rozhodnutí ověří, než se projeví; v měřené kampani pěti říší přijala 93 z 93 strategických, 80 z 88 diplomatických a 79 z 86 taktických rozhodnutí. Agenti si pamatují minulé hry přes pgvector úložiště kronik a zaznamenaná rozhodnutí umožňují přehrát hru bez modelu. Přes 80 000 řádků Pythonu a 1 400 testů. Hlavní 4X hra zůstává v aktivním vývoji. Ve vývoji je i trvalá online verze nad FastAPI, PostgreSQL a Vue 3. Samostatný taktický doplněk Jednota: Tactics už má živý build na Cloud Run; novější lokální pravidla přidávají semi-realtime bitvy flotil, poškození subsystémů, boarding/raid akce a odolnější flotilu vetřelců a teprve čekají na nasazení.",
       },
       links: [
         { label: { en: "Play Jednota: Tactics", cs: "Hrát Jednota: Tactics" }, url: "links.jednotaTacticsWeb", primary: true },
@@ -702,6 +702,20 @@ window.DATA = {
 
   // Newest first. The header shows the version of the first entry.
   changelog: [
+    {
+      version: "1.10.2",
+      date: "2026-09-28",
+      items: {
+        en: [
+          "Gravity 2D is archived: its last images left the site and the chat facts no longer mention it.",
+          "The Jednota card describes the newer battle rules in general terms.",
+        ],
+        cs: [
+          "Gravity 2D je archivované: jeho poslední obrázky zmizely z webu a fakta pro chat ho už nezmiňují.",
+          "Karta Jednoty popisuje novější pravidla bitev obecně.",
+        ],
+      },
+    },
     {
       version: "1.10.1",
       date: "2026-09-28",
