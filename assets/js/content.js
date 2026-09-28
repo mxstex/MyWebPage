@@ -703,6 +703,18 @@ window.DATA = {
   // Newest first. The header shows the version of the first entry.
   changelog: [
     {
+      version: "1.10.1",
+      date: "2026-09-28",
+      items: {
+        en: [
+          "The CV and the LinkedIn draft follow 1.10.0: Quantum is listed among the live Cloud Run projects and the Jednota: Tactics battle simulator as live.",
+        ],
+        cs: [
+          "CV a LinkedIn profil odpovídají verzi 1.10.0: Quantum je mezi živými projekty na Cloud Run a bitevní simulátor Jednota: Tactics je uvedený jako živý.",
+        ],
+      },
+    },
+    {
       version: "1.10.0",
       date: "2026-09-28",
       items: {

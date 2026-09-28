@@ -2,10 +2,12 @@
 
 Status: LIVE
 Live: https://mxstex.github.io/MyWebPage/
-Tests: 2026-09-28 – `node --check` on assets/js/*.js: OK; `node tools/check_links.mjs`: no broken internal link; `node tools/test_chat_loader.mjs`: 7 passed. The real-browser WebLLM check (`tools/webllm_probe.py`, Edge 153, RTX 4070 Ti) last passed 2026-09-26
+Tests: 2026-09-28 – `node --check` on assets/js/*.js: OK; EN/CS keys 115/115; `node tools/check_links.mjs --external`: no broken link (Cloud Run games answer 200 after a cold start, LinkedIn 999 = browser only); `node tools/test_chat_loader.mjs`: 7 passed; private publication gate: 60 files, 0 violations. Live site identical to `main` (1.10.0); Edge UI smoke test in EN and CS (12 cards, changelog, lightbox, no console errors, no horizontal scroll at 375 px); `tools/webllm_probe.py` on the live site: 0.5B model ready in 6.4 s, answered, cached reload 1.0 s
 
 ## Completed
-- 2026-09-28: 1.10.0 portfolio refresh after a full GitHub workspace scan: Gravity 2D removed from the active showcase and chat facts; Quantum corrected to LIVE; Jednota links its live Tactics build; Starforge card switched to the new project-generated Dyson-swarm visual; Forge copy now includes startup sync + Observer integration; Video Generator workflow refreshed. Remote edit validated by JavaScript parse and targeted asset/link checks; the normal local link/chat suite remains the next checkout verification.
+- 2026-09-28: 1.10.0 portfolio refresh after a full GitHub workspace scan: Gravity 2D removed from the active showcase and chat facts; Quantum corrected to LIVE; Jednota links its live Tactics build; Starforge card switched to the new project-generated Dyson-swarm visual; Forge copy now includes startup sync + Observer integration; Video Generator workflow refreshed. Remote edit validated by JavaScript parse and targeted asset/link checks; the full local suite, the live UI and the chat were verified afterwards (Tests line).
+- 2026-09-28: 1.10.1 the CV (HTML + PDF, still two pages) and the LinkedIn draft follow 1.10.0: Quantum among the live
+  Cloud Run projects, Jednota: Tactics live. Statuses checked against the portfolio registry and each project's PROGRESS.
 - 2026-09-27: publication policy excludes non-public/adult products and their safe editions.
   Private-registry check covers committed text, filenames and CV PDF text/metadata; `tools/pre-push`
   is installed locally. Excluded names remain outside this public repository. No public cards changed.
@@ -13,7 +15,7 @@ Tests: 2026-09-28 – `node --check` on assets/js/*.js: OK; `node tools/check_li
   115/115 EN/CS keys, internal links and all seven chat-loader checks passed.
 - Single-page bilingual (English / Czech) portfolio on GitHub Pages: profile, skills, experience,
   the Gravity games, other projects, LLM notes, education, contact; six backgrounds with their own
-  hero animations; changelog dialog behind the version number in the header (site version 1.9.0).
+  hero animations; changelog dialog behind the version number in the header (site version 1.10.1).
 - "Chat with my CV": a small Qwen2.5 model runs in the visitor's browser (WebLLM + WebGPU) and answers
   only from the public `FACTS` in `assets/js/chat.js`.
 - Downloadable two-page CV (`cv/Michal_Stepan_CV.pdf`) exported from `cv/Michal_Stepan_CV.html`;
@@ -62,8 +64,9 @@ Tests: 2026-09-28 – `node --check` on assets/js/*.js: OK; `node tools/check_li
 - The 1.5B model was not exercised in the browser tonight (the 0.5B path was the reported failure); its 8,192 window
   costs more VRAM and small adapters may refuse it - the loader then says so instead of "something went wrong".
 - No CI: the link checker and the checks in CLAUDE.md run by hand before a commit.
-- "Gravity for Android is in closed testing on Google Play" rests on the gravityAndroid docs (1.0.1 uploaded to
-  closed testing on 2026-09-01); the Play Console itself was not checked.
+- 1.10.0 removed both Gravity 2D cards, the web build (registry: legacy) and the Android 2D app, although the
+  registry keeps `gravity-android` active and in closed testing on Google Play. Whether the Android 2D card returns
+  is the owner's call; the site no longer claims closed testing anywhere.
 - LinkedIn answers automated requests with HTTP 999, so that link can only be checked in a browser.
 - Figures in the cards (test counts, levels, chapters) drift as the games grow; re-check them against
   each game's README when a game ships a larger update.
