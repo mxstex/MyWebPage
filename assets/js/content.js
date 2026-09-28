@@ -16,14 +16,14 @@ window.SITE = {
   location: { en: "Sviadnov, Czechia", cs: "Sviadnov, Česko" },
   links: {
     gravityWeb3d: "https://gravity3d-tgz74cquha-ez.a.run.app/",
-    gravityWeb2d: "",                        // public URL of the 2D web build, when there is one
     orbitWeb: "https://orbit-prod-lxfrbj3zhq-ew.a.run.app",
     starforgeWeb: "https://starforge-4zrmoo7y3a-ez.a.run.app",
     myzooWeb: "https://myzoo-gsl5pfkg4q-ez.a.run.app",
     mygardenWeb: "https://mygarden-ltbbj4q4qq-ez.a.run.app",
     iondriveWeb: "https://iondrive-tgz74cquha-ez.a.run.app",
+    quantumWeb: "https://quantum-728896009545.europe-west4.run.app",
+    jednotaTacticsWeb: "https://jednota-tactics-4zrmoo7y3a-ez.a.run.app",
     reactorWeb: "https://reactor-operator-tgz74cquha-ez.a.run.app",
-    play2d: "",                              // Google Play listing once published; "coming soon" is shown while empty
     play3d: "",
   },
   videos: [
@@ -89,7 +89,7 @@ window.T = {
     "about.fact4.s": "Live products, public demos and pre-release engineering: agents, simulations, cloud",
     "about.p1": "I turn ambiguous AI use cases into production systems. At ABB I work as a Senior GenAI Application Engineer on industrial engineering workflows, from use-case analysis and architecture through implementation, evaluation and cloud delivery: document extraction and RAG, structured LLM outputs with deterministic validation, agent-based assistants on Azure OpenAI / AI Foundry and Azure AI Agents, golden datasets and acceptance/performance tests, FastAPI services and CI/CD to Azure Container Apps with Key Vault and Log Analytics. I also build MCP integrations that let AI coding assistants work directly with team tools. I am strongest where AI must be reliable, testable and integrated into real business workflows, and I am open to B2B / contract work in GenAI engineering, AI solution architecture and production AI delivery.",
     "about.p2": "Before that I spent three years as a freelance backend and data engineer delivering B2B directly into client environments in energy, telecom and manufacturing (DTSE, Landis+Gyr, Vendavo), and earlier built energy-management and analytics systems at Siemens and ABB. My roots are in power engineering: eight years at a district heating utility, the last ones as technical deputy leading more than fifteen people, taught me what production reliability actually means. Altogether more than fifteen years across industrial software, data, cloud and energy.",
-    "about.p3": "Outside work I run Tojin Games, a one-person engineering lab with live browser products, public YouTube demos and pre-release projects. Live science software on Google Cloud Run includes Gravity 3D, Orbit, Ion Drive, Starforge, MyZoo, My Garden and Reactor Operator. Jednota runs local LLM strategist, diplomat and fleet agents with structured outputs, deterministic validation and pgvector memory, and Tojin Forge is my local multi-repository coding agent with an Ollama tool loop, sandboxed write scopes, tests, checkpoints, CLI/MCP integration and unattended overnight runs, now shown in a development preview on YouTube. Particle Forge is in pre-release. The browser games share my own FastAPI authentication service: Patreon OAuth 2.0 is exchanged for short-lived RS256 JWTs through one-time codes, while games hold only the public verification key. Services run on Cloud Run with Secret Manager and Terraform, and a code-driven pipeline records real gameplay in 4K.",
+    "about.p3": "Outside work I run Tojin Games, a one-person engineering lab with live browser products, public YouTube demos and pre-release projects. Live science software on Google Cloud Run now includes Gravity 3D, Orbit, Ion Drive, Starforge, MyZoo, My Garden, Reactor Operator and Quantum. Jednota combines local LLM strategist, diplomat and fleet agents with deterministic validation and pgvector memory; its tactical companion is live while the core 4X and online versions continue in development. Tojin Forge is my local multi-repository coding agent, now paired with Tojin Observer for visual evidence and application guidance. Tojin Video Generator handles local storyboard-to-video workflows with Ollama and ComfyUI. The browser games share my own FastAPI authentication service with Patreon OAuth 2.0, one-time codes and short-lived RS256 JWTs. Services run on Cloud Run with Secret Manager and Terraform.",
 
     "skills.title": "Skills",
     "skills.lead": "What I work with today, and what I have worked with before.",
@@ -98,11 +98,11 @@ window.T = {
     "experience.stack": "Stack",
 
     "gravity.title": "Gravity",
-    "gravity.kicker": "Physics sandbox · web and Android · 2D and 3D",
-    "gravity.intro": "You never control the universe. Only the initial conditions. Gravity is a Newtonian sandbox with one mechanic: set the velocity of a single small asteroid, choose the moment to release it, and watch real gravity produce the consequences. Ten story chapters take the same flyby from an asteroid to two colliding black holes. The simulation is hand-written: symmetric forces, conserved angular momentum, collisions that merge or ricochet because the physics says so. Every level is verified to be beatable and to never beat itself.",
+    "gravity.kicker": "Physics sandbox · web and Android · 3D",
+    "gravity.intro": "You never control the universe. Only the initial conditions. Gravity 3D is a Newtonian sandbox with one mechanic: set the velocity of a single small asteroid, choose the moment to release it, and watch real gravity produce the consequences. Ten story chapters take the same flyby from an asteroid to two colliding black holes. The simulation is hand-written: symmetric forces, conserved angular momentum, collisions that merge or ricochet because the physics says so. Every level is verified to be beatable and to never beat itself.",
     "gravity.gallery": "Screenshots",
     "gravity.videos": "Videos",
-    "gravity.free": "Ad-free, in English and Czech. On the web the prologue and the first chapter are free and Patreon unlocks the rest; the Android builds are free, work offline and collect no data.",
+    "gravity.free": "Ad-free, in English and Czech. On the web the prologue and the first chapter are free and Patreon unlocks the rest; the Gravity 3D Android build is free, works offline and collects no data.",
     "gravity.soon": "Coming soon to Google Play",
 
     "projects.title": "Other projects",
@@ -217,7 +217,7 @@ window.T = {
     "about.fact4.s": "Živé produkty, veřejná dema a projekty před vydáním: agenti, simulace, cloud",
     "about.p1": "Měním nejasná AI zadání v produkční systémy. V ABB pracuji jako Senior GenAI Application Engineer na průmyslových inženýrských workflow, od analýzy use casu a architektury přes implementaci a evaluaci po cloudové nasazení: extrakce dokumentů a RAG, strukturované LLM výstupy s deterministickou validací, agentní asistenti nad Azure OpenAI / AI Foundry a Azure AI Agents, golden datasety a akceptační/výkonnostní testy, FastAPI služby a CI/CD do Azure Container Apps s Key Vaultem a Log Analytics. Stavím také MCP integrace, přes které AI coding asistenti pracují přímo s týmovými nástroji. Nejsilnější jsem tam, kde AI musí být spolehlivá, testovatelná a zapojená do skutečných firemních procesů, a jsem otevřený B2B / kontraktové spolupráci v GenAI engineeringu, AI solution architecture a produkčním nasazení AI.",
     "about.p2": "Předtím jsem tři roky pracoval jako freelance backend a datový inženýr a dodával B2B přímo do prostředí klientů z energetiky, telekomunikací a výroby (DTSE, Landis+Gyr, Vendavo); ještě dřív jsem stavěl systémy pro energetický management a analytiku v Siemensu a ABB. Kořeny mám v energetice: osm let v teplárenské distribuční společnosti, naposledy jako technický zástupce s týmem přes patnáct lidí, mě naučilo, co znamená spolehlivý provoz. Dohromady víc než patnáct let v průmyslovém softwaru, datech, cloudu a energetice.",
-    "about.p3": "Mimo práci vedu Tojin Games, jednočlennou technickou laboratoř s živými produkty v prohlížeči, veřejnými YouTube demy a projekty před vydáním. Živý vědecký software na Google Cloud Run zahrnuje Gravity 3D, Orbit, Ion Drive, Starforge, MyZoo, My Garden a Reactor Operator. V Jednotě běží lokální LLM agenti stratéga, diplomata a flotily se strukturovanými výstupy, deterministickou validací a pgvector pamětí a Tojin Forge je můj lokální coding agent pro více repozitářů s Ollama tool loopem, sandboxovanými zápisy, testy, checkpointy, CLI/MCP integrací a bezobslužnými nočními běhy, nově s ukázkou z vývoje na YouTube. Particle Forge je před vydáním. Webové hry sdílejí mou vlastní autentizační službu ve FastAPI: Patreon OAuth 2.0 se přes jednorázové kódy mění na krátkodobé RS256 JWT a hry drží jen veřejný ověřovací klíč. Služby běží na Cloud Run se Secret Managerem a Terraformem a pipeline řízená kódem nahrává skutečný gameplay ve 4K.",
+    "about.p3": "Mimo práci vedu Tojin Games, jednočlennou technickou laboratoř s živými produkty v prohlížeči, veřejnými YouTube demy a projekty před vydáním. Živý vědecký software na Google Cloud Run teď zahrnuje Gravity 3D, Orbit, Ion Drive, Starforge, MyZoo, My Garden, Reactor Operator a Quantum. Jednota kombinuje lokální LLM agenty stratéga, diplomata a flotily s deterministickou validací a pgvector pamětí; taktický doplněk už běží živě, zatímco hlavní 4X a online verze pokračují ve vývoji. Tojin Forge je můj lokální coding agent pro více repozitářů, nově propojený s Tojin Observerem pro vizuální důkazy a navádění v aplikacích. Tojin Video Generator řeší lokální storyboard-to-video workflow nad Ollamou a ComfyUI. Webové hry sdílejí mou vlastní autentizační službu ve FastAPI s Patreon OAuth 2.0, jednorázovými kódy a krátkodobými RS256 JWT. Služby běží na Cloud Run se Secret Managerem a Terraformem.",
 
     "skills.title": "Dovednosti",
     "skills.lead": "S čím pracuji dnes a s čím jsem pracoval dřív.",
@@ -226,11 +226,11 @@ window.T = {
     "experience.stack": "Stack",
 
     "gravity.title": "Gravity",
-    "gravity.kicker": "Fyzikální sandbox · web a Android · 2D i 3D",
-    "gravity.intro": "Vesmír neřídíte. Jen počáteční podmínky. Gravity je newtonovský sandbox s jedinou mechanikou: nastavte rychlost jednomu malému asteroidu, zvolte okamžik vypuštění a sledujte, co skutečná gravitace udělá. Deset kapitol příběhu dovede tentýž průlet od asteroidu až ke srážce dvou černých děr. Simulace je ručně psaná: symetrické síly, zachovaný moment hybnosti, srážky, které slučují nebo odrážejí, protože to říká fyzika. Každý level je ověřený, že se dá vyhrát a nikdy se nevyhraje sám.",
+    "gravity.kicker": "Fyzikální sandbox · web a Android · 3D",
+    "gravity.intro": "Vesmír neřídíte. Jen počáteční podmínky. Gravity 3D je newtonovský sandbox s jedinou mechanikou: nastavte rychlost jednomu malému asteroidu, zvolte okamžik vypuštění a sledujte, co skutečná gravitace udělá. Deset kapitol příběhu dovede tentýž průlet od asteroidu až ke srážce dvou černých děr. Simulace je ručně psaná: symetrické síly, zachovaný moment hybnosti, srážky, které slučují nebo odrážejí, protože to říká fyzika. Každý level je ověřený, že se dá vyhrát a nikdy se nevyhraje sám.",
     "gravity.gallery": "Screenshoty",
     "gravity.videos": "Videa",
-    "gravity.free": "Bez reklam, anglicky a česky. Na webu jsou prolog a první kapitola zdarma a zbytek odemkne Patreon; verze pro Android jsou zdarma, fungují offline a nesbírají žádná data.",
+    "gravity.free": "Bez reklam, česky i anglicky. Na webu jsou prolog a první kapitola zdarma a zbytek odemkne Patreon; Gravity 3D pro Android je zdarma, funguje offline a nesbírá žádná data.",
     "gravity.soon": "Brzy na Google Play",
 
     "projects.title": "Další projekty",
@@ -432,32 +432,6 @@ window.DATA = {
       ],
     },
     {
-      name: "Gravity",
-      platform: { en: "Web · Python + NiceGUI · 2D", cs: "Web · Python + NiceGUI · 2D" },
-      image: "assets/img/gravity-2d-feature.jpg",
-      icon: "assets/img/gravity-2d-icon.png",
-      desc: {
-        en: "The original and the reference implementation. Python, NiceGUI and a single canvas; the physics core is deterministic, with no external engine, and the Android engine is tested against it. Ten chapters and free-play scenarios, progress kept in the browser.",
-        cs: "Původní verze a referenční implementace. Python, NiceGUI a jeden canvas; fyzikální jádro je deterministické, bez externího enginu, a engine pro Android se testuje proti němu. Deset kapitol a volné scénáře, postup uložený v prohlížeči.",
-      },
-      links: [
-        { label: { en: "Play in the browser", cs: "Hrát v prohlížeči" }, url: "links.gravityWeb2d", primary: true },
-      ],
-    },
-    {
-      name: "Gravity",
-      platform: { en: "Android · Kotlin + Compose · 2D", cs: "Android · Kotlin + Compose · 2D" },
-      image: "assets/img/shots/2d-03.jpg",
-      icon: "assets/img/gravity-2d-icon.png",
-      desc: {
-        en: "Native Kotlin and Jetpack Compose. A hand-written Velocity Verlet integrator on a fixed timestep; the engine is a pure Kotlin module with no Android dependency, so every level is verified fair by a test before it ships. Runs at about 60 fps on a Galaxy S24 FE and is in closed testing on Google Play.",
-        cs: "Nativní Kotlin a Jetpack Compose. Ručně psaný integrátor Velocity Verlet s pevným krokem; engine je čistý Kotlin modul bez závislosti na Androidu, takže každý level před vydáním ověří test, že je férový. Na Galaxy S24 FE běží kolem 60 fps a je v uzavřeném testování na Google Play.",
-      },
-      links: [
-        { label: { en: "Google Play", cs: "Google Play" }, url: "links.play2d", primary: true, soon: true },
-      ],
-    },
-    {
       name: "Gravity 3D",
       platform: { en: "Android · Kotlin + Compose · 3D", cs: "Android · Kotlin + Compose · 3D" },
       image: "assets/img/shots/3d-03.jpg",
@@ -479,11 +453,6 @@ window.DATA = {
     { src: "assets/img/shots/3d-04.jpg", caption: { en: "Saturn (3D)", cs: "Saturn (3D)" } },
     { src: "assets/img/shots/3d-05.jpg", caption: { en: "Two black holes (3D)", cs: "Dvě černé díry (3D)" } },
     { src: "assets/img/shots/3d-06.jpg", caption: { en: "The story (3D)", cs: "Příběh (3D)" } },
-    { src: "assets/img/shots/2d-01.jpg", caption: { en: "The board (2D)", cs: "Hrací plocha (2D)" } },
-    { src: "assets/img/shots/2d-02.jpg", caption: { en: "Aiming (2D)", cs: "Míření (2D)" } },
-    { src: "assets/img/shots/2d-03.jpg", caption: { en: "The flyby (2D)", cs: "Průlet (2D)" } },
-    { src: "assets/img/shots/2d-04.jpg", caption: { en: "Solved (2D)", cs: "Vyřešeno (2D)" } },
-    { src: "assets/img/shots/2d-05.jpg", caption: { en: "The story (2D)", cs: "Příběh (2D)" } },
   ],
 
   projects: [
@@ -493,11 +462,12 @@ window.DATA = {
       image: "assets/img/jednota-ui.jpg",
       tags: ["Python", "NiceGUI", "Ollama", "pgvector", "LLM agents", "FastAPI", "Playwright", "ComfyUI"],
       desc: {
-        en: "A galactic 4X strategy in the spirit of the classic 90s games. An invasion from beyond the galaxy is coming and no race can stop it alone: unify the galaxy by diplomacy or conquest, then destroy the invasion fleet and free the occupied systems. Every empire's strategist, every diplomatic envoy and every fleet admiral is an agent on a local LLM through Ollama. Deterministic rules check each decision before it takes effect; in a measured five-empire campaign they accepted 93 of 93 strategic, 80 of 88 diplomatic and 79 of 86 tactical decisions. Agents remember earlier games through a pgvector store of chronicles, and recorded decisions let replays run without the model. More than 80,000 lines of Python and 1,400 tests. An online version is in development too: a persistent multiplayer galaxy on FastAPI, PostgreSQL and Vue 3 with a shared galaxy clock, first contact, fleet battles, sieges and treaties between players. Neither is publicly playable yet.",
-        cs: "Galaktická 4X strategie v duchu klasik z 90. let. Z hlubin vesmíru přichází invaze a žádná rasa ji sama nezastaví: sjednoťte galaxii diplomacií nebo dobytím, pak zničte invazní flotilu a osvoboďte obsazené systémy. Stratég každé říše, každý diplomatický vyslanec i každý admirál flotily je agent na lokálním LLM přes Ollamu. Deterministická pravidla každé rozhodnutí ověří, než se projeví; v měřené kampani pěti říší přijala 93 z 93 strategických, 80 z 88 diplomatických a 79 z 86 taktických rozhodnutí. Agenti si pamatují minulé hry přes pgvector úložiště kronik a zaznamenaná rozhodnutí umožňují přehrát hru bez modelu. Přes 80 000 řádků Pythonu a 1 400 testů. Ve vývoji je i online verze: trvalá multiplayerová galaxie nad FastAPI, PostgreSQL a Vue 3 se společnými hodinami galaxie, prvním kontaktem, bitvami flotil, obléháním a smlouvami mezi hráči. Veřejně hratelná zatím není ani jedna.",
+        en: "A galactic 4X strategy in the spirit of the classic 90s games. An invasion from beyond the galaxy is coming and no race can stop it alone: unify the galaxy by diplomacy or conquest, then destroy the invasion fleet and free the occupied systems. Every empire's strategist, every diplomatic envoy and every fleet admiral is an agent on a local LLM through Ollama. Deterministic rules check each decision before it takes effect; in a measured five-empire campaign they accepted 93 of 93 strategic, 80 of 88 diplomatic and 79 of 86 tactical decisions. Agents remember earlier games through a pgvector store of chronicles, and recorded decisions let replays run without the model. More than 80,000 lines of Python and 1,400 tests. The core 4X game remains in active development. A persistent online version is also in development on FastAPI, PostgreSQL and Vue 3. Its standalone tactical companion, Jednota: Tactics, is already live on Cloud Run with semi-realtime fleet combat, subsystem damage, boarding/raid actions and the current Mk X Antaran rules.",
+        cs: "Galaktická 4X strategie v duchu klasik z 90. let. Z hlubin vesmíru přichází invaze a žádná rasa ji sama nezastaví: sjednoťte galaxii diplomacií nebo dobytím, pak zničte invazní flotilu a osvoboďte obsazené systémy. Stratég každé říše, každý diplomatický vyslanec i každý admirál flotily je agent na lokálním LLM přes Ollamu. Deterministická pravidla každé rozhodnutí ověří, než se projeví; v měřené kampani pěti říší přijala 93 z 93 strategických, 80 z 88 diplomatických a 79 z 86 taktických rozhodnutí. Agenti si pamatují minulé hry přes pgvector úložiště kronik a zaznamenaná rozhodnutí umožňují přehrát hru bez modelu. Přes 80 000 řádků Pythonu a 1 400 testů. Hlavní 4X hra zůstává v aktivním vývoji. Ve vývoji je i trvalá online verze nad FastAPI, PostgreSQL a Vue 3. Samostatný taktický doplněk Jednota: Tactics už ale běží živě na Cloud Run se semi-realtime bitvami flotil, poškozením subsystémů, boarding/raid akcemi a aktuálními pravidly Antaranů na Mk X.",
       },
       links: [
-        { label: { en: "Battle video", cs: "Video z bitvy" }, url: "https://www.youtube.com/watch?v=0FKwCZZLfEc", primary: true },
+        { label: { en: "Play Jednota: Tactics", cs: "Hrát Jednota: Tactics" }, url: "links.jednotaTacticsWeb", primary: true },
+        { label: { en: "Battle video", cs: "Video z bitvy" }, url: "https://www.youtube.com/watch?v=0FKwCZZLfEc" },
         { label: { en: "Soundtrack", cs: "Soundtrack" }, url: "https://www.youtube.com/watch?v=Dmcpzly1iZg" },
       ],
     },
@@ -557,14 +527,16 @@ window.DATA = {
     },
     {
       name: "Quantum",
-      sub: { en: "Wave mechanics sandbox", cs: "Sandbox vlnové mechaniky" },
+      sub: { en: "Wave mechanics sandbox · live", cs: "Sandbox vlnové mechaniky · živě" },
       image: "assets/img/projects/quantum.jpg",
-      tags: ["Python", "NiceGUI", "NumPy", "Split-step Fourier"],
+      tags: ["Python", "NiceGUI", "NumPy", "Split-step Fourier", "GCP Cloud Run"],
       desc: {
-        en: "Prepare a wave packet and let the Schrödinger equation decide. Eight scenes, from the double slit with a which-path detector and a double slit in time, through tunnelling and uncertainty, to string breaking, identical atoms on a beam splitter and an open question: how long does tunnelling take? The split-step Fourier integrator is hand-written with no quantum library, and tests compare it against analytic solutions.",
-        cs: "Připravte vlnový balík a nechte rozhodnout Schrödingerovu rovnici. Osm scén, od dvojštěrbiny s detektorem dráhy a dvojštěrbiny v čase přes tunelování a relace neurčitosti po trhání struny, identické atomy na děliči svazku a otevřenou otázku, jak dlouho tunelování trvá. Integrátor split-step Fourier je ručně psaný bez kvantové knihovny a testy ho porovnávají s analytickými řešeními.",
+        en: "Prepare a wave packet and let the Schrödinger equation decide. Eight scenes, from the double slit with a which-path detector and a double slit in time, through tunnelling and uncertainty, to string breaking, identical atoms on a beam splitter and an open question: how long does tunnelling take? The split-step Fourier integrator is hand-written with no quantum library, and tests compare it against analytic solutions. Now live on Cloud Run.",
+        cs: "Připravte vlnový balík a nechte rozhodnout Schrödingerovu rovnici. Osm scén, od dvojštěrbiny s detektorem dráhy a dvojštěrbiny v čase přes tunelování a relace neurčitosti po trhání struny, identické atomy na děliči svazku a otevřenou otázku, jak dlouho tunelování trvá. Integrátor split-step Fourier je ručně psaný bez kvantové knihovny a testy ho porovnávají s analytickými řešeními. Nově běží živě na Cloud Run.",
       },
-      links: [],
+      links: [
+        { label: { en: "Play in the browser", cs: "Hrát v prohlížeči" }, url: "links.quantumWeb", primary: true },
+      ],
     },
     {
       name: "Particle Forge",
@@ -580,7 +552,7 @@ window.DATA = {
     {
       name: "Starforge",
       sub: { en: "Hard sci-fi incremental strategy", cs: "Hard sci-fi budovatelská strategie" },
-      image: "assets/img/projects/starforge.webp",
+      image: "assets/img/projects/starforge-swarm.jpg",
       tags: ["Python", "NiceGUI", "Canvas", "GCP Cloud Run", "Cloud Storage", "Terraform"],
       desc: {
         en: "From a single orbital station to mining Mercury and the first Dyson-swarm collector, in real units: joules, watts, kilograms. Ten scripted bot strategies prove the economy can be finished, eight hours of offline progress are computed analytically in about a millisecond, and versioned saves follow a signed-in player across devices. Chapter I is free; Patreon unlocks the rest.",
@@ -625,8 +597,8 @@ window.DATA = {
       sub: { en: "Local autonomous coding agent · development preview", cs: "Lokální autonomní coding agent · ukázka z vývoje" },
       tags: ["Python", "NiceGUI", "Ollama", "LLM agents", "MCP", "CLI", "SQLite"],
       desc: {
-        en: "A local, autonomous, multi-repository coding agent on Ollama models: a NiceGUI control room and a headless CLI over the same engine. Not a chat window but an engineering loop: task, model, tool call, tool result, tests, fix, verify, report. You choose how much it may do (Safe, Ask on write, Full access); every change is checkpointed and can be reverted, destructive Git is blocked and it never pushes. In Work mode nothing leaves the machine, and it picks its own model: the largest of the newest tool-calling models that fits the GPU. Overnight it audits every repository from its own evidence, works through them one fresh-context task at a time, keeps a change only when the repository's own tests and linter pass, and leaves a morning report. An MCP server offers its workspace tools to other agents. It runs every day on my own workspace; a development preview is on YouTube.",
-        cs: "Lokální autonomní coding agent pro více repozitářů na modelech z Ollamy: velín v NiceGUI a headless CLI nad stejným enginem. Není to chatovací okno, ale inženýrská smyčka: úkol, model, volání nástroje, výsledek, testy, oprava, ověření, report. Vy určíte, kolik smí (Safe, Ask on write, Full access); každá změna má checkpoint a jde vrátit, destruktivní Git je zablokovaný a nikdy nepushuje. V pracovním režimu nic neopustí počítač a model si vybere sám: největší z nejnovějších modelů s voláním nástrojů, který se vejde do GPU. V noci projde stav každého repozitáře podle jeho vlastních podkladů, pracuje na nich po jednom úkolu s čistým kontextem, změnu ponechá, jen když projdou testy a linter daného repozitáře, a ráno nechá report. MCP server nabízí jeho nástroje nad workspacem dalším agentům. Běží každý den nad mým vlastním workspacem; ukázka z vývoje je na YouTube.",
+        en: "A local, autonomous, multi-repository coding agent on Ollama models: a NiceGUI control room and a headless CLI over the same engine. Not a chat window but an engineering loop: task, model, tool call, tool result, tests, fix, verify, report. You choose how much it may do (Safe, Ask on write, Full access); every change is checkpointed and can be reverted, destructive Git is blocked and it never pushes. In Work mode nothing leaves the machine, and it picks its own model: the largest of the newest tool-calling models that fits the GPU. Overnight it audits every repository from its own evidence, works through them one fresh-context task at a time, keeps a change only when the repository's own tests and linter pass, and leaves a morning report. An MCP server offers its workspace tools to other agents. It runs every day on my own workspace. The suite now has more than 680 passing tests; startup sync keeps the repositories current, and Tojin Observer can watch external windows, preserve evidence, analyse long recordings and feed visual guidance back into the workflow. A development preview is on YouTube.",
+        cs: "Lokální autonomní coding agent pro více repozitářů na modelech z Ollamy: velín v NiceGUI a headless CLI nad stejným enginem. Není to chatovací okno, ale inženýrská smyčka: úkol, model, volání nástroje, výsledek, testy, oprava, ověření, report. Vy určíte, kolik smí (Safe, Ask on write, Full access); každá změna má checkpoint a jde vrátit, destruktivní Git je zablokovaný a nikdy nepushuje. V pracovním režimu nic neopustí počítač a model si vybere sám: největší z nejnovějších modelů s voláním nástrojů, který se vejde do GPU. V noci projde stav každého repozitáře podle jeho vlastních podkladů, pracuje na nich po jednom úkolu s čistým kontextem, změnu ponechá, jen když projdou testy a linter daného repozitáře, a ráno nechá report. MCP server nabízí jeho nástroje nad workspacem dalším agentům. Běží každý den nad mým vlastním workspacem. Sada má přes 680 procházejících testů; synchronizace při startu udržuje repozitáře aktuální a Tojin Observer umí sledovat externí okna, ukládat důkazy, analyzovat dlouhé záznamy a vracet vizuální navádění zpět do workflow. Ukázka z vývoje je na YouTube.",
       },
       links: [
         { label: { en: "Promo video", cs: "Promo video" }, url: "https://www.youtube.com/watch?v=xFeAN1Bb9v0", primary: true },
@@ -635,11 +607,11 @@ window.DATA = {
     },
     {
       name: "Tojin platform",
-      sub: { en: "One login, seven games, a video pipeline", cs: "Jedno přihlášení, sedm her, video pipeline" },
+      sub: { en: "Shared auth, deployment and local media tooling", cs: "Sdílený auth, deployment a lokální media tooling" },
       tags: ["FastAPI", "OAuth 2.0", "JWT", "GCP Cloud Run", "Secret Manager", "Terraform", "Playwright", "ffmpeg"],
       desc: {
-        en: "The shared layer behind the web games. A FastAPI service completes Patreon OAuth 2.0, maps membership to internal entitlements and signs short-lived RS256 JWTs. Browser redirects carry only a hashed, one-time code with a 60-second TTL; the game server exchanges it for the JWT, while the Patreon access token is never stored and each game holds only the public verification key/JWKS. Cloud Run reads the Patreon secret and RSA private key from Secret Manager, provisioned with Terraform. A separate code-driven pipeline records real gameplay in 4K through Playwright/CDP, adds local TTS and validates output before upload.",
-        cs: "Společná vrstva pod webovými hrami. Služba ve FastAPI dokončí Patreon OAuth 2.0, převede členství na interní oprávnění a podepíše krátkodobý RS256 JWT. Přesměrování v prohlížeči nese jen hashovaný jednorázový kód s TTL 60 sekund; herní server ho vymění za JWT, Patreon access token se nikde neukládá a každá hra drží jen veřejný ověřovací klíč/JWKS. Cloud Run načítá Patreon secret a RSA private key ze Secret Manageru vytvořeného přes Terraform. Samostatná pipeline řízená kódem nahrává skutečný gameplay ve 4K přes Playwright/CDP, přidává lokální TTS a výstup před uploadem automaticky ověřuje.",
+        en: "The shared layer behind the web games. A FastAPI service completes Patreon OAuth 2.0, maps membership to internal entitlements and signs short-lived RS256 JWTs. Browser redirects carry only a hashed, one-time code with a 60-second TTL; the game server exchanges it for the JWT, while the Patreon access token is never stored and each game holds only the public verification key/JWKS. Cloud Run reads the Patreon secret and RSA private key from Secret Manager, provisioned with Terraform. A separate code-driven pipeline records real gameplay in 4K through Playwright/CDP, adds local TTS and validates output before upload. Tojin Video Generator adds a local Ollama + ComfyUI storyboard workflow, including folder-based scene plans and exact one-shot-per-line sequences.",
+        cs: "Společná vrstva pod webovými hrami. Služba ve FastAPI dokončí Patreon OAuth 2.0, převede členství na interní oprávnění a podepíše krátkodobý RS256 JWT. Přesměrování v prohlížeči nese jen hashovaný jednorázový kód s TTL 60 sekund; herní server ho vymění za JWT, Patreon access token se nikde neukládá a každá hra drží jen veřejný ověřovací klíč/JWKS. Cloud Run načítá Patreon secret a RSA private key ze Secret Manageru vytvořeného přes Terraform. Samostatná pipeline řízená kódem nahrává skutečný gameplay ve 4K přes Playwright/CDP, přidává lokální TTS a výstup před uploadem automaticky ověřuje. Tojin Video Generator přidává lokální storyboard workflow nad Ollamou a ComfyUI, včetně plánů scén ze složek a přesných sekvencí jeden řádek = jeden záběr.",
       },
       links: [
         { label: { en: "YouTube", cs: "YouTube" }, url: "https://www.youtube.com/@tojin111", primary: true },
@@ -730,6 +702,22 @@ window.DATA = {
 
   // Newest first. The header shows the version of the first entry.
   changelog: [
+    {
+      version: "1.10.0",
+      date: "2026-09-28",
+      items: {
+        en: [
+          "Gravity 2D retired from the active portfolio: the showcase now focuses on Gravity 3D for web and Android.",
+          "Starforge uses its new Dyson-swarm visual and Quantum is correctly marked as live on Cloud Run.",
+          "Jednota now links the live Tactics build; Forge reflects startup sync and the Observer workflow, and the shared platform describes the current Video Generator storyboard pipeline.",
+        ],
+        cs: [
+          "Gravity 2D vyřazeno z aktivního portfolia: přehlídka se teď soustředí na Gravity 3D pro web a Android.",
+          "Starforge používá nový vizuál Dysonova roje a Quantum je správně označeno jako živé na Cloud Run.",
+          "Jednota nově odkazuje na živý build Tactics; Forge popisuje synchronizaci při startu a workflow s Observerem a sdílená platforma aktuální storyboard pipeline Video Generatoru.",
+        ],
+      },
+    },
     {
       version: "1.9.0",
       date: "2026-09-24",

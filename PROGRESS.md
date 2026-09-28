@@ -5,6 +5,7 @@ Live: https://mxstex.github.io/MyWebPage/
 Tests: 2026-09-28 – `node --check` on assets/js/*.js: OK; `node tools/check_links.mjs`: no broken internal link; `node tools/test_chat_loader.mjs`: 7 passed. The real-browser WebLLM check (`tools/webllm_probe.py`, Edge 153, RTX 4070 Ti) last passed 2026-09-26
 
 ## Completed
+- 2026-09-28: 1.10.0 portfolio refresh after a full GitHub workspace scan: Gravity 2D removed from the active showcase and chat facts; Quantum corrected to LIVE; Jednota links its live Tactics build; Starforge card switched to the new project-generated Dyson-swarm visual; Forge copy now includes startup sync + Observer integration; Video Generator workflow refreshed. Remote edit validated by JavaScript parse and targeted asset/link checks; the normal local link/chat suite remains the next checkout verification.
 - 2026-09-27: publication policy excludes non-public/adult products and their safe editions.
   Private-registry check covers committed text, filenames and CV PDF text/metadata; `tools/pre-push`
   is installed locally. Excluded names remain outside this public repository. No public cards changed.
@@ -17,9 +18,9 @@ Tests: 2026-09-28 – `node --check` on assets/js/*.js: OK; `node tools/check_li
   only from the public `FACTS` in `assets/js/chat.js`.
 - Downloadable two-page CV (`cv/Michal_Stepan_CV.pdf`) exported from `cv/Michal_Stepan_CV.html`;
   the PDF text matches the HTML source.
-- Project cards match the portfolio registry: the seven live games on Google Cloud Run (Gravity 3D,
-  Orbit, Ion Drive, Starforge, MyZoo, My Garden, Reactor Operator) link to their live builds; Jednota,
-  Fusion, Quantum and Particle Forge are shown as in development or pre-release without play links.
+- Project cards match the portfolio registry: the eight live games on Google Cloud Run (Gravity 3D,
+  Orbit, Ion Drive, Starforge, MyZoo, My Garden, Reactor Operator, Quantum) link to their live builds; Jednota: Tactics
+  links to its live build, while the Jednota core, Fusion and Particle Forge are presented according to their current development state.
 - 1.9.0 (2026-09-24): Tojin Forge card links its YouTube development preview (promo, narrated guide);
   Reactor Operator shows seven reactors / twenty scenarios and links its how-to and Reactor Physics series;
   Jednota figures re-measured (81,086 tracked lines of Python incl. tests, 1,405 passing tests) and the online
