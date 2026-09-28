@@ -2,7 +2,7 @@
 
 Status: LIVE
 Live: https://mxstex.github.io/MyWebPage/
-Tests: 2026-09-26 – `node --check` on assets/js/*.js: OK; EN/CS keys 115/115; `node tools/check_links.mjs`: no broken internal link; `node tools/test_chat_loader.mjs`: 7 OK; real browser (Edge 153, RTX 4070 Ti, WebGPU nvidia/lovelace, `tools/webllm_probe.py`): Fast model ready in 6 s, a CV question answered, reload from cache ready in 1 s
+Tests: 2026-09-28 – `node --check` on assets/js/*.js: OK; `node tools/check_links.mjs`: no broken internal link; `node tools/test_chat_loader.mjs`: 7 passed. The real-browser WebLLM check (`tools/webllm_probe.py`, Edge 153, RTX 4070 Ti) last passed 2026-09-26
 
 ## Completed
 - 2026-09-27: publication policy excludes non-public/adult products and their safe editions.
