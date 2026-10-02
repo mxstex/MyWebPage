@@ -20,7 +20,7 @@ window.SITE = {
     starforgeWeb: "https://starforge-4zrmoo7y3a-ez.a.run.app",
     myzooWeb: "https://myzoo-euwit6q25a-ez.a.run.app",
     mygardenWeb: "https://mygarden-fmrk7xquua-ez.a.run.app",
-    iondriveWeb: "https://iondrive-tgz74cquha-ez.a.run.app",
+    iondriveWeb: "https://iondrive-5exha2swwa-ez.a.run.app",
     quantumWeb: "https://quantum-270355464245.europe-west4.run.app",
     jednotaTacticsWeb: "https://jednota-tactics-sbscj7hvza-ez.a.run.app",
     reactorWeb: "https://reactor-operator-harszncioq-ez.a.run.app",
