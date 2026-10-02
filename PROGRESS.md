@@ -2,9 +2,11 @@
 
 Status: LIVE
 Live: https://mxstex.github.io/MyWebPage/
-Tests: 2026-09-28 – `node --check` on assets/js/*.js: OK; EN/CS keys 115/115; `node tools/check_links.mjs --external`: no broken link (Cloud Run games answer 200 after a cold start, LinkedIn 999 = browser only); `node tools/test_chat_loader.mjs`: 7 passed; private publication gate: 60 files, 0 violations. Live site identical to `main` (1.10.0); Edge UI smoke test in EN and CS (12 cards, changelog, lightbox, no console errors, no horizontal scroll at 375 px); `tools/webllm_probe.py` on the live site: 0.5B model ready in 6.4 s, answered, cached reload 1.0 s
+Tests: 2026-10-02 – `node --check` on assets/js/*.js: OK; EN/CS keys 115/115; `node tools/check_links.mjs --external`: no broken link (LinkedIn 999 = browser only; Reactor Operator and Tactics answered 200 on the second try, cold start); `node tools/test_chat_loader.mjs`: 7 passed. 2026-09-28: Edge UI smoke test in EN and CS, `tools/webllm_probe.py` on the live site (0.5B model ready in 6.4 s, answered, cached reload 1.0 s)
 
 ## Completed
+- 2026-10-02: the game links follow the move of every Cloud Run game into its own GCP project (e57be36, Ion Drive
+  dd6797c); GitHub Pages serves `main`.
 - 2026-09-28: 1.10.0 portfolio refresh after a full GitHub workspace scan: Gravity 2D removed from the active showcase and chat facts; Quantum corrected to LIVE; Jednota links its live Tactics build; Starforge card switched to the new project-generated Dyson-swarm visual; Forge copy now includes startup sync + Observer integration; Video Generator workflow refreshed. Remote edit validated by JavaScript parse and targeted asset/link checks; the full local suite, the live UI and the chat were verified afterwards (Tests line).
 - 2026-09-28: 1.10.1 the CV (HTML + PDF, still two pages) and the LinkedIn draft follow 1.10.0: Quantum among the live
   Cloud Run projects, Jednota: Tactics live. Statuses checked against the portfolio registry and each project's PROGRESS.
@@ -37,27 +39,27 @@ Tests: 2026-09-28 – `node --check` on assets/js/*.js: OK; EN/CS keys 115/115; 
   every referenced image exists; the served site is identical to `main`; no project the portfolio
   registry marks private appears in the files or the git history.
 
+- 2026-09-26: Chat with my CV - the model loaded, the first answer failed:
+  - Reproduced on the live site and locally in a real Edge 153 with WebGPU (`tools/webllm_probe.py`, evidence in
+    `tools/webllm_evidence/`): WebLLM 0.2.85 imported, `Qwen2.5-0.5B-Instruct-q4f16_1-MLC` downloaded (8 shards, ~280 MB) and
+    initialized in 6 s, then the first question threw `ContextWindowSizeExceededError: prompt tokens 4276 > context
+    window 4096` - the `FACTS` prompt alone is over the prebuilt model's 4,096-token window - and the page showed the
+    generic "Something went wrong while loading the model", which read as a download/start failure.
+  - Root cause: the context window, not the download, WebGPU or the model id (both Qwen2.5 ids are in the 0.2.85 catalogue).
+  - Fix: `CreateMLCEngine(..., {context_window_size: 8192})`; `assets/js/chat_loader.js` (pure decisions, tested under Node)
+    and a staged loader in `chat.js`: `requestAdapter()` is called (a null adapter has its own message), adapter features
+    and buffer limits are checked against the model, the model id is checked in `prebuiltAppConfig.model_list`, import /
+    download / GPU / context / generation failures each have a specific EN+CS message, a "Technical details" disclosure
+    carries stage, error, browser and adapter, progress values are normalised, a failed engine is unloaded before a
+    retry, a context overflow clears the history. No cloud fallback: local or off.
+  - Verified after the fix in the same Edge: ready in 6 s, "What does Michal do at ABB..." answered from the FACTS,
+    reload from cache ready in 1 s. The small model's download-size copy corrected to about 0.3 GB (measured shards).
+  - Verified on the live site after the Pages deploy (2026-09-26 22:05, `tools/webllm_evidence/msedge-mxstex.github.io-small-after-fix.json`):
+    ready in 6.1 s, "Is Michal open to B2B consulting and where is he based?" answered (yes / Sviadnov near Ostrava - the
+    0.5B model also mixed in the DISTEP team size, which is why the intro says the PDF is the source of truth), cached reload 1.0 s.
+
 ## Current
 - Nothing in progress.
-
-## 2026-09-26 – Chat with my CV: the model loaded, the first answer failed
-- Reproduced on the live site and locally in a real Edge 153 with WebGPU (`tools/webllm_probe.py`, evidence in
-  `tools/webllm_evidence/`): WebLLM 0.2.85 imported, `Qwen2.5-0.5B-Instruct-q4f16_1-MLC` downloaded (8 shards, ~280 MB) and
-  initialized in 6 s, then the first question threw `ContextWindowSizeExceededError: prompt tokens 4276 > context
-  window 4096` - the `FACTS` prompt alone is over the prebuilt model's 4,096-token window - and the page showed the
-  generic "Something went wrong while loading the model", which read as a download/start failure.
-- Root cause: the context window, not the download, WebGPU or the model id (both Qwen2.5 ids are in the 0.2.85 catalogue).
-- Fix: `CreateMLCEngine(..., {context_window_size: 8192})`; `assets/js/chat_loader.js` (pure decisions, tested under Node)
-  and a staged loader in `chat.js`: `requestAdapter()` is called (a null adapter has its own message), adapter features
-  and buffer limits are checked against the model, the model id is checked in `prebuiltAppConfig.model_list`, import /
-  download / GPU / context / generation failures each have a specific EN+CS message, a "Technical details" disclosure
-  carries stage, error, browser and adapter, progress values are normalised, a failed engine is unloaded before a
-  retry, a context overflow clears the history. No cloud fallback: local or off.
-- Verified after the fix in the same Edge: ready in 6 s, "What does Michal do at ABB..." answered from the FACTS,
-  reload from cache ready in 1 s. The small model's download-size copy corrected to about 0.3 GB (measured shards).
-- Verified on the live site after the Pages deploy (2026-09-26 22:05, `tools/webllm_evidence/msedge-mxstex.github.io-small-after-fix.json`):
-  ready in 6.1 s, "Is Michal open to B2B consulting and where is he based?" answered (yes / Sviadnov near Ostrava - the
-  0.5B model also mixed in the DISTEP team size, which is why the intro says the PDF is the source of truth), cached reload 1.0 s.
 
 ## Next
 - Keep project cards limited to the public portfolio registry and run the publication gate before pushes.
@@ -67,7 +69,8 @@ Tests: 2026-09-28 – `node --check` on assets/js/*.js: OK; EN/CS keys 115/115; 
   costs more VRAM and small adapters may refuse it - the loader then says so instead of "something went wrong".
 - No CI: the link checker and the checks in CLAUDE.md run by hand before a commit.
 - Owner decision 2026-09-28: Gravity 2D (web and Android) is obsolete/archived and nothing of it stays on the site.
-  The portfolio registry still lists `gravity-android` as active; do not re-add a card from that entry.
+  The portfolio registry marks `gravity-android` archived (`gravity3d-android` is a separate, active project); do not
+  re-add a Gravity 2D card.
 - The Jednota invaders are to be renamed (owner, 2026-09-28): the site describes them generically until the new name
   lands in the game repositories.
 - LinkedIn answers automated requests with HTTP 999, so that link can only be checked in a browser.
