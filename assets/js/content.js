@@ -24,6 +24,7 @@ window.SITE = {
     quantumWeb: "https://quantum-270355464245.europe-west4.run.app",
     jednotaTacticsWeb: "https://jednota-tactics-sbscj7hvza-ez.a.run.app",
     reactorWeb: "https://reactor-operator-harszncioq-ez.a.run.app",
+    fusionWeb: "https://fusion-54y2laymuq-ez.a.run.app",
     play3d: "",
   },
   videos: [
@@ -518,12 +519,14 @@ window.DATA = {
       name: "Fusion",
       sub: { en: "Plasma confinement game", cs: "Hra o udržení plazmatu" },
       image: "assets/img/projects/holdmyplazma.webp",
-      tags: ["Python", "NiceGUI", "NumPy", "SciPy", "Biot–Savart"],
+      tags: ["Python", "NiceGUI", "NumPy", "SciPy", "Biot–Savart", "GCP Cloud Run"],
       desc: {
         en: "Hold plasma with magnets: choose the coils, current, radius and tilt, fire a shot and read what happened from Langmuir-probe diagnostics. Magnetic fields from Biot–Savart, field-line tracing with Poincaré sections, the q(r) profile and a 0-D energy balance, calibrated against my own research on the CASTOR tokamak, with presets for CASTOR, COMPASS, ITER and Wendelstein 7-X. Eleven scenarios from a straight tube and a magnetic bottle through a tokamak and a stellarator to an open research problem: where the heat leaving the plasma should go.",
         cs: "Udržte plazma magnety: zvolte cívky, proud, poloměr a náklon, vystřelte a z diagnostiky Langmuirových sond vyčtěte, co se stalo. Magnetické pole z Biot–Savartova zákona, trasování siločar s Poincarého řezy, profil q(r) a 0-D energetická bilance, kalibrované podle mého vlastního výzkumu na tokamaku CASTOR, s předvolbami pro CASTOR, COMPASS, ITER a Wendelstein 7-X. Jedenáct scénářů od rovné trubice a magnetické láhve přes tokamak a stelarátor po otevřený výzkumný problém: kam odvést teplo, které z plazmatu uniká.",
       },
-      links: [],
+      links: [
+        { label: { en: "Play in the browser", cs: "Hrát v prohlížeči" }, url: "links.fusionWeb", primary: true },
+      ],
     },
     {
       name: "Quantum",
@@ -702,6 +705,18 @@ window.DATA = {
 
   // Newest first. The header shows the version of the first entry.
   changelog: [
+    {
+      version: "1.10.3",
+      date: "2026-10-03",
+      items: {
+        en: [
+          "Fusion is live: its card links to the first release on Google Cloud Run.",
+        ],
+        cs: [
+          "Fusion je živě: jeho karta odkazuje na první vydání na Google Cloud Run.",
+        ],
+      },
+    },
     {
       version: "1.10.2",
       date: "2026-09-28",
