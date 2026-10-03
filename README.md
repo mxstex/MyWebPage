@@ -12,7 +12,7 @@ Plain HTML, CSS and JavaScript. No build step. Bilingual (English / Czech) with 
 backgrounds to pick from in the header (Meadow by default, then Forest at dusk, Sea, Space, Nebula,
 Paper). Each has its own palette in `style.css` and its own hero animation in `main.js` (`BGS`).
 
-Live at https://mxstex.github.io/MyWebPage/ · current state in [PROGRESS.md](PROGRESS.md) · guidance for coding agents in [CLAUDE.md](CLAUDE.md).
+Live at https://mxstex.github.io/MyWebPage/ · status in [PROGRESS.md](PROGRESS.md).
 
 ## Editing
 
