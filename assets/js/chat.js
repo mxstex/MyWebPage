@@ -16,7 +16,7 @@
 (function () {
   "use strict";
 
-  const WEBLLM_URL = "https://esm.run/@mlc-ai/web-llm@0.2.85";
+  const WEBLLM_URL = "../vendor/web-llm-0.2.85.esm.js";
   const L = window.ChatLoader;
   const MODELS = { small: L.MODELS.small.id, large: L.MODELS.large.id };
 

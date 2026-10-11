@@ -2,6 +2,7 @@
 <html lang="en" data-bg="meadow">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://i.ytimg.com; media-src 'self' blob:; frame-src https://www.youtube-nocookie.com; connect-src 'self' https://huggingface.co https://*.huggingface.co https://*.hf.co https://raw.githubusercontent.com; worker-src 'self' blob:; base-uri 'none'; form-action 'none'; object-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Michal Štěpán · Senior GenAI Engineer · AI Solution Architecture</title>
   <meta name="description" content="Michal Štěpán turns ambiguous AI use cases into production systems: AI solution architecture, RAG and agents, deterministic validation, golden-dataset evaluation, MCP, FastAPI and delivery on Azure and GCP. Open to B2B / contract consulting.">
@@ -12,13 +13,7 @@
   <meta property="og:description" content="AI solution architecture and production GenAI: RAG and agents, evaluation, deterministic validation, MCP, FastAPI, Azure and GCP. Open to B2B / contract consulting.">
   <meta property="og:image" content="assets/img/gravity-3d-feature.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23f1c55c'/%3E%3Ctext%20x='32'%20y='43'%20font-family='Georgia,serif'%20font-weight='700'%20font-size='30'%20text-anchor='middle'%20fill='%231a1408'%3EM%C5%A0%3C/text%3E%3C/svg%3E">
-  <script>
-    (function () {
-      var b = "meadow";
-      try { var s = localStorage.getItem("bg"); if (/^(meadow|forest|sea|space|nebula|paper)$/.test(s)) b = s; } catch (e) {}
-      document.documentElement.setAttribute("data-bg", b);
-    })();
-  </script>
+  <script src="assets/js/bg_init.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@600;700&display=swap" rel="stylesheet">

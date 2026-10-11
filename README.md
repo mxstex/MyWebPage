@@ -51,3 +51,11 @@ other external URLs.
 Repository settings → Pages → Source: *Deploy from a branch* → branch `main`, folder `/ (root)`.
 The site is then at `https://mxstex.github.io/MyWebPage/`. All paths are relative, so a custom
 domain works without changes.
+
+## Supply chain
+
+The WebLLM runtime is vendored (`assets/vendor/web-llm-0.2.85.esm.js`, the jsDelivr `+esm` build of
+`@mlc-ai/web-llm@0.2.85`, SHA-256 `858153d0dc197a4fb52a52830aaca8f6c8e222a787420f36225a1094db6c5b3d`) because a dynamic
+`import()` cannot carry Subresource Integrity. `index.html` has a Content-Security-Policy meta tag (scripts only from
+this origin; model files from huggingface.co / raw.githubusercontent.com). A new origin or an inline script needs a
+matching CSP edit. To upgrade web-llm, download the new `+esm` file, update the file name in `chat.js` and this hash.
